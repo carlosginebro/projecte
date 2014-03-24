@@ -86,6 +86,18 @@ $(function(){
    $("#BtForm").click(function() {
 	var nom= $("#NomForm").val();
 	var pw= $("#PwForm").val();
+        if(nom === '' || pw === ''){
+              var duration = 80;
+                            var offset = 40;
+                            
+                            $('#test').animate({marginLeft:('-='+ offset)}, duration,function(){
+                                 $(this).animate({marginLeft:('+=' + offset*2)}, duration, function(){
+                                    $(this).animate({marginLeft:('-=' + offset*2)}, duration, function(){
+                                         $(this).animate({marginLeft:('+='+ offset)}, duration);
+                                    });
+                                 });
+                              });  
+        }else{
 
 	$.ajax({
 		
@@ -93,17 +105,7 @@ $(function(){
 		data: {nom: nom, pw: pw},
 		url: "formulariUsuari.php",
 		success:function( dada ) {
-                    if (dada=="1"){
-//                          var duration = 80;
-//                            var offset = 40;
-//                            
-//                            $('#test').animate({marginLeft:('-='+ offset)}, duration,function(){
-//                                 $(this).animate({marginLeft:('+=' + offset*2)}, duration, function(){
-//                                    $(this).animate({marginLeft:('-=' + offset*2)}, duration, function(){
-//                                         $(this).animate({marginLeft:('+='+ offset)}, duration);
-//                                    });
-//                                 });
-//                              });      
+                    if (dada=="1"){              
                  
                         var duration = 300;
                         var offset = 80;
@@ -113,15 +115,7 @@ $(function(){
                          document.location= "loading.php";                         
                          });    
 				 
-                    }else{
-//                          var duration = 400;
-//                        var offset = 80;
-//                        $('#test').animate({'max-width':'480px', width:('+=' + offset), 
-//                                                    marginLeft:('-=' + offset/2), height:('+=' + offset), 
-//                                                    marginTop:('-=' + 300/2), opacity:0}, duration, function(){
-//                                                    document.location= "loading.php";
-//         
-//                         });       
+                    }else{              
                               
                             var duration = 80;
                             var offset = 40;
@@ -137,7 +131,9 @@ $(function(){
 			
 		}
 		
-	});
+            });
+        
+         }
 	
     });
     
