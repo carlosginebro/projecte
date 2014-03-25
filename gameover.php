@@ -1,6 +1,8 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/imposiblequiz.css" />
+         <?php
+            require_once 'head.php';
+        ?>
     </head>
     <body id="container" >
         <div id='plantilla' style="background-image: url('css/galery/gameover.png'); display:block;">
