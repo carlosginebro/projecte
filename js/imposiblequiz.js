@@ -2,19 +2,22 @@ window.$vidas = {
         vidas: 3
     };
 
-window.$pasar_nivel = {
-        pasar_nivel: 0
-};
- 
- window.$nivel = {
-     nivel:1
- };
+//window.$pasar_nivel = {
+//        pasar_nivel: 0
+//};
+
+var pasar_nivel = 0;
+
+// window.$nivel = {
+//     nivel:1
+// };
 
  $(window).load(function() {
      $("#plantilla").fadeIn();
      $("#loading").fadeIn(7000, function(){
         
-        document.location= "pantalla.php"; 
+        document.location= "pantalla.php";
+
     });
      $("#urano").fadeIn(2000);
     $("#urano").css("left", $("#urano").position().left).circulate({
@@ -76,9 +79,9 @@ window.$pasar_nivel = {
  });
 
 $(function(){
-   var vidas = window.$vidas.vidas;
-   var pasar_nivel = window.$pasar_nivel.pasar_nivel;
-   var nivel = window.$nivel.nivel;
+//   var vidas = window.$vidas.vidas;
+//   var pasar_nivel = window.$pasar_nivel.pasar_nivel;
+//   var nivel = window.$nivel.nivel;
 
  
 
@@ -140,7 +143,7 @@ $(function(){
 
 
 /* Marcando respuestas*/
-$( "#bt1, #bt3" )
+$( ".bt1, .bt3" )
   .mousedown(function() {
     $( this ).addClass("marcando_left");
   })
@@ -148,12 +151,12 @@ $( "#bt1, #bt3" )
     $( this ).removeClass( "marcando_left" );
   });
   
-  $( "#bt1, #bt3" )
+  $( ".bt1, .bt3" )
   .mouseleave(function() {
      $( this ).removeClass( "marcando_left" );
   });
   
-  $( "#bt2, #bt4" )
+  $( ".bt2, .bt4" )
   .mousedown(function() {
     $( this ).addClass("marcando_right");
   })
@@ -161,7 +164,7 @@ $( "#bt1, #bt3" )
     $( this ).removeClass( "marcando_right" );
   });
   
-  $( "#bt2, #bt4" )
+  $( ".bt2, .bt4" )
   .mouseleave(function() {
      $( this ).removeClass( "marcando_right" );
   });
@@ -193,17 +196,46 @@ $( "#bt1, #bt3" )
       
       $ ("#vidas_icons").addClass("icono_vidas"+pasar_nivel);
     });
-
+ 
  
   /*Fin conseguir flecha pasar nivel*/
   
+  /*Usar comodin*/
+//  $('body').on("click", "#vidas_icons", function() {
+      
+      $("#vidas_icons").click(function(){
+          if(pasar_nivel>0){
+            $ ("#vidas_icons").removeClass("icono_vidas"+pasar_nivel);
+             pasar_nivel--;
+             $ ("#vidas_icons").addClass("icono_vidas"+pasar_nivel).after(function(){
+                  nivel++;
+                document.location="lvl_"+nivel+".php";
+            });
+        }
+          
+    });
+ 
+  /*Fi usar comodin*/
+  
+  /*Comensar a jugar*/
+    $("[name=jugar]").click(function(){
+//         $ ("body").load(window.location.pathname +"/levels/lvl_1.php");
+       document.location="levels/lvl_1.php"; 
+    });
+  
   
   /*AVANÇAR NIVELL*/
-  $('body').on("click", "[name=si]", function() {
+//  $('body').on("click", "[name=si]", function() {
 //       $ ("body").load(window.location.pathname +"levels/lvl_"+nivel+".php");
-    document.location="levels/lvl_"+nivel+".php";
-       nivel++;
-       alert(nivel);
+
+    $("[name=si]").click(function(){
+        var nivel = $("#getLvl").val(); 
+        alert(nivel);
+        nivel++;
+        alert(nivel);
+//         $ ("body").load(window.location.pathname +"/levels/lvl_"+nivel+".php");
+        document.location="lvl_"+nivel+".php";   
+        
     });
     
     

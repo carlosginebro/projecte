@@ -25,6 +25,14 @@ body{
 #saturno { z-index: 60; position: absolute; top: 280px; left: 50%;  width: 40px; display: none;}
 
 
+#NomForm{
+    width:200px;
+}
+
+#PwForm{
+   width:200px; 
+}
+
 #test form input[type=text]{
     font-family:sans-serif;
 }
@@ -239,61 +247,61 @@ body a{
 
 /*Fondos Botones*/
 /*normal*/
-body.normal #bt1{
+body.normal .bt1{
     background-image: url('galery/boton_left.png');
     background-size: contain;
     /*background-size: cover;*/
 
 }
-body.normal #bt3{
+body.normal .bt3{
     background-image: url('galery/boton_left.png');
     background-size: contain;
     /*background-size: cover;*/
 }
 
-body.normal #bt2{
+body.normal .bt2{
     background-image: url('galery/boton_right.png');
     background-size: contain;
 }
-body.normal #bt4{
+body.normal .bt4{
     background-image: url('galery/boton_right.png');
     background-size: contain;
 }
-body.normal #bt1:hover{
+body.normal .bt1:hover{
     background-image: url('galery/boton_left_hover.png');
     background-size: contain;
 }
-body.normal #bt3:hover{
+body.normal .bt3:hover{
     background-image: url('galery/boton_left_hover.png');
     background-size: contain;
 }
 
-body.normal #bt2:hover{
+body.normal .bt2:hover{
     background-image: url('galery/boton_right_hover.png');
     background-size: contain;
 }
-body.normal #bt4:hover{
+body.normal .bt4:hover{
     background-image: url('galery/boton_right_hover.png');
     background-size: contain;
 }
 
 
 /*molon*/
-body.molon #bt1, #bt3{
+body.molon .bt1, .bt3{
     background-image: url('galery/cool_left.png');
     background-size: contain;
 }
 
-body.molon #bt2, #bt4{
+body.molon .bt2, .bt4{
     background-image: url('galery/cool_right.png');
     background-size: contain;
 }
 
-body.molon #bt1:hover{
+body.molon .bt1:hover{
     background-image: url('galery/cool_left_hoover.png');
     background-size: contain;
 }
-body.molon #bt3:hover{
+body.molon .bt3:hover{
     background-image: url('galery/cool_left_hoover.png');
     background-size: contain;
 }
@@ -301,22 +309,22 @@ body.molon #bt3:hover{
 
 /*rock*/
 
-body.rock #bt1{
+body.rock .bt1{
     background-image: url('galery/rock_left.png');
     background-size: contain;
 }
 
-body.rock #bt3{
+body.rock .bt3{
     background-image: url('galery/rock_left.png');
     background-size: contain;
 }
 
-body.rock #bt2{
+body.rock .bt2{
     background-image: url('galery/rock_right.png');
     background-size: contain;
 }
 
-body.rock #bt4{
+body.rock .bt4{
     background-image: url('galery/rock_right.png');
     background-size: contain;
 }
@@ -325,7 +333,7 @@ body.rock #bt4{
 /*Fin fondo botones*/
 
 
-#bt1, #bt3{
+.bt1, .bt3{
 
     background-repeat: no-repeat;
     /*width: 378px;*/
@@ -336,7 +344,7 @@ body.rock #bt4{
     background-position-y:0.4em;
 }
 
-#bt2, #bt4{
+.bt2, .bt4{
     /*border:none;*/
     background-repeat: no-repeat;
     background-size: contain;
@@ -347,7 +355,7 @@ body.rock #bt4{
     background-position-y:-0.4em;
 }
 
-#bt1:hover, #bt3:hover{
+.bt1:hover, .bt3:hover{
 
     background-repeat: no-repeat;
     /*width: 378px;*/
@@ -357,7 +365,7 @@ body.rock #bt4{
         height: 22%;  */
 }
 
-#bt2:hover, #bt4:hover{
+.bt2:hover, .bt4:hover{
     /*border:none;*/
 
     background-repeat: no-repeat;
@@ -438,7 +446,9 @@ body.rock #bt4{
 }
 /**Fi plantilla**/
 
-
+#getLvl{
+    visibility: hidden;
+}
 
 
 
