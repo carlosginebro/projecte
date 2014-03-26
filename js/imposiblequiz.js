@@ -12,11 +12,11 @@ window.$pasar_nivel = {
 
  $(window).load(function() {
      $("#plantilla").fadeIn();
-    $("#loading").fadeIn(7000, function(){
+     $("#loading").fadeIn(7000, function(){
         
         document.location= "pantalla.php"; 
     });
-     
+     $("#urano").fadeIn(2000);
     $("#urano").css("left", $("#urano").position().left).circulate({
             sizeAdjustment: 160,
             speed: 5500,
@@ -25,7 +25,7 @@ window.$pasar_nivel = {
             loop: true,
             zIndexValues: [1, 51, 51, 1]
     });
-
+ $("#tierra").fadeIn(2000);
     $("#tierra").css("left", $("#tierra").position().left).circulate({
             sizeAdjustment: 160,
             speed: 6500,
@@ -34,7 +34,7 @@ window.$pasar_nivel = {
             loop: true,
             zIndexValues: [1, 52, 52, 1]
     });
-    
+    $("#luna").fadeIn(2000);
     $("#luna").css("left", $("#luna").position().left).circulate({
             sizeAdjustment: 160,
             speed: 5000,
@@ -43,7 +43,7 @@ window.$pasar_nivel = {
             loop: true,
             zIndexValues: [1, 54, 54, 1]
     });
-    
+     $("#marte").fadeIn(2000);
     $("#marte").css("left", $("#marte").position().left).circulate({
             sizeAdjustment: 160,
             speed: 8000,
@@ -52,7 +52,7 @@ window.$pasar_nivel = {
             loop: true,
             zIndexValues: [1, 52, 52, 1]
     });
-    
+    $("#jupiter").fadeIn(2000);
     $("#jupiter").css("left", $("#jupiter").position().left).circulate({
             sizeAdjustment: 160,
             speed: 13500,
@@ -61,7 +61,7 @@ window.$pasar_nivel = {
             loop: true,
             zIndexValues: [1, 51, 51, 1]
     });
-    
+    $("#saturno").fadeIn(2000);
     $("#saturno").css("left", $("#saturno").position().left).circulate({
             sizeAdjustment: 160,
             speed: 9500,

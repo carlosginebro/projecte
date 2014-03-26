@@ -12,17 +12,17 @@ body{
 }
 /*formulario entrada*/
 
-#urano { z-index: 60; position: absolute; top: 240px; left: 50%; width: 25px; display: block; }
+#urano { z-index: 60; position: absolute; top: 240px; left: 50%; width: 25px; display: none;}
 
-#luna { z-index: 60; position: absolute; top: 320px; left: 50%;  width: 20px; display: block; }
+#luna { z-index: 60; position: absolute; top: 320px; left: 50%;  width: 20px; display: none;}
 
-#tierra { z-index: 60; position: absolute; top: 350px; left: 50%;  width: 30px; display: block; }
+#tierra { z-index: 60; position: absolute; top: 350px; left: 50%;  width: 30px; display: none;}
 
-#marte { z-index: 60; position: absolute; top: 380px; left: 50%;  width: 35px; display: block; }
+#marte { z-index: 60; position: absolute; top: 380px; left: 50%;  width: 35px; display: none;}
 
-#jupiter { z-index: 60; position: absolute; top: 350px; left: 50%;  width: 50px; display: block; }
+#jupiter { z-index: 60; position: absolute; top: 350px; left: 50%;  width: 50px; display: none;}
 
-#saturno { z-index: 60; position: absolute; top: 280px; left: 50%;  width: 40px; display: block; }
+#saturno { z-index: 60; position: absolute; top: 280px; left: 50%;  width: 40px; display: none;}
 
 
 #test form input[type=text]{
