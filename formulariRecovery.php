@@ -16,7 +16,7 @@
        
        
  
-        echo "$reg[Usuari], $reg[Password]";
+        echo "Nom Usuari: $reg[Usuari] </br>Password: $reg[Password]";
     }else{
         echo '0';
     }

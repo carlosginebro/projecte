@@ -90,7 +90,7 @@ $(function(){
         });
     });
     
-    $("#back_recovery").click(function(){
+    $('body').on("click", "#back_recovery", function() {
         $("#form_recovery").slideUp(500, function(){
              $("#form_entrada").slideDown();
         });
@@ -178,7 +178,7 @@ $(function(){
 		data: {mail: mail, recovery: recovery},
 		url: "formulariRecovery.php",
 		success:function( dada ) {
-                   alert(dada);
+                
                     if(dada==='0'){
                          $("#RecoveryForm").val('Dades incorrectes');
                          $("#MailForm").val('Dades incorrectes'); 
@@ -186,7 +186,7 @@ $(function(){
                     }else{
                             $('#form_recovery').fadeOut(500, function(){
                             $('#form_recovery').show().html("<div id='correct_message'></div>");
-                            $('#correct_message').html("L'hi hem enviat un correu electrònic amb les seves dades\n"+dada).hide().fadeIn(1500); 
+                            $('#correct_message').html("L'hi hem enviat un correu electrònic amb les seves dades.</br></br>"+dada+"</br></br><i class='fa fa-star fa-spin'></i><i class='fa fa-star fa-spin'></i><i class='fa fa-star fa-spin'></i><i class='fa fa-star fa-spin'></i><i class='fa fa-star fa-spin'></i></br></br> <span  id='back_recovery'>Formulari d'entrada</span>").hide().fadeIn(1500); 
                         });
                     }
                 }
