@@ -8,14 +8,19 @@
       </div>
       <div class="modal-body">
           <form id="form_config" method="post" action="">
+              <legend>Estilos del juego: </legend>
+                
               <fieldset>
-                  <input type="radio" value="normal" name="interface"/> Normal
+                  <ul>
+                      <li><input type="radio" value="normal" name="interface"/> Normal</li>
+
+                      <li><input type="radio" value="molon" name="interface"/> Molon</li>
+
+                      <li><input type="radio" value="rock" name="interface"/> Roca</li>
                   <br />
-                  <input type="radio" value="molon" name="interface"/> Molon
-                  <br />
-                  <input type="radio" value="rock" name="interface"/> Roca
-                  <br />
-                  <input type="submit" value="Aceptar" />
+       
+       
+                  <input type="submit" value="Aceptar"  id="btestilos"/>
 
               </fieldset>
           </form>

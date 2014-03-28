@@ -61,7 +61,7 @@ body{
     
 }
 
-#NomForm, #PwForm{
+#NomForm, #PwForm, #MailForm, #RecoveryForm{
     background-color:#b9e9fd;
 }
 
@@ -72,7 +72,81 @@ body{
 }
 
 #BtForm{
-cursor:pointer;
+    cursor:pointer;
+    margin-top: 20px;
+    box-shadow: 0 0 20px 2px black;
+    background-color: #ccc;
+    border: solid 2px #333;
+    border-radius: 4px;
+    height: 40px;
+    width: 140px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#BtRecoveryAjax{
+   cursor:pointer;
+    margin-top: 20px;
+    box-shadow: 0 0 20px 2px black;
+    background-color: #ccc;
+    border: solid 2px #333;
+    border-radius: 4px;
+    height: 40px;
+    width: 140px;
+    font-size: 16px;
+    font-weight: bold; 
+}
+
+#test form fieldset label{
+    font-size: 18pt;
+}
+
+#NomForm{
+    height: 30px;
+    width: 300px;
+    font-size:14pt;
+    
+}
+
+#PwForm{
+    height: 30px;
+    width: 300px; 
+    font-size:14pt;
+
+}
+
+#MailForm{
+    height: 30px;
+    width: 300px;
+    font-size:14pt;
+}
+
+#RecoveryForm{
+    height: 30px;
+    width: 300px;
+    font-size:14pt;
+}
+
+#recovery, #back_recovery{
+ float: left;
+ font-size: 10pt;
+color: black;
+ margin-left: 20px;
+ cursor: pointer;
+}
+
+#recovery:hover, #back_recovery:hover{
+    color: #2187e7;
+    font-weight: bold;
+}
+
+#form_recovery{
+    display:none;
+}
+
+
+#correct_message{
+    height:227px;
 }
 
 /*fin formulario entrada*/
@@ -390,7 +464,8 @@ body.rock .bt4{
     height:100%;
     text-align: center;
     padding-top: 10%;
-
+    padding-right:20px;
+    padding-left: 30px;
     /*    font-size:40px;*/
 
     padding-bottom: 4%;
@@ -443,12 +518,49 @@ body.rock .bt4{
 
 .size{
     font-size:2em;
+    
 }
 /**Fi plantilla**/
 
 #getLvl{
     visibility: hidden;
 }
+
+
+/*Boostrap*/
+
+#myModalLabel{
+    font-family: Romanicums;
+    font-weight: bold;
+    font-size:25px;
+}
+
+.modal-content{
+    border: solid 3px #333;
+    font-size:22px;
+   background: -moz-linear-gradient(-45deg, #f0f9ff 0%, #dee5e8 47%, #c0c8ce 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#f0f9ff), color-stop(47%,#dee5e8), color-stop(100%,#c0c8ce)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, #f0f9ff 0%,#dee5e8 47%,#c0c8ce 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, #f0f9ff 0%,#dee5e8 47%,#c0c8ce 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, #f0f9ff 0%,#dee5e8 47%,#c0c8ce 100%); /* IE10+ */
+    background: linear-gradient(135deg, #f0f9ff 0%,#dee5e8 47%,#c0c8ce 100%); /* W3C */
+}
+
+#form_config ul li{
+    
+        list-style-type: none;
+        margin-top:15px;
+    }
+#btestilos{
+    background-color: #ccc;
+    border: solid 2px;
+    border-radius: 4px;
+    height: 40px;
+    width: 120px;
+    float: right;
+    margin-right: 30px;
+}
+
 
 
 

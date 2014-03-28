@@ -10,7 +10,7 @@
 ?>
 <html>
     <head>
-        <meta charset="ISO-8859-15" />
+        <meta charset="utf-8" />
         <?php
             require_once 'head.php';
         ?>
@@ -28,13 +28,13 @@
         <img src="css/galery/saturno.png" id="saturno"/>
         
 <div id="test">
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="form_entrada">
     
     <fieldset>
 	
 	<ul>
 		<li>
-			<label for="nom">Nom d'usuari</label>
+			<label>Nom d'usuari</label>
                 </li>
                 <li>
 			<input type="text"  id="NomForm" name="nom"  />
@@ -43,11 +43,40 @@
 			<label>Contrasenya</label>
                 </li>
                 <li>
+                        
 			<input type="password" id="PwForm" name="pw"  />
 		</li>
 	</ul>
 	<p>
+            <span  id="recovery">Recuperar Contrasenya</span>
+            <br/>
 		<input type="button" class="btn" value="Acceptar" id="BtForm" />
+	</p>
+	</fieldset>
+</form>
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="form_recovery">
+    
+    <fieldset>
+	
+	<ul>
+		<li>
+			<label>Correu Electrònic</label>
+                </li>
+                <li>
+			<input type="text"  id="MailForm" name="nom"  />
+		</li>
+		<li>
+			<label>Recovery Key</label>
+                </li>
+                <li>
+                        
+			<input type="text" id="RecoveryForm" name="pw"  />
+		</li>
+	</ul>
+	<p>
+                 <span  id="back_recovery">Formulari d'entrada</span>
+                <br/>
+		<input type="button" class="btn" value="Acceptar" id="BtRecoveryAjax" />
 	</p>
 	</fieldset>
 </form>

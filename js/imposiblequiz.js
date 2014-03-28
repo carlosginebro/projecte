@@ -83,8 +83,28 @@ $(function(){
 //   var pasar_nivel = window.$pasar_nivel.pasar_nivel;
 //   var nivel = window.$nivel.nivel;
 
- 
+/* Obrir recovery*/
+    $("#recovery").click(function(){
+        $("#form_entrada").slideUp(500,function(){
+             $("#form_recovery").slideDown();
+        });
+    });
+    
+    $("#back_recovery").click(function(){
+        $("#form_recovery").slideUp(500, function(){
+             $("#form_entrada").slideDown();
+        });
+    });
+    
+//     $("#recovery").click(function(){
+//        $("#form_entrada").slideUp().after(function(){
+//             $("#form_recovery").slideDown();
+//        });
+//    });
 
+/*Fi obrir recovery*/
+ 
+/* Comprovar usuari */
 
    $("#BtForm").click(function() {
 	var nom= $("#NomForm").val();
@@ -139,7 +159,48 @@ $(function(){
          }
 	
     });
+    /*Fi enviar dades a la base de dades x comprobar usuari*/
     
+    /*Comprovar recovery*/
+    
+    $("#BtRecoveryAjax").click(function(){
+       var mail = $("#MailForm").val();
+       var recovery = $("#RecoveryForm").val();
+
+       if(mail === '' || recovery === ''){
+           $("#RecoveryForm").val('Dades incorrectes');
+           $("#MailForm").val('Dades incorrectes');
+      
+       }else{
+           
+           $.ajax({
+               type: "post",
+		data: {mail: mail, recovery: recovery},
+		url: "formulariRecovery.php",
+		success:function( dada ) {
+                   alert(dada);
+                    if(dada==='0'){
+                         $("#RecoveryForm").val('Dades incorrectes');
+                         $("#MailForm").val('Dades incorrectes'); 
+                       
+                    }else{
+                            $('#form_recovery').fadeOut(500, function(){
+                            $('#form_recovery').show().html("<div id='correct_message'></div>");
+                            $('#correct_message').html("L'hi hem enviat un correu electrònic amb les seves dades\n"+dada).hide().fadeIn(1500); 
+                        });
+                    }
+                }
+           });
+       }
+        
+    });
+    
+    
+    
+    
+    
+    
+    /*Fi comprovar recovery*/
 
 
 /* Marcando respuestas*/
