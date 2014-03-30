@@ -4,8 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/wamp/www/projecte/formulariUsuari.php</file>
-            <file>file:/C:/wamp/www/projecte/loading.php</file>
+            <file>file:/C:/wamp/www/projecte/head.php</file>
+            <file>file:/C:/wamp/www/projecte/index.php</file>
+            <file>file:/C:/wamp/www/projecte/interface.php</file>
+            <file>file:/C:/wamp/www/projecte/levels/lvl_1.php</file>
+            <file>file:/C:/wamp/www/projecte/css/imposiblequiz.css</file>
             <file>file:/C:/wamp/www/projecte/js/imposiblequiz.js</file>
+            <file>file:/C:/wamp/www/projecte/formulariRecovery.php</file>
         </group>
     </open-files>
 </project-private>

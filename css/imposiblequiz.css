@@ -4,6 +4,12 @@
   /*src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');*/
 }
 
+@font-face {
+  font-family: Numeros;
+  src: url('../fonts/Engineer_sHand.tff');
+  /*src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');*/
+}
+
 body{
     background-image: url('galery/fondo.jpg');
     font-family: Romanicums;
@@ -84,6 +90,12 @@ body{
     font-weight: bold;
 }
 
+#BtForm:hover{
+   box-shadow: 0 0 20px 2px yellow; 
+   border-color: gold;
+   background-color: #fdf5ce;
+}
+
 #BtRecoveryAjax{
    cursor:pointer;
     margin-top: 20px;
@@ -95,6 +107,12 @@ body{
     width: 140px;
     font-size: 16px;
     font-weight: bold; 
+}
+
+#BtRecoveryAjax:hover{
+   box-shadow: 0 0 20px 2px yellow; 
+   border-color: gold;
+   background-color: #fdf5ce;    
 }
 
 #test form fieldset label{

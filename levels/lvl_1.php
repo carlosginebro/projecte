@@ -28,7 +28,7 @@ if (isset($_POST['interface'])) {
                     </li>
                     <li class="bt2" name="pasar_nivel" style="float: left;display: block; width: 50%;height: 50%;">
                         <div class="respuesta" style="width: 86%;">
-                            <span class="size">Respuesta <span style='font-family:arial !important'>2</span></span>
+                            <span class="size">Respuesta <span style='font-family:Numeros !important'>2</span></span>
                         </div>
                     </li>
                 </ul>
