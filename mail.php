@@ -14,17 +14,17 @@ $mail->SMTPDebug  = 0;
 
 $mail->From = 'ctcrazyuniverse@gmail.com';
 $mail->FromName = 'CrazyUniverse';
-$mail->addAddress("$email" , 'persona');  
+$mail->addAddress("$email" , "$u");  
 /*$mail->addReplyTo('info@example.com', 'Information');
 $mail->addCC('cc@example.com');
 $mail->addBCC('bcc@example.com');*/
 
 $mail->WordWrap = 50;                       
-$mail->addAttachment('pas.txt');   
+//$mail->addAttachment('pas.txt');   
 $mail->isHTML(true);                          
 
-$mail->Subject = 'Asunto';
-$mail->Body    = '<a href="http://localhost/act2/activarusuari.php?usu='.$nom.'" class="registre">Clica aqui per validarte!</a>';
+$mail->Subject = 'Contrasenya i Password';
+$mail->Body    = 'Nom Usuari: '.$u.' </br>Password: '.$p.' .';
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
