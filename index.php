@@ -18,7 +18,7 @@
 
     </head>
     <body>
-
+        <div id ="logo_index"></div>
         
         <img src="css/galery/luna.png" id="luna"/>
         <img src="css/galery/tierra.png" id="tierra"/>

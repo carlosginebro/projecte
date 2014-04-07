@@ -18,6 +18,24 @@ body{
 }
 /*formulario entrada*/
 
+#logo_index{
+    width:500px;
+  height: 250px;
+    position:absolute;
+    top:2%;
+    left:5%;
+    background-image: url('galery/logo_index.png');
+     background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: -6px;
+}
+
+#logo_index:hover{
+   background-image: url('galery/logo_marcat_index.png');
+   cursor: pointer;
+}
+
+
 #urano { z-index: 60; position: absolute; top: 240px; left: 50%; width: 25px; display: none;}
 
 #luna { z-index: 60; position: absolute; top: 320px; left: 50%;  width: 20px; display: none;}

@@ -19,6 +19,12 @@ var pasar_nivel = 0;
         document.location= "pantalla.php";
 
     });
+
+    
+    $("#logo_index").click(function(){
+          
+    });
+    
      $("#urano").fadeIn(2000);
     $("#urano").css("left", $("#urano").position().left).circulate({
             sizeAdjustment: 160,
