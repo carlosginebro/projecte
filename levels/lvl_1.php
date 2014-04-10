@@ -31,7 +31,7 @@ if (isset($_POST['interface'])) {
                 <ul style="list-style: none outside none;">
                     <li class="bt1" name="si" style="float: left;display: block; width: 44%;height: 50%;">
                         <div class="respuesta" >
-                            <span class="size">Respuesta Uno</span>     
+                            <span class="size"><?   ?></span>     
                         </div>
                     </li>
                     <li class="bt2" name="pasar_nivel" style="float: left;display: block; width: 50%;height: 50%;">
