@@ -1,10 +1,16 @@
 <?php
     session_start();
     
-    $conec = new mysqli("localhost", "root", "", "projecte");
-    global $conec;
+	function cone(){
+		$conec = new mysqli("localhost", "root", "", "projecte");
+		return $conec;
+	
+	}
+ 
+
+
     function getPregunta($nivell){
-		
+		$conec= cone();
 		
         $sql = "select * from preguntes where nivell_pregunta =".$nivell;
         $consulta = $conec->query($sql);
@@ -15,12 +21,12 @@
         $pregunta_final = $reg['pregunta'];
 	$id_pregutna = $reg['id_pregunta'];	
 	
-        $sql = "select * from respostes where fk_pregunta = 1 order by correcte";//.$id_pregutna;
+        $sql = "select * from respostes where fk_pregunta = 1";//.$id_pregutna;
         
         $consulta = $conec->query($sql);
         
-        while($reg = $cosulta->fetch_array()){
-            $pregunta_final.="#".$reg['pregunta'];
+        while($reg = $consulta->fetch_array()){
+            $pregunta_final.="#".$reg['resposta'];
         }
         
         return $pregunta_final;
