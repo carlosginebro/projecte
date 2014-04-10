@@ -24,7 +24,7 @@ if (isset($_POST['interface'])) {
 <body id="container" class="<?php echo $estilo ?>" >
        <div id="plantilla">
             <div id="portada">
-                <span><?php echo $pregunta; ?></span>
+                <span style="font-family:'Arial';"><?php echo $pregunta; ?></span>
             </div>
      
             <div id="marcadores" style="width:100%; height: 47%; margin-left: 5%;">
