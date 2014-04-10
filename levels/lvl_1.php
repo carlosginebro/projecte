@@ -3,6 +3,14 @@
        <meta charset="ISO-8859-15" />
         <?php
             require_once 'headlvls.php';
+            require_once '../funcions.php';
+            
+            
+            
+            
+            
+            
+            $pregunta = getPregunta(1);
         ?>
 </head>
 <?php
@@ -16,7 +24,7 @@ if (isset($_POST['interface'])) {
 <body id="container" class="<?php echo $estilo ?>" >
        <div id="plantilla">
             <div id="portada">
-                
+                <span><?php echo $pregunta; ?></span>
             </div>
      
             <div id="marcadores" style="width:100%; height: 47%; margin-left: 5%;">
