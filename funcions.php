@@ -26,7 +26,7 @@
         $consulta = $conec->query($sql);
         
         while($reg = $consulta->fetch_array()){
-            $pregunta_final.="#".$reg['resposta'];
+            $pregunta_final.="#".$reg['correcte']."#".$reg['resposta'];
         }
         
         return $pregunta_final;
