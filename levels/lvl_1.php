@@ -38,7 +38,7 @@ if (isset($_POST['interface'])) {
                     </li>
                     <li class="bt2" name="<?php echo $arrayPregunta[3]; ?>" style="float: left;display: block; width: 50%;height: 50%;">
                         <div class="respuesta" style="width: 86%;">
-                            <span class="size">Respuesta <span style='font-family:Numeros !important'><?php echo $arrayPregunta[4]; ?></span></span>
+                            <span class="size"><?php echo $arrayPregunta[4]; ?></span>
                         </div>
                     </li>
                 </ul>
