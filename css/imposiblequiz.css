@@ -1,8 +1,7 @@
-@font-face {
+/*@font-face {
   font-family: Romanicums;
   src: url('../fonts/Romanicum Regular.ttf');
-  /*src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');*/
-}
+}*/
 
 @font-face {
   font-family: Numeros;
@@ -600,7 +599,11 @@ body.rock .bt4{
     margin-right: 30px;
 }
 
-
+.no_portada{
+    background-image: none !important;
+    font-size: 28pt;
+    font-weight: bold;
+}
 
 
 @media only screen and (max-width: 800px) {

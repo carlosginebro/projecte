@@ -85,7 +85,7 @@ var pasar_nivel = 0;
  });
 
 $(function(){
-//   var vidas = window.$vidas.vidas;
+   var vidas = window.$vidas.vidas;
 //   var pasar_nivel = window.$pasar_nivel.pasar_nivel;
 //   var nivel = window.$nivel.nivel;
 
@@ -240,17 +240,18 @@ $( ".bt1, .bt3" )
   
   
   /*Casilla fallo restar vidas*/
+  
   $('body').on("click", "[name=no]", function() {
+//      alert("vidas");
       if(vidas>0){
             vidas--;
         alert(vidas);
-    }
+        }
     if(vidas==0){
         alert("gameover");//mirar pork no hace el fadeIn en gameover
-        document.location="gameover.php";
-        
-        
+        document.location="../gameover.php";  
     }
+    
   });
  
   

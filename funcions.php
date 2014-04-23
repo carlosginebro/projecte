@@ -21,20 +21,40 @@
         $pregunta_final = $reg['pregunta'];
 	$id_pregutna = $reg['id_pregunta'];	
 	
-        $sql = "select * from respostes where fk_pregunta = 1";//.$id_pregutna;
+        $sql = "select * from respostes where fk_pregunta = $id_pregutna";//$id_pregutna;
         
         $consulta = $conec->query($sql);
+        $respostes = array();
+        $cont = 0;
         
         while($reg = $consulta->fetch_array()){
-            $pregunta_final.="#".$reg['correcte']."#".$reg['resposta'];
+            $respostes[$cont]="#".$reg['correcte']."#".$reg['resposta'];
+            $cont++;
+//            $pregunta_final.="#".$reg['correcte']."#".$reg['resposta'];
         }
         
+        $keys = array_keys($respostes);
+
+        shuffle($keys);
+        
+        foreach($keys as $key) {
+            $new[$key] = $respostes[$key];
+        }
+        
+        $respostes = $new;
+        
+        $respostesMezcladas = shuffle($respostes);
+     
+        for($i = 0, $size = count($respostes); $i < $size; $i++){
+              $pregunta_final.=$respostes[$i];
+        }
+
         return $pregunta_final;
     }
 
-    function getRespostes(){
-        
-    }
+//    function getRespostes(){
+//        
+//    }
 
 
 
