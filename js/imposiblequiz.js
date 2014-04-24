@@ -258,6 +258,7 @@ $( ".bt1, .bt3" )
   /*Final fallo casillas restar vidas*/
   
   /*Ganar flecha pasar nivel*/
+  
   $('body').on("click", "[name=pasar_nivel]", function() {
       $ ("#vidas_icons").removeClass("icono_vidas"+pasar_nivel);
       pasar_nivel++;
@@ -286,6 +287,7 @@ $( ".bt1, .bt3" )
   /*Fi usar comodin*/
   
   /*Comensar a jugar*/
+  
     $("[name=jugar]").click(function(){
 //         $ ("body").load(window.location.pathname +"/levels/lvl_1.php");
        document.location="levels/lvl_1.php"; 

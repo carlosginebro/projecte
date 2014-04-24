@@ -3,6 +3,16 @@
        <meta charset="ISO-8859-15" />
         <?php
             require_once 'headlvls.php';
+            require_once '../funcions.php';
+            
+            
+            
+            
+            
+            
+            $pregunta = getPregunta(2);
+            
+            $arrayPregunta = explode("#", $pregunta);
         ?>
 </head>
 <?php
@@ -14,36 +24,36 @@ if (isset($_POST['interface'])) {
 ?>
 
 <body id="container" class="<?php echo $estilo ?>" >
-     <div id="plantilla">
-            <div id="portada">
-                
+       <div id="plantilla">
+            <div id="portada" class="no_portada">
+                <span style="font-family:'Arial';"><?php echo $arrayPregunta[0]; ?></span>
             </div>
      
             <div id="marcadores" style="width:100%; height: 47%; margin-left: 5%;">
                 <ul style="list-style: none outside none;">
-                    <li class="bt1" name="no" style="float: left;display: block; width: 44%;height: 50%;">
+                    <li class="bt1" name="<?php echo $arrayPregunta[1]; ?>" style="float: left;display: block; width: 44%;height: 50%;">
                         <div class="respuesta" >
-                            <span class="size">Mala</span>     
+                            <span class="size"><?php echo $arrayPregunta[2]; ?></span>     
                         </div>
                     </li>
-                    <li class="bt2" name="si" style="float: left;display: block; width: 50%;height: 50%;">
+                    <li class="bt2" name="<?php echo $arrayPregunta[3]; ?>" style="float: left;display: block; width: 50%;height: 50%;">
                         <div class="respuesta" style="width: 86%;">
-                            <span class="size">Buena <span style='font-family:arial !important'>2</span></span>
+                            <span class="size"><?php echo $arrayPregunta[4]; ?></span>
                         </div>
                     </li>
                 </ul>
                 <ul style="list-style: none outside none;">
-                    <li class="bt3" name="no" style="float: left;display: block; width: 44%;height: 50%;">
+                    <li class="bt3" name="<?php echo $arrayPregunta[5]; ?>" style="float: left;display: block; width: 44%;height: 50%;">
                         <div class="respuesta" >
-                            <span class="size">Respuesta 3 de la 2</span>
+                            <span class="size"><?php echo $arrayPregunta[6]; ?></span>
          
 
                         </div>
                     </li>
                     
-                    <li class="bt4" name="no" style="float: left;display: block; width: 50%;height: 50%;">
+                    <li class="bt4" name="<?php echo $arrayPregunta[7]; ?>" style="float: left;display: block; width: 50%;height: 50%;">
                         <div class="respuesta">
-                            <span class="size">Rsdfsdf 4</span>
+                            <span class="size"><?php echo $arrayPregunta[8]; ?></span>
                          
                         </div>
                     </li>

@@ -603,6 +603,17 @@ body.rock .bt4{
     background-image: none !important;
     font-size: 28pt;
     font-weight: bold;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top:20px;
+    margin-bottom:-20px;
+    line-height: 45px;
+}
+
+.nivel_pantalla{
+    border: 2px solid black;
+    float:left;
 }
 
 
