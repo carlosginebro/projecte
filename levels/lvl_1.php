@@ -4,12 +4,7 @@
         <?php
             require_once 'headlvls.php';
             require_once '../funcions.php';
-            
-            
-            
-            
-            
-            
+                   
             $pregunta = getPregunta(1);
             
             $arrayPregunta = explode("#", $pregunta);
