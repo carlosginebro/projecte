@@ -1,7 +1,7 @@
-/*@font-face {
+@font-face {
   font-family: Romanicums;
   src: url('../fonts/Romanicum Regular.ttf');
-}*/
+}
 
 @font-face {
   font-family: Numeros;
@@ -556,7 +556,12 @@ body.rock .bt4{
 
 .size{
     font-size:2em;
-    
+    text-align: center;
+    display: block;
+    width: 315px;
+    height: 70px;
+    padding-left: 15px;
+    padding-right: 10px;
 }
 /**Fi plantilla**/
 
@@ -614,6 +619,9 @@ body.rock .bt4{
 .nivel_pantalla{
     border: 2px solid black;
     float:left;
+    width: 50px;
+    border-radius: 100px;
+    text-align: center;
 }
 
 
