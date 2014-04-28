@@ -19,26 +19,26 @@ if (isset($_POST['interface'])) {
        <div id="plantilla">
             <div id="portada" class="no_portada">
                 <span class="nivel_pantalla" name="si">6</span>
-                <span >zzz</span>
+                <span >&radic;81 * 5 - (4 * 10,5) + 3  =</span>
             </div>
      
             <div id="marcadores" style="width:100%; height: 47%; margin-left: 5%;">
                 <ul style="list-style: none outside none;">
                     <li class="bt1" name="no" style="float: left;display: block; width: 44%;height: 50%;">
                         <div class="respuesta" >
-                            <span class="size">zzz</span>     
+                            <span class="size">7</span>     
                         </div>
                     </li>
                     <li class="bt2" name="no" style="float: left;display: block; width: 50%;height: 50%;">
                         <div class="respuesta" style="width: 86%;">
-                            <span class="size">zzz</span>
+                            <span class="size">4</span>
                         </div>
                     </li>
                 </ul>
                 <ul style="list-style: none outside none;">
                     <li class="bt3" name="no" style="float: left;display: block; width: 44%;height: 50%;">
                         <div class="respuesta" >
-                            <span class="size">zzz</span>
+                            <span class="size">5,9</span>
          
 
                         </div>
@@ -46,7 +46,7 @@ if (isset($_POST['interface'])) {
                     
                     <li class="bt4" name="no" style="float: left;display: block; width: 50%;height: 50%;">
                         <div class="respuesta">
-                            <span class="size">zzz</span>
+                            <span class="size">8</span>
                          
                         </div>
                     </li>
