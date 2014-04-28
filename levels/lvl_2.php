@@ -4,12 +4,7 @@
         <?php
             require_once 'headlvls.php';
             require_once '../funcions.php';
-            
-            
-            
-            
-            
-            
+
             $pregunta = getPregunta(2);
             
             $arrayPregunta = explode("#", $pregunta);
@@ -27,7 +22,7 @@ if (isset($_POST['interface'])) {
        <div id="plantilla">
             <div id="portada" class="no_portada">
                 <span class="nivel_pantalla">2</span>
-                <span style="font-family:'Arial';"><?php echo $arrayPregunta[0]; ?></span>
+                <span ><?php echo $arrayPregunta[0]; ?></span>
             </div>
      
             <div id="marcadores" style="width:100%; height: 47%; margin-left: 5%;">

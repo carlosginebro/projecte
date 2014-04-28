@@ -1,6 +1,14 @@
 <html>
 <head>
-    
+       <meta charset="ISO-8859-15" />
+        <?php
+            require_once 'headlvls.php';
+            require_once '../funcions.php';
+                   
+            $pregunta = getPregunta(3);
+            
+            $arrayPregunta = explode("#", $pregunta);
+        ?>
 </head>
 <?php
 if (isset($_POST['interface'])) {
@@ -11,49 +19,53 @@ if (isset($_POST['interface'])) {
 ?>
 
 <body id="container" class="<?php echo $estilo ?>" >
-    <div id="plantilla">
-        <div id="portada">
-
-        </div>
-        <table cellspacing="0" id="marcadores" >
-            <tr>
-                <td id="bt1" name="no">
-                    <div class="respuesta" >
-                        VENGAA!!     
-                    </div>
-                </td>
-                <td id="bt2" name="no">
-                    <div class="respuesta">
-                        OLA k ase
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td id="bt3" name="pasar_nivel">
-                    <div class="respuesta">
-                        CREDITOS
-
-                    </div>
-                </td>
-                <td id="bt4" name="no" data-toggle="modal" data-target="#myModal">
-                    <div class="respuesta">
-                        Configuracion
-
-
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <div id="vidas">
-            <div id="vidas_icons" class="icono_vidas0">
-
-
+       <div id="plantilla">
+            <div id="portada" class="no_portada">
+                <span class="nivel_pantalla">5</span>
+                <span ><?php echo $arrayPregunta[0]; ?></span>
             </div>
-        </div>
+     
+            <div id="marcadores" style="width:100%; height: 47%; margin-left: 5%;">
+                <ul style="list-style: none outside none;">
+                    <li class="bt1" name="<?php echo $arrayPregunta[1]; ?>" style="float: left;display: block; width: 44%;height: 50%;">
+                        <div class="respuesta" >
+                            <span class="size"><?php echo $arrayPregunta[2]; ?></span>     
+                        </div>
+                    </li>
+                    <li class="bt2" name="<?php echo $arrayPregunta[3]; ?>" style="float: left;display: block; width: 50%;height: 50%;">
+                        <div class="respuesta" style="width: 86%;">
+                            <span class="size"><?php echo $arrayPregunta[4]; ?></span>
+                        </div>
+                    </li>
+                </ul>
+                <ul style="list-style: none outside none;">
+                    <li class="bt3" name="<?php echo $arrayPregunta[5]; ?>" style="float: left;display: block; width: 44%;height: 50%;">
+                        <div class="respuesta" >
+                            <span class="size"><?php echo $arrayPregunta[6]; ?></span>
+         
 
-    </div>
-</div>
-
+                        </div>
+                    </li>
+                    
+                    <li class="bt4" name="<?php echo $arrayPregunta[7]; ?>" style="float: left;display: block; width: 50%;height: 50%;">
+                        <div class="respuesta">
+                            <span class="size"><?php echo $arrayPregunta[8]; ?></span>
+                         
+                        </div>
+                    </li>
+                 
+                </ul>
+           
+            </div>
+            <div id="vidas">
+                <div id="vidas_icons" class="icono_vidas0">
+                  
+                   
+                </div>
+            </div>
+                
+            </div>
+<input type="text" value="5" id="getLvl" />
 
 
 </body>
