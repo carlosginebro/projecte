@@ -19,7 +19,7 @@ if (isset($_POST['interface'])) {
        <div id="plantilla">
             <div id="portada" class="no_portada">
                 <span class="nivel_pantalla" name="si">6</span>
-                <span >&radic;81 * 5 - (4 * 10,5) + 3  =</span>
+                <span >9 * 5 - (4 * 10,5) + 3  =</span>
             </div>
      
             <div id="marcadores" style="width:100%; height: 47%; margin-left: 5%;">
