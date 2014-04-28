@@ -15,6 +15,11 @@ body{
     -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+
+div, span{
+    cursor:default;
+}
+
 /*formulario entrada*/
 
 #logo_index{
@@ -382,19 +387,23 @@ body.normal .bt4{
 body.normal .bt1:hover{
     background-image: url('galery/boton_left_hover.png');
     background-size: contain;
+    
 }
 body.normal .bt3:hover{
     background-image: url('galery/boton_left_hover.png');
     background-size: contain;
+    
 }
 
 body.normal .bt2:hover{
     background-image: url('galery/boton_right_hover.png');
     background-size: contain;
+   
 }
 body.normal .bt4:hover{
     background-image: url('galery/boton_right_hover.png');
     background-size: contain;
+   
 }
 
 
@@ -412,10 +421,12 @@ body.molon .bt2, .bt4{
 body.molon .bt1:hover{
     background-image: url('galery/cool_left_hoover.png');
     background-size: contain;
+  
 }
 body.molon .bt3:hover{
     background-image: url('galery/cool_left_hoover.png');
     background-size: contain;
+   
 }
 
 
@@ -562,6 +573,7 @@ body.rock .bt4{
     height: 70px;
     padding-left: 15px;
     padding-right: 20px;
+    cursor: pointer;
 }
 /**Fi plantilla**/
 
