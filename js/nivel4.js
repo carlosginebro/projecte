@@ -1,4 +1,4 @@
-function init(){
+function ComencaLvl4(){
     asteroide = $('<img>').attr({
         'src': '../css/galery/nau.gif'
     }).css({
@@ -7,15 +7,20 @@ function init(){
         top: -10,
         left: -10
     });
-    $("#plantilla").fadeOut();
-    //append it to body
-    $(document.body).append(asteroide);
+	
+    $("#plantilla").fadeOut( function () {
+	 //Afegim l'asteroide a la pagina
+	$(document.body).append(asteroide);
 
-    //start dreaming
-    do_dream();
+    //metode colocació random de planetes
+    planetesAl();
+	});
+	
+   
+    
 }
 
-function do_dream() {
+function planetesAl() {
     
 	//Obtenim una imatge aleatoria dels planetas
 	var imagen=  Math.floor((Math.random()*5)+1)+'.png'; 
@@ -26,7 +31,7 @@ function do_dream() {
     var x = Math.floor((Math.random() * $("#plantilla").width())+200);
     var y = Math.floor((Math.random() * $("#plantilla").height())+80);
     
-    dream = $('<span>').css({
+    planetes = $('<span>').css({
         'position': 'absolute',
         height: '100px',
         width: '100px',
@@ -37,38 +42,39 @@ function do_dream() {
         left: x - 60 //Calculacio de la posició a arriba la imatge de l'asteroide
     });
     
-    //append it to body
-    $(document.body).append(dream);
+    //Afegim els planetes a la pantalla
+    $(document.body).append(planetes);
     
-     //bind the explode on click event
-    dream.bind('click', function (e) {
-        //you won
+     //bind the explode on click event****************************
+    planetes.bind('click', function (e) {
+        //Guanya el jugador
         won(e); 
-        //hide the dream
+        //Amagem els planetes.
         explode(e.pageX, e.pageY, $(e.target));
     });
     
-    //call asteroide to chase the dream
-    chase(x, y, dream);
-    //dreams are endless
-    window.setTimeout('do_dream()', 1200);
+    //Fem seguir l'asteroide al planetes.
+    chase(x, y, planetes);
+	
+    //Fem que es repeteixi sempre
+    window.setTimeout('planetesAl()', 1200);
 } 
 
-function chase(x, y, dream) {
-    //asteroide gets the dream 
+function chase(x, y, planetes) {
+    //SI l'asteroide pilla el planta
     asteroide.animate({
         top: y,
         left: x 
     }, 900, function () {
-        //explode the dream
-        explode(x, y, dream);
-        //you lose
+        //El planeta explota
+        explode(x, y, planetes);
+        //I perds
         lose();
     });
 } 
 
-function explode(x, y, dream) {
-    dream.animate({
+function explode(x, y, planetes) {
+    planetes.animate({
         height: '200px',
         width: '200px',
         'border-radius': '500px',
@@ -76,7 +82,7 @@ function explode(x, y, dream) {
         top: y - 100,
         left: x - 100
     }, 100, function () {
-        dream.hide();
+        planetes.hide();
     });
 } 
 
@@ -89,7 +95,7 @@ function lose() {
     }
  }
 function won() {
-    //stop the asteroide
+    //Si guanyes parem asteroide
     asteroide.stop();
     $('#you').html(parseInt($('#you').html()) + 1);
     var punts =  $('#you').html();

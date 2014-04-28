@@ -19,7 +19,7 @@
     <span id='you'>0</span> 
     <span id='angel'>0</span>
        <div id="plantilla">
-           <input type="button" onclick="init()"/>
+           <input type="button" onclick="ComencaLvl4()"/>
             
             </div>
 <input type="text" value="4" id="getLvl" />
