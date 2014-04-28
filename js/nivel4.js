@@ -1,5 +1,5 @@
 function init(){
-    angel = $('<img>').attr({
+    asteroide = $('<img>').attr({
         'src': '../css/galery/nau.gif'
     }).css({
         'position': 'absolute',
@@ -9,30 +9,32 @@ function init(){
     });
     $("#plantilla").fadeOut();
     //append it to body
-    $(document.body).append(angel);
+    $(document.body).append(asteroide);
 
     //start dreaming
     do_dream();
 }
 
 function do_dream() {
-    //take a random color
-    var color = 'rgb(' + Math.floor(Math.random() * 255) + ',' +
-                        Math.floor(Math.random() * 255) + ',' + 
-                        Math.floor(Math.random() * 255) + ')';
-
-    //generate random position
-    var x = Math.floor(Math.random() * $("#plantilla").width());
-    var y = Math.floor(Math.random() * $("#plantilla").height());
+    
+	//Obtenim una imatge aleatoria dels planetas
+	var imagen=  Math.floor((Math.random()*5)+1)+'.png'; 
+	
+	
+	
+    //Generem una posicio aleatoria per el planeta en la plantalla 
+    var x = Math.floor((Math.random() * $("#plantilla").width())+200);
+    var y = Math.floor((Math.random() * $("#plantilla").height())+80);
     
     dream = $('<span>').css({
         'position': 'absolute',
         height: '100px',
         width: '100px',
-        'background-color': color,
-        'border-radius': '100px',
-        top: y - 50, //offsets
-        left: x - 50 //offsets
+        'background-image': 'url("planeta4/'+imagen+'")',
+		'background-size': 'contain',
+		'background-repeat': 'no-repeat',
+        top: y - 60, // Calculacio de la posició a arriba la imatge de l'asteroide
+        left: x - 60 //Calculacio de la posició a arriba la imatge de l'asteroide
     });
     
     //append it to body
@@ -46,15 +48,15 @@ function do_dream() {
         explode(e.pageX, e.pageY, $(e.target));
     });
     
-    //call angel to chase the dream
+    //call asteroide to chase the dream
     chase(x, y, dream);
     //dreams are endless
     window.setTimeout('do_dream()', 1200);
 } 
 
 function chase(x, y, dream) {
-    //angel gets the dream 
-    angel.animate({
+    //asteroide gets the dream 
+    asteroide.animate({
         top: y,
         left: x 
     }, 900, function () {
@@ -81,14 +83,14 @@ function explode(x, y, dream) {
 function lose() {
     $('#angel').html(parseInt($('#angel').html()) + 1);
     var punts =  $('#angel').html();
-    if(punts == 5){
+    if(punts == 100){
         alert("gameover");//mirar pork no hace el fadeIn en gameover
         document.location="../gameover.php";  
     }
  }
 function won() {
-    //stop the angel
-    angel.stop();
+    //stop the asteroide
+    asteroide.stop();
     $('#you').html(parseInt($('#you').html()) + 1);
     var punts =  $('#you').html();
     if(punts == 5){
