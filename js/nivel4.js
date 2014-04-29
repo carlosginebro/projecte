@@ -1,11 +1,15 @@
+var imagen;
+
+
 function ComencaLvl4(){
     asteroide = $('<img>').attr({
-        'src': '../css/galery/nau.gif'
+        'src': '../css/galery/asteroide.png'
     }).css({
         'position': 'absolute',
         'z-index': 75,
         top: -10,
-        left: -10
+        left: -10,
+		width: 50
     });
 	
     $("#plantilla").fadeOut( function () {
@@ -23,8 +27,8 @@ function ComencaLvl4(){
 function planetesAl() {
     
 	//Obtenim una imatge aleatoria dels planetas
-	var imagen=  Math.floor((Math.random()*5)+1)+'.png'; 
-	
+	var imaplaneta=  Math.floor((Math.random()*5)+1)+'.png'; 
+	imagen = "e"+imaplaneta;
 	
 	
     //Generem una posicio aleatoria per el planeta en la plantalla 
@@ -35,11 +39,11 @@ function planetesAl() {
         'position': 'absolute',
         height: '100px',
         width: '100px',
-        'background-image': 'url("planeta4/'+imagen+'")',
+        'background-image': 'url("planeta4/'+imaplaneta+'")',
 		'background-size': 'contain',
 		'background-repeat': 'no-repeat',
-        top: y - 60, // Calculacio de la posició a arriba la imatge de l'asteroide
-        left: x - 60 //Calculacio de la posició a arriba la imatge de l'asteroide
+        top: y - 50, // Calculacio de la posició a arriba la imatge de l'asteroide
+        left: x - 50 //Calculacio de la posició a arriba la imatge de l'asteroide
     });
     
     //Afegim els planetes a la pantalla
@@ -50,7 +54,7 @@ function planetesAl() {
         //Guanya el jugador
         won(e); 
         //Amagem els planetes.
-        explode(e.pageX, e.pageY, $(e.target));
+        salvaPlaneta(e.pageX, e.pageY, $(e.target));
     });
     
     //Fem seguir l'asteroide al planetes.
@@ -67,14 +71,16 @@ function chase(x, y, planetes) {
         left: x 
     }, 900, function () {
         //El planeta explota
-        explode(x, y, planetes);
+        explotaplaneta(x, y, planetes);
         //I perds
         lose();
     });
 } 
 
-function explode(x, y, planetes) {
-    planetes.animate({
+
+function salvaPlaneta(x, y, planetes) {
+
+	planetes.animate({
         height: '200px',
         width: '200px',
         'border-radius': '500px',
@@ -84,6 +90,29 @@ function explode(x, y, planetes) {
     }, 100, function () {
         planetes.hide();
     });
+	
+    
+}
+
+function explotaplaneta(x, y, planetes) {
+	
+	planetes.css({
+		'background-image': 'url("planeta4/'+imagen+'")'
+		
+	}, 100, function (){
+
+	}).animate({
+        height: '200px',
+        width: '200px',
+        'border-radius': '500px',
+        opacity: 0.1,
+        top: y - 100,
+        left: x - 100
+    }, 100, function () {
+        planetes.hide();
+    });;
+	
+    
 } 
 
 function lose() {
