@@ -1,6 +1,5 @@
 var imagen;
 
-
 function ComencaLvl4(){
     asteroide = $('<img>').attr({
         'src': '../css/galery/asteroide.png'
@@ -33,12 +32,12 @@ function planetesAl() {
 	
     //Generem una posicio aleatoria per el planeta en la plantalla 
     var x = Math.floor((Math.random() * $("#plantilla").width())+200);
-    var y = Math.floor((Math.random() * $("#plantilla").height())+80);
+    var y = Math.floor((Math.random() * $("#plantilla").height())+10);
     
     planetes = $('<span>').css({
         'position': 'absolute',
-        height: '100px',
-        width: '100px',
+        'height': '100px',
+        'width': '100px',
         'background-image': 'url("planeta4/'+imaplaneta+'")',
 		'background-size': 'contain',
 		'background-repeat': 'no-repeat',
@@ -49,7 +48,7 @@ function planetesAl() {
     //Afegim els planetes a la pantalla
     $(document.body).append(planetes);
     
-     //bind the explode on click event****************************
+     //Si el planete es clickat farà que guanyi el jugador
     planetes.bind('click', function (e) {
         //Guanya el jugador
         won(e); 
@@ -116,8 +115,8 @@ function explotaplaneta(x, y, planetes) {
 } 
 
 function lose() {
-    $('#angel').html(parseInt($('#angel').html()) + 1);
-    var punts =  $('#angel').html();
+    $('#asteroide').html(parseInt($('#asteroide').html()) + 1);
+    var punts =  $('#asteroide').html();
     if(punts == 100){
         alert("gameover");//mirar pork no hace el fadeIn en gameover
         document.location="../gameover.php";  
@@ -126,8 +125,8 @@ function lose() {
 function won() {
     //Si guanyes parem asteroide
     asteroide.stop();
-    $('#you').html(parseInt($('#you').html()) + 1);
-    var punts =  $('#you').html();
+    $('#jugador').html(parseInt($('#jugador').html()) + 1);
+    var punts =  $('#jugador').html();
     if(punts == 5){
         var nivel = $("#getLvl").val(); 
         alert(nivel);

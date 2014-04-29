@@ -15,15 +15,21 @@
 }
 ?>
 
-<body id="container" class="<?php echo $estilo ?>" >
-    <span id='you'>0</span> 
-    <span id='angel'>0</span>
+<body id="container" style="overflow:hidden;" class="<?php echo $estilo ?>" >
+    <span id='jugador'>0</span> 
+    <span id='asteroide'>0</span>
        <div id="plantilla">
-           <input type="button" onclick="ComencaLvl4()"/>
-            
+		   <div id="portada" class="no_portada">
+					<span class="nivel_pantalla">4</span>
+					<span> Has de salvar els planetes abans que l'asteroide els faci explota! <br />Fes click sobre ell per salvar-lo!!!</span>
+			</div>
+			<div id="marcadores" style="text-align:center;">
+				<input type="button" value="Començar!" style="width:350px; height:100px; font-size:30pt;" onclick="ComencaLvl4()"/> 
             </div>
+       </div>
+	   
+	   
 <input type="text" value="4" id="getLvl" />
-
 
 </body>
 
