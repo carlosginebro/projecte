@@ -120,7 +120,7 @@ function explotaplaneta(x, y, planetes) {
 function lose() {
     $('#asteroide').html(parseInt($('#asteroide').html()) + 1);
     var punts =  $('#asteroide').html();
-    if(punts == 200){
+    if(punts == 20){
         alert("gameover");//mirar pork no hace el fadeIn en gameover
         document.location="../gameover.php";  
     }
@@ -130,7 +130,7 @@ function won() {
     asteroide.stop();
     $('#jugador').html(parseInt($('#jugador').html()) + 1);
     var punts =  $('#jugador').html();
-    if(punts == 200){
+    if(punts == 20){
         var nivel = $("#getLvl").val();   
 		
         nivel++;      

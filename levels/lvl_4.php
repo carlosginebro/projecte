@@ -54,7 +54,7 @@
        <div id="plantilla">
 		   <div id="portada" class="no_portada">
 					<span class="nivel_pantalla">4</span>
-					<span> Has de salvar els planetes abans que l'asteroide els faci explota! <br />Fes click sobre ell per salvar-lo!!!</span>
+					<span> Has de salvar 20 planetes abans que l'asteroide els faci explota! <br />Fes click sobre ell per salvar-lo!!!</span>
 			</div>
 			<div id="marcadores" style="text-align:center;">
 				<input type="button" value="Començar!" class='bt_jocs_nivells' onclick="ComencaLvl4()"/> 
