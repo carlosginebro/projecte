@@ -32,8 +32,10 @@ function planetesAl() {
 	
     //Generem una posicio aleatoria per el planeta en la plantalla 
     var x = Math.floor((Math.random() * $("#plantilla").width())+200);
-    var y = Math.floor((Math.random() * $("#plantilla").height())+10);
+    var y = Math.floor((Math.random() * $("#plantilla").height())+50);
     
+
+	
     planetes = $('<span>').css({
         'position': 'absolute',
         'height': '100px',
@@ -60,7 +62,7 @@ function planetesAl() {
     chase(x, y, planetes);
 	
     //Fem que es repeteixi sempre
-    window.setTimeout('planetesAl()', 1200);
+    window.setTimeout('planetesAl()', 1000);
 } 
 
 function chase(x, y, planetes) {
@@ -68,7 +70,7 @@ function chase(x, y, planetes) {
     asteroide.animate({
         top: y,
         left: x 
-    }, 900, function () {
+    }, 1000, function () {
         //El planeta explota
         explotaplaneta(x, y, planetes);
         //I perds
@@ -117,7 +119,7 @@ function explotaplaneta(x, y, planetes) {
 function lose() {
     $('#asteroide').html(parseInt($('#asteroide').html()) + 1);
     var punts =  $('#asteroide').html();
-    if(punts == 100){
+    if(punts == 200){
         alert("gameover");//mirar pork no hace el fadeIn en gameover
         document.location="../gameover.php";  
     }
@@ -127,11 +129,10 @@ function won() {
     asteroide.stop();
     $('#jugador').html(parseInt($('#jugador').html()) + 1);
     var punts =  $('#jugador').html();
-    if(punts == 5){
-        var nivel = $("#getLvl").val(); 
-        alert(nivel);
-        nivel++;
-        alert(nivel);
+    if(punts == 200){
+        var nivel = $("#getLvl").val();   
+		
+        nivel++;      
         document.location="lvl_"+nivel+".php";     
     }
  

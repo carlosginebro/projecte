@@ -6,6 +6,26 @@
             require_once '../funcions.php';
         ?>
        <script src="../js/nivel4.js"></script>
+	   <style>
+		   #jugador{
+				color:white;
+				font-size: 20pt;
+		   }
+		   
+		   #asteroide{
+				color:white;
+				font-size: 20pt;
+		   }
+		   
+		   table{
+			color: white;
+			font-size: 20pt;
+		   }
+		   
+		   td{
+		   
+		   }
+	   </style>
 </head>
 <?php
     if (isset($_POST['interface'])) {
@@ -16,8 +36,21 @@
 ?>
 
 <body id="container" style="overflow:hidden;" class="<?php echo $estilo ?>" >
-    <span id='jugador'>0</span> 
-    <span id='asteroide'>0</span>
+	<table>
+		<tr>
+			<td>Tu</td>
+			<td colspan="2" width="20"> -</td>
+			<td>Asteroide </td>
+		</tr>
+		<tr>
+			<td> <span id='jugador'>0</span></td>
+			<td colspan="2"> - </td>
+			<td><span id='asteroide'>0</span></td>
+		</tr>
+		
+	</table>
+   
+   
        <div id="plantilla">
 		   <div id="portada" class="no_portada">
 					<span class="nivel_pantalla">4</span>
