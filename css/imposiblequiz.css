@@ -673,6 +673,22 @@ body.rock .bt4{
    cursor: pointer;
 }
 
+#casalvl7{
+    margin-top: 170px;
+}
+
+
+
+#extintor:hover{
+    cursor: pointer;
+
+}
+
+#petrol:hover{
+    cursor: pointer;
+    
+}
+
 @media only screen and (max-width: 800px) {
     .size{
         font-size:1em;

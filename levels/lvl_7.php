@@ -28,7 +28,7 @@
            </div>
            <div id="marcadores" style="width:100%; height: 47%; margin-left: 5%; display:none;">
                    
-               <div style="float:left; background-image: url('../css/galery/casalvl7.png'); width:300px; height:300px; background-size: contain; background-repeat: no-repeat;">
+               <div id='casalvl7' style="float:left; background-image: url('../css/galery/casalvl7.png'); width:300px; height:300px; background-size: contain; background-repeat: no-repeat;">
                    <div id='img_fuegolvl7' style="background-image: url('../css/galery/fuegolvl7.png'); width:300px; height:300px; background-size: contain; background-repeat: no-repeat;"></div>          
                </div>  
                <div id='extintor' style="float: left; background-image: url('../css/galery/extintorlvl7.png'); width:100px; height:100px; background-size: contain; background-repeat: no-repeat;"></div>

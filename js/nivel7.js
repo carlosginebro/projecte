@@ -1,10 +1,12 @@
-var segons = 15;
+var segons = 14;
 var temps;
 var tiempo = "";
 var widthx;
 var heightx;
 var x = 0;
 var y = 0;
+var duration = 80;
+var offset = 40;
 function inicio7(){
     $("#portada").hide();
     $("#marcadores").fadeIn();
@@ -19,12 +21,14 @@ function cronometre(){
 
             $('#tiempo2').html('0');
       
-            document.location="../gameover.php"; 
+//            document.location="../gameover.php"; 
             
         }else if(segons < 6){
             $("#tiempo2").css({
-               color:'red' 
+               color:'red'
             });
+            
+             
             
             tiempo =  ""+segons;
             $('#tiempo2').html(tiempo);
