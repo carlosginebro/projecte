@@ -21,9 +21,9 @@
            <div id="tiempo2" style="float:right;"></div>
            <div id="portada" class="no_portada">
 
-            <span>bla bla bla bla bla bla bla bla bla bla bla bla bla </span>
-            <br />
-            <input type="button" value="START!" id="bt7" onclick="inicio7()"/>
+            <span>Aconsegueix apagar el foc de la casa abans que sigui massa tard, fes servir l'extintor per apagar el foc, o en cas contrari, si vols avivar el foc, fes servir la gasolina...</span>
+            <br /><br />
+            <input type="button" value="Començar!" id="bt7" class='bt_jocs_nivells' onclick="inicio7()"/>
 
            </div>
            <div id="marcadores" style="width:100%; height: 47%; margin-left: 5%; display:none;">
@@ -35,7 +35,7 @@
                <div id='petrol' style="float: left; background-image: url('../css/galery/gasolinalvl7.png'); width:100px; height:100px; background-size: contain; background-repeat: no-repeat;"></div>
 
         </div>
-<input type="text" value="4" id="getLvl" />
+<input type="text" value="7" id="getLvl" />
 
 
 </body>

@@ -9,6 +9,10 @@
   /*src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');*/
 }
 
+.cHiden{
+    display:none;
+}
+
 body{
     background-image: url('galery/fondo.jpg');
     font-family: Romanicums;
@@ -636,8 +640,38 @@ body.rock .bt4{
     text-align: center;
 }
 
+#tiempo2{
+    font-size: 30pt;
+    margin-right: 10px;
+    margin-top: 10px;
+    /*border: 2px solid;*/
+    width: 100px;
+    height: 100px;
+    /*border-radius: 50px;*/
+    padding-top:65px;
+    padding-left:30px;
+    display: none;
+    background-image: url('galery/bomb.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
+.bt_jocs_nivells{
+    width: 350px;
+    height: 100px;
+    font-size: 30pt;
+    font-family: Romanicums;
+    box-shadow: 0 0 20px 2px black;
+    background-color:#ddd;
+    font-weight: bold;
+}
 
+.bt_jocs_nivells:hover{
+   box-shadow: 0 0 20px 2px yellow; 
+   border-color: gold;
+   background-color: #fdf5ce;
+   cursor: pointer;
+}
 
 @media only screen and (max-width: 800px) {
     .size{

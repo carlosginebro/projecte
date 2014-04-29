@@ -36,7 +36,7 @@
 ?>
 
 <body id="container" style="overflow:hidden;" class="<?php echo $estilo ?>" >
-	<table>
+	<table class='cHiden'>
 		<tr>
 			<td>Tu</td>
 			<td colspan="2" width="20"> -</td>
@@ -57,7 +57,7 @@
 					<span> Has de salvar els planetes abans que l'asteroide els faci explota! <br />Fes click sobre ell per salvar-lo!!!</span>
 			</div>
 			<div id="marcadores" style="text-align:center;">
-				<input type="button" value="Començar!" style="width:350px; height:100px; font-size:30pt;" onclick="ComencaLvl4()"/> 
+				<input type="button" value="Començar!" class='bt_jocs_nivells' onclick="ComencaLvl4()"/> 
             </div>
        </div>
 	   

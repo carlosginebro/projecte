@@ -1,6 +1,7 @@
 var imagen;
 
 function ComencaLvl4(){
+    $("table").show();
     asteroide = $('<img>').attr({
         'src': '../css/galery/asteroide.png'
     }).css({
