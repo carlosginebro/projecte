@@ -1,11 +1,37 @@
 
     <?php 
+    
+    session_start();
+    
+    function cone(){
+            $conec = new mysqli("localhost", "root", "", "projecte");
+            return $conec;
+    }
+    
+    
+    $conec= cone();
+    $id = $_SESSION['id'];
+    
+    $sql = "select Vides from usuari where id = $id";
+    $consulta = $conec->query($sql);
+    $reg = $consulta->fetch_array();
+    $_SESSION['vides'] = $reg['Vides'];
+    
+    $sql = "select estil from estils where fk_usuari = $id";
+    
+    $consulta = $conec->query($sql);
+    $reg = $consulta->fetch_array();
+    $estilo = $reg['estil'];
+    
+    $_SESSION['estil'] = $estilo;
+    
     if(isset($_POST['interface'])){
         $estilo = $_POST['interface'];
-        $sql = "update estilos into estil where ";
-    }else{
-        $estilo = 'normal';
+        $sql = "update estils set estil = '$estilo' where fk_usuari = $id";
+        $conec->query($sql);
+        $_SESSION['estil'] = $estilo;
     }
+    
     ?>
     
 	<head>

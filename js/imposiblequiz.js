@@ -1,16 +1,12 @@
-window.$vidas = {
-        vidas: 3
-    };
+//window.$vidas = {
+//        vidas: 3
+//    };
 
-//window.$pasar_nivel = {
-//        pasar_nivel: 0
-//};
 
 var pasar_nivel = 0;
 
-// window.$nivel = {
-//     nivel:1
-// };
+
+ 
 
  $(window).load(function() {
      $("#plantilla").fadeIn();
@@ -85,7 +81,8 @@ var pasar_nivel = 0;
  });
 
 $(function(){
-   var vidas = window.$vidas.vidas;
+  
+
 //   var pasar_nivel = window.$pasar_nivel.pasar_nivel;
 //   var nivel = window.$nivel.nivel;
 
@@ -242,15 +239,28 @@ $( ".bt1, .bt3" )
   /*Casilla fallo restar vidas*/
   
   $('body').on("click", "[name=no]", function() {
-//      alert("vidas");
-      if(vidas>0){
-            vidas--;
-        alert(vidas);
-        }
+
+    var vidas = $('#videsbd').val();
+
+    if(vidas>0){
+        vidas--;
+   
+        $('#videsbd').val(vidas);
+    }
+        
     if(vidas==0){
         alert("gameover");//mirar pork no hace el fadeIn en gameover
         document.location="../gameover.php";  
     }
+    
+    $.ajax({	
+        type: "post",
+        data: {vidas: vidas},
+        url: "../restarVides.php",
+        success:function( dada ) {
+            alert(dada);
+        }
+    });
     
   });
  
@@ -259,12 +269,12 @@ $( ".bt1, .bt3" )
   
   /*Ganar flecha pasar nivel*/
   
-  $('body').on("click", "[name=pasar_nivel]", function() {
-      $ ("#vidas_icons").removeClass("icono_vidas"+pasar_nivel);
-      pasar_nivel++;
-      
-      $ ("#vidas_icons").addClass("icono_vidas"+pasar_nivel);
-    });
+//  $('body').on("click", "[name=pasar_nivel]", function() {
+//      $ ("#vidas_icons").removeClass("icono_vidas"+pasar_nivel);
+//      pasar_nivel++;
+//      
+//      $ ("#vidas_icons").addClass("icono_vidas"+pasar_nivel);
+//    });
  
  
   /*Fin conseguir flecha pasar nivel*/

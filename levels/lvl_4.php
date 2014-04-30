@@ -27,15 +27,8 @@
 		   }
 	   </style>
 </head>
-<?php
-    if (isset($_POST['interface'])) {
-        $estilo = $_POST['interface'];
-    } else {
-        $estilo = 'normal';
-}
-?>
 
-<body id="container" style="overflow:hidden;" class="<?php echo $estilo ?>" >
+<body id="container" style="overflow:hidden;" class="<?php echo $_SESSION['estil']; ?>" >
 	<table class='cHiden'>
 		<tr>
 			<td>Tu</td>
@@ -63,6 +56,7 @@
 	   
 	   
 <input type="text" value="4" id="getLvl" />
+<input type="text" value="<?php echo $_SESSION['vides'];?>" class="cHiden" id="videsbd" />
 
 </body>
 

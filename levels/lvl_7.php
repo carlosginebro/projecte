@@ -7,15 +7,8 @@
         ?>
        <script src="../js/nivel7.js"></script>
 </head>
-<?php
-    if (isset($_POST['interface'])) {
-        $estilo = $_POST['interface'];
-    } else {
-        $estilo = 'normal';
-}
-?>
 
-<body id="container" class="<?php echo $estilo ?>" >
+<body id="container" class="<?php echo $_SESSION['estil']; ?>" >
 
        <div id="plantilla">
            <div id="tiempo2" style="float:right;"></div>
@@ -36,7 +29,7 @@
 
         </div>
 <input type="text" value="7" id="getLvl" />
-
+<input type="text" value="<?php echo $_SESSION['vides'];?>" class="cHiden" id="videsbd" />
 
 </body>
 

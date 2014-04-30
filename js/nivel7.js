@@ -21,7 +21,7 @@ function cronometre(){
 
             $('#tiempo2').html('0');
       
-//            document.location="../gameover.php"; 
+            document.location="../gameover.php"; 
             
         }else if(segons < 6){
             $("#tiempo2").css({

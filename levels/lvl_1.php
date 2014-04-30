@@ -10,15 +10,9 @@
             $arrayPregunta = explode("#", $pregunta);
         ?>
 </head>
-<?php
-if (isset($_POST['interface'])) {
-    $estilo = $_POST['interface'];
-} else {
-    $estilo = 'normal';
-}
-?>
 
-<body id="container" class="<?php echo $estilo ?>" >
+
+<body id="container" class="<?php echo $_SESSION['estil']; ?>" >
        <div id="plantilla">
             <div id="portada" class="no_portada">
                 <span class="nivel_pantalla">1</span>
@@ -59,14 +53,13 @@ if (isset($_POST['interface'])) {
             </div>
             <div id="vidas">
                 <div id="vidas_icons" class="icono_vidas0">
-                  
-                   
+
                 </div>
             </div>
                 
             </div>
 <input type="text" value="1" id="getLvl" />
-
+<input type="text" value="<?php echo $_SESSION['vides'];?>" class="cHiden" id="videsbd" />
 
 </body>
 
