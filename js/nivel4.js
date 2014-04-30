@@ -6,7 +6,7 @@ function ComencaLvl4(){
         'src': '../css/galery/asteroide.png'
     }).css({
         'position': 'absolute',
-        'z-index': 75,
+        'z-index': 2,
         top: -10,
         left: -10,
 		width: 50
@@ -63,7 +63,7 @@ function planetesAl() {
     chase(x, y, planetes);
 	
     //Fem que es repeteixi sempre
-    window.setTimeout('planetesAl()', 1000);
+    window.setTimeout('planetesAl()', 1200);
 } 
 
 function chase(x, y, planetes) {

@@ -36,7 +36,7 @@
 			<td>Asteroide </td>
 		</tr>
 		<tr>
-			<td> <span id='jugador'>0</span></td>
+			<td><span id='jugador'>0</span></td>
 			<td colspan="2"> - </td>
 			<td><span id='asteroide'>0</span></td>
 		</tr>
@@ -47,7 +47,7 @@
        <div id="plantilla">
 		   <div id="portada" class="no_portada">
 					<span class="nivel_pantalla">4</span>
-					<span> Has de salvar 20 planetes abans que l'asteroide els faci explota! <br />Fes click sobre ell per salvar-lo!!!</span>
+					<span> Has de salvar 20 planetes abans que l'asteroide els faci explotar! <br />Fes click sobre ell per salvar-lo!!!</span>
 			</div>
 			<div id="marcadores" style="text-align:center;">
 				<input type="button" value="Començar!" class='bt_jocs_nivells' onclick="ComencaLvl4()"/> 
