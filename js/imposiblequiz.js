@@ -1,12 +1,3 @@
-//window.$vidas = {
-//        vidas: 3
-//    };
-
-
-var pasar_nivel = 0;
-
-
- 
 
  $(window).load(function() {
      $("#plantilla").fadeIn();
@@ -17,76 +8,76 @@ var pasar_nivel = 0;
     });
 
     
-    $("#logo_index").click(function(){
-          
-    });
+//    $("#logo_index").click(function(){
+//          
+//    });
     
      $("#urano").fadeIn(2000);
-    $("#urano").css("left", $("#urano").position().left).circulate({
-            sizeAdjustment: 160,
-            speed: 5500,
-            width: -820,
-            height: 50,
-            loop: true,
-            zIndexValues: [1, 51, 51, 1]
+     $("#urano").css("left", $("#urano").position().left).circulate({
+        sizeAdjustment: 160,
+        speed: 5500,
+        width: -820,
+        height: 50,
+        loop: true,
+        zIndexValues: [1, 51, 51, 1]
     });
- $("#tierra").fadeIn(2000);
+    
+    $("#tierra").fadeIn(2000);
     $("#tierra").css("left", $("#tierra").position().left).circulate({
-            sizeAdjustment: 160,
-            speed: 6500,
-            width: -820,
-            height: 50,
-            loop: true,
-            zIndexValues: [1, 52, 52, 1]
+        sizeAdjustment: 160,
+        speed: 6500,
+        width: -820,
+        height: 50,
+        loop: true,
+        zIndexValues: [1, 52, 52, 1]
     });
+    
     $("#luna").fadeIn(2000);
     $("#luna").css("left", $("#luna").position().left).circulate({
-            sizeAdjustment: 160,
-            speed: 5000,
-            width: -820,
-            height: 50,
-            loop: true,
-            zIndexValues: [1, 54, 54, 1]
+        sizeAdjustment: 160,
+        speed: 5000,
+        width: -820,
+        height: 50,
+        loop: true,
+        zIndexValues: [1, 54, 54, 1]
     });
-     $("#marte").fadeIn(2000);
+    
+    $("#marte").fadeIn(2000);
     $("#marte").css("left", $("#marte").position().left).circulate({
-            sizeAdjustment: 160,
-            speed: 8000,
-            width: -820,
-            height: 50,
-            loop: true,
-            zIndexValues: [1, 52, 52, 1]
+        sizeAdjustment: 160,
+        speed: 8000,
+        width: -820,
+        height: 50,
+        loop: true,
+        zIndexValues: [1, 52, 52, 1]
     });
+    
     $("#jupiter").fadeIn(2000);
     $("#jupiter").css("left", $("#jupiter").position().left).circulate({
-            sizeAdjustment: 160,
-            speed: 13500,
-            width: -820,
-            height: 50,
-            loop: true,
-            zIndexValues: [1, 51, 51, 1]
+        sizeAdjustment: 160,
+        speed: 13500,
+        width: -820,
+        height: 50,
+        loop: true,
+        zIndexValues: [1, 51, 51, 1]
     });
+    
     $("#saturno").fadeIn(2000);
     $("#saturno").css("left", $("#saturno").position().left).circulate({
-            sizeAdjustment: 160,
-            speed: 9500,
-            width: -820,
-            height: 50,
-            loop: true,
-            zIndexValues: [1, 53, 53, 1]
+        sizeAdjustment: 160,
+        speed: 9500,
+        width: -820,
+        height: 50,
+        loop: true,
+        zIndexValues: [1, 53, 53, 1]
     });
-    
-   
-    
+     
  });
 
 $(function(){
-  
-
-//   var pasar_nivel = window.$pasar_nivel.pasar_nivel;
-//   var nivel = window.$nivel.nivel;
 
 /* Obrir recovery*/
+
     $("#recovery").click(function(){
         $("#form_entrada").slideUp(500,function(){
              $("#form_recovery").slideDown();
@@ -113,16 +104,16 @@ $(function(){
 	var nom= $("#NomForm").val();
 	var pw= $("#PwForm").val();
         if(nom === '' || pw === ''){
-              var duration = 80;
-                            var offset = 40;
-                            
-                            $('#test').animate({marginLeft:('-='+ offset)}, duration,function(){
-                                 $(this).animate({marginLeft:('+=' + offset*2)}, duration, function(){
-                                    $(this).animate({marginLeft:('-=' + offset*2)}, duration, function(){
-                                         $(this).animate({marginLeft:('+='+ offset)}, duration);
-                                    });
-                                 });
-                              });  
+            var duration = 80;
+            var offset = 40;
+
+            $('#test').animate({marginLeft:('-='+ offset)}, duration,function(){
+                 $(this).animate({marginLeft:('+=' + offset*2)}, duration, function(){
+                    $(this).animate({marginLeft:('-=' + offset*2)}, duration, function(){
+                         $(this).animate({marginLeft:('+='+ offset)}, duration);
+                    });
+                 });
+              });  
         }else{
 
 	$.ajax({
@@ -143,16 +134,16 @@ $(function(){
 				 
                     }else{              
                               
-                            var duration = 80;
-                            var offset = 40;
-                            
-                            $('#test').animate({marginLeft:('-='+ offset)}, duration,function(){
-                                 $(this).animate({marginLeft:('+=' + offset*2)}, duration, function(){
-                                    $(this).animate({marginLeft:('-=' + offset*2)}, duration, function(){
-                                         $(this).animate({marginLeft:('+='+ offset)}, duration);
-                                    });
-                                 });
-                              });      
+                        var duration = 80;
+                        var offset = 40;
+
+                        $('#test').animate({marginLeft:('-='+ offset)}, duration,function(){
+                             $(this).animate({marginLeft:('+=' + offset*2)}, duration, function(){
+                                $(this).animate({marginLeft:('-=' + offset*2)}, duration, function(){
+                                     $(this).animate({marginLeft:('+='+ offset)}, duration);
+                                });
+                             });
+                        });      
                     }
 			
 		}
@@ -162,6 +153,7 @@ $(function(){
          }
 	
     });
+    
     /*Fi enviar dades a la base de dades x comprobar usuari*/
     
     /*Comprovar recovery*/
@@ -171,23 +163,24 @@ $(function(){
        var recovery = $("#RecoveryForm").val();
 
        if(mail === '' || recovery === ''){
+           
            $("#RecoveryForm").val('Dades incorrectes');
            $("#MailForm").val('Dades incorrectes');
       
        }else{
            
-           $.ajax({
-               type: "post",
-		data: {mail: mail, recovery: recovery},
-		url: "formulariRecovery.php",
-		success:function( dada ) {
+            $.ajax({
+                type: "post",
+                data: {mail: mail, recovery: recovery},
+                url: "formulariRecovery.php",
+                success:function( dada ) {
                 
                     if(dada==='0'){
                          $("#RecoveryForm").val('Dades incorrectes');
                          $("#MailForm").val('Dades incorrectes'); 
                        
                     }else{
-                            $('#form_recovery').fadeOut(500, function(){
+                         $('#form_recovery').fadeOut(500, function(){
                             $('#form_recovery').show().html("<div id='correct_message'></div>");
                             $('#correct_message').html("L'hi hem enviat un correu electrònic amb les seves dades.</br></br>"+dada+"</br></br><i class='fa fa-star fa-spin'></i><i class='fa fa-star fa-spin'></i><i class='fa fa-star fa-spin'></i><i class='fa fa-star fa-spin'></i><i class='fa fa-star fa-spin'></i></br></br> <span  id='back_recovery'>Formulari d'entrada</span>").hide().fadeIn(1500); 
                         });
@@ -198,98 +191,86 @@ $(function(){
         
     });
     
-    
-    
-    
-    
-    
     /*Fi comprovar recovery*/
 
 
-/* Marcando respuestas*/
-$( ".bt1, .bt3" )
-  .mousedown(function() {
-    $( this ).addClass("marcando_left");
-  })
-  .mouseup(function() {
-    $( this ).removeClass( "marcando_left" );
-  });
+    /* Marcando respuestas*/
+    $( ".bt1, .bt3" ).mousedown(function() {
+        $( this ).addClass("marcando_left");
+    }).mouseup(function() {
+        $( this ).removeClass( "marcando_left" );
+    });
   
-  $( ".bt1, .bt3" )
-  .mouseleave(function() {
-     $( this ).removeClass( "marcando_left" );
-  });
+    $( ".bt1, .bt3" ).mouseleave(function() {
+        $( this ).removeClass( "marcando_left" );
+    });
   
-  $( ".bt2, .bt4" )
-  .mousedown(function() {
-    $( this ).addClass("marcando_right");
-  })
-  .mouseup(function() {
-    $( this ).removeClass( "marcando_right" );
-  });
+    $( ".bt2, .bt4" ).mousedown(function() {
+        $( this ).addClass("marcando_right");
+    }).mouseup(function() {
+        $( this ).removeClass( "marcando_right" );
+    });
   
-  $( ".bt2, .bt4" )
-  .mouseleave(function() {
-     $( this ).removeClass( "marcando_right" );
-  });
+    $( ".bt2, .bt4" ).mouseleave(function() {
+        $( this ).removeClass( "marcando_right" );
+    });
   
   /*fi marcadores respuestas */
   
   
   /*Casilla fallo restar vidas*/
   
-  $('body').on("click", "[name=no]", function() {
-
-    var vidas = $('#videsbd').val();
-
-    if(vidas>0){
-        vidas--;
-   
-        $('#videsbd').val(vidas);
-    }
-        
-    if(vidas==0){
-        alert("gameover");//mirar pork no hace el fadeIn en gameover
-        document.location="../gameover.php";  
-    }
-    
-    $.ajax({	
-        type: "post",
-        data: {vidas: vidas},
-        url: "../restarVides.php",
-        success:function( dada ) {
-            alert(dada);
+    $('body').on("click", "[name=no]", function() {
+        var vidas = $('#videsbd').val();
+        if(vidas>=0){
+            $("#vidas_rest").removeClass("cVidas_rest"+vidas);
+            vidas--;
+            $('#videsbd').val(vidas);
         }
+        
+        $.ajax({	
+            type: "post",
+            data: {vidas: vidas},
+            url: "../restarVidesComodins.php",
+            success:function( dada ) {
+                $ ("#vidas_rest").addClass("cVidas_rest"+dada).after(function(){
+                    if(dada==0){
+                        alert("gameover");//mirar pork no hace el fadeIn en gameover
+                        document.location="../gameover.php";  
+                    }
+                });
+            }
+        });
+
     });
-    
-  });
  
-  
   /*Final fallo casillas restar vidas*/
   
-  /*Ganar flecha pasar nivel*/
-  
-//  $('body').on("click", "[name=pasar_nivel]", function() {
-//      $ ("#vidas_icons").removeClass("icono_vidas"+pasar_nivel);
-//      pasar_nivel++;
-//      
-//      $ ("#vidas_icons").addClass("icono_vidas"+pasar_nivel);
-//    });
- 
- 
-  /*Fin conseguir flecha pasar nivel*/
-  
   /*Usar comodin*/
-//  $('body').on("click", "#vidas_icons", function() {
       
-      $("#vidas_icons").click(function(){
-          if(pasar_nivel>0){
-            $ ("#vidas_icons").removeClass("icono_vidas"+pasar_nivel);
-             pasar_nivel--;
-             $ ("#vidas_icons").addClass("icono_vidas"+pasar_nivel).after(function(){
-                  nivel++;
+    $("#vidas_icons").click(function(){
+        
+        var comodinsActu = $("#getComodins").val();
+        var nivel = $("#getLvl").val();
+        if(comodinsActu>0){
+            
+            $ ("#vidas_icons").removeClass("icono_vidas"+comodinsActu);
+            comodinsActu--;
+            
+            $.ajax({
+                type: "post",
+                data: {comodins: comodinsActu},
+                url: "../restarVidesComodins.php",
+                success: function(dada) {
+                    //alert(dada);
+                }
+            });
+            
+            $ ("#vidas_icons").addClass("icono_vidas"+comodinsActu).after(function(){
+                nivel++;
                 document.location="lvl_"+nivel+".php";
             });
+            
         }
           
     });
@@ -299,21 +280,22 @@ $( ".bt1, .bt3" )
   /*Comensar a jugar*/
   
     $("[name=jugar]").click(function(){
-//         $ ("body").load(window.location.pathname +"/levels/lvl_1.php");
-       document.location="levels/lvl_1.php"; 
+
+        document.location="levels/lvl_1.php"; 
+       
     });
+    
+    /*fi comensar jugar*/
   
   
   /*AVANÇAR NIVELL*/
-//  $('body').on("click", "[name=si]", function() {
-//       $ ("body").load(window.location.pathname +"levels/lvl_"+nivel+".php");
 
     $("[name=si]").click(function(){
+        
         var nivel = $("#getLvl").val(); 
         alert(nivel);
         nivel++;
         alert(nivel);
-//         $ ("body").load(window.location.pathname +"/levels/lvl_"+nivel+".php");
         document.location="lvl_"+nivel+".php";   
         
     });
@@ -322,15 +304,16 @@ $( ".bt1, .bt3" )
    //BOTO SORTIR 
    
     $('body').on("click", "#bt4", function() {
-                        $("#plantilla").fadeOut(300, function(){
-                            document.location= "index.php?reinicia";
-                        });
+        
+        $("#plantilla").fadeOut(300, function(){
+            document.location= "index.php?reinicia";
+        });
 			
     });
     
+    //Fi boto sortir
     
     
     
-    
-   });
+});
   

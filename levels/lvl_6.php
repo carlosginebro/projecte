@@ -48,15 +48,17 @@
            
             </div>
             <div id="vidas">
-                <div id="vidas_icons" class="icono_vidas0">
-                  
+                <div id="vidas_icons" class="icono_vidas<?php echo $_SESSION['comodins']; ?>">
+                
                    
                 </div>
+                <div id="vidas_rest" class="cVidas_rest<?php echo $_SESSION['vides']; ?>"></div>
             </div>
                 
             </div>
 <input type="text" value="6" id="getLvl" />
 <input type="text" value="<?php echo $_SESSION['vides'];?>" class="cHiden" id="videsbd" />
+<input type="text" value="<?php echo $_SESSION['comodins']; ?>" class="cHiden" id="getComodins" />
 
 </body>
 

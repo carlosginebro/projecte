@@ -530,7 +530,17 @@ body.rock .bt4{
     margin-top: 0%;
     height:10%;
     width:96%;
+    
 
+}
+
+#vidas_icons{
+    float:left;
+    margin-left:50px;
+}
+
+#vidas_icons:hover{
+    cursor:pointer;
 }
 
 .icono_vidas0{
@@ -567,6 +577,49 @@ body.rock .bt4{
     background-image: url('galery/saltar_nivel3.png');
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+#vidas_rest{
+    float: right;
+    width: 50px;
+    margin-right:200px;
+    height: 100%;
+}
+
+.cVidas_rest5{
+    background-image: url('galery/vida_5.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cVidas_rest4{
+    background-image: url('galery/vida_4.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cVidas_rest3{
+    background-image: url('galery/vida_3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cVidas_rest2{
+    background-image: url('galery/vida_2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cVidas_rest1{
+    background-image: url('galery/vida_1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cVidas_rest0{
+    background-image: url('galery/vida_0.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .size{

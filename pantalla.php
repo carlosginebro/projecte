@@ -12,10 +12,11 @@
     $conec= cone();
     $id = $_SESSION['id'];
     
-    $sql = "select Vides from usuari where id = $id";
+    $sql = "select Vides, Comodins from usuari where id = $id";
     $consulta = $conec->query($sql);
     $reg = $consulta->fetch_array();
     $_SESSION['vides'] = $reg['Vides'];
+    $_SESSION['comodins'] = $reg['Comodins'];
     
     $sql = "select estil from estils where fk_usuari = $id";
     
@@ -85,10 +86,11 @@
             <!--</table>-->
             </div>
             <div id="vidas">
-                <div id="vidas_icons" class="icono_vidas0">
+                <div id="vidas_icons" class="icono_vidas<?php echo $_SESSION['comodins']; ?>">
                   
                    
                 </div>
+                <div id="vidas_rest" class="cVidas_rest<?php echo $_SESSION['vides']; ?>"></div>
             </div>
                 
             </div>
