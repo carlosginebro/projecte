@@ -9,7 +9,8 @@ function ComencaLvl4(){
         'z-index': 2,
         top: -10,
         left: -10,
-		width: 50
+        width: 50,
+//        'pointer-events': 'none'
     });
 	
     $("#plantilla").fadeOut( function () {

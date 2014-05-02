@@ -52,7 +52,9 @@
            
             </div>
             <div id="vidas">
+                <div id="logo_icons"></div>
                 <div id="vidas_icons" class="icono_vidas<?php echo $_SESSION['comodins']; ?>"></div>
+                <div id="logo_vides"></div>
                 <div id="vidas_rest" class="cVidas_rest<?php echo $_SESSION['vides']; ?>"></div>
             </div>
                 

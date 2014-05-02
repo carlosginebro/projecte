@@ -534,9 +534,19 @@ body.rock .bt4{
 
 }
 
-#vidas_icons{
+#logo_icons{
     float:left;
     margin-left:50px;
+    background-image: url('galery/logo_comodins.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width:230px;
+}
+
+#vidas_icons{
+    float:left;
+    margin-left:10px;
 }
 
 #vidas_icons:hover{
@@ -579,10 +589,19 @@ body.rock .bt4{
     background-size: contain;
 }
 
+#logo_vides{
+    float:left;
+    width:150px;
+    height:100%;
+    background-image: url('galery/logo_vides.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
 #vidas_rest{
-    float: right;
+    float: left;
     width: 50px;
-    margin-right:200px;
     height: 100%;
 }
 
