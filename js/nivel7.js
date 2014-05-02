@@ -11,6 +11,7 @@ function inicio7(){
     $("#portada").hide();
     $("#marcadores").fadeIn();
     $("#tiempo2").fadeIn();
+    $("#plantilla").addClass('bosque');
     cronometre();
 }
 
@@ -85,6 +86,16 @@ $(function(){
             'margin-top' : y,
             'margin-left' : x
         });
+        
+        if(heightx > 420){
+           $("#petrol").hide();
+           $("#img_fuegolvl7").hide();
+           $("#extintor").hide();
+           $("#casalvl7").hide();
+           $("#plantilla").removeClass('bosque');
+           $("#plantilla").addClass('bosque_quemado');
+           $("#piro").show();
+        }
         
     });
 

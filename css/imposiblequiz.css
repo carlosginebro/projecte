@@ -746,7 +746,7 @@ body.rock .bt4{
 }
 
 #casalvl7{
-    margin-top: 170px;
+    margin-top: 243px;
 }
 
 
@@ -759,6 +759,27 @@ body.rock .bt4{
 #petrol:hover{
     cursor: pointer;
     
+}
+
+.bosque{
+    background-image: url('galery/bosque_normal.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bosque_quemado{
+    background-image: url('galery/bosque_quemado.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#piro{
+    display: block;
+    margin-left: 70px;
+    margin-top: 20%;
+    font-size: 100pt;
+    color: red;
+    display: none;
 }
 
 @media only screen and (max-width: 800px) {
