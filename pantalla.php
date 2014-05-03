@@ -60,14 +60,14 @@
                             <span class="size">VENGAA!!</span>     
                         </div>
                     </li>
-                    <li id="bt2" class="bt2" name="no" style="float: left;display: block; width: 50%;height: 50%;">
+                    <li id="bt2" id ="creditos" class="bt2" style="float: left;display: block; width: 50%;height: 50%;">
                         <div class="respuesta" style="width: 86%;">
                             <span class="size">CREDITOS</span>
                         </div>
                     </li>
                 </ul>
                 <ul style="list-style: none outside none;">
-                    <li id="bt3" class="bt3" name="no" data-toggle="modal" data-target="#myModal" style="float: left;display: block; width: 44%;height: 50%;">
+                    <li id="bt3" class="bt3" data-toggle="modal" data-target="#myModal" style="float: left;display: block; width: 44%;height: 50%;">
                         <div class="respuesta" >
                             <span class="size">Configuracion</span>
          
