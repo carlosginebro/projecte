@@ -782,6 +782,67 @@ body.rock .bt4{
     display: none;
 }
 
+
+/*** lvl 9 ***/
+
+.c91{
+    background-color: #0af4dd;
+    color:#fa0000;
+}
+
+.c92{
+    background-color:#f5e65c;
+    color: black;
+}
+
+.c93{
+    background-color:#80ef52;
+    color: #f46d18;
+}
+
+.c94{
+    background-color:#fa0000;
+    color:#0af4dd;
+}
+
+.c95{
+    background-color: #1891f4;
+    color: #f1c018; 
+}
+
+.c96{
+    background-color:#23221e;
+    color:whitesmoke;
+}
+
+.c97{
+    background-color:#f46d18;
+    color: #1891f4;
+}
+
+.c98{
+    background-color:#c832cd;
+    color:maroon;
+}
+
+.c99{
+    background-color:#ea4fd1;
+    color: #158a04;
+}
+
+.cgridFont{
+    position: fixed !important;
+    margin-left: 15%;
+    font-size: 17pt;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
 @media only screen and (max-width: 800px) {
     .size{
         font-size:1em;

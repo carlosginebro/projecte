@@ -313,7 +313,10 @@ $(function(){
     
     //Fi boto sortir
     
-
+    $(".gridster ul").gridster({
+        widget_margins: [2, 2],
+        widget_base_dimensions: [55, 55]
+    });
     
 });
   
