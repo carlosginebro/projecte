@@ -19,9 +19,9 @@
         $consulta->data_seek($random);
         $reg = $consulta->fetch_array();
         $pregunta_final = $reg['pregunta'];
-	$id_pregutna = $reg['id_pregunta'];	
+	$id_pregunta = $reg['id_pregunta'];	
 	
-        $sql = "select * from respostes where fk_pregunta = $id_pregutna";
+        $sql = "select * from respostes where fk_pregunta = $id_pregunta";
         
         $consulta = $conec->query($sql);
         $respostes = array();
