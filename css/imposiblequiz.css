@@ -449,6 +449,16 @@ body.molon .bt3:hover{
     background-size: contain;
    
 }
+body.molon .bt2:hover{
+    background-image: url('galery/cool_right_hoover.png');
+    background-size: contain;
+   
+}
+body.molon .bt4:hover{
+    background-image: url('galery/cool_right_hoover.png');
+    background-size: contain;
+   
+}
 
 
 /*rock*/
