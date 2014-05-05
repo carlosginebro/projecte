@@ -539,6 +539,14 @@ body.rock .bt4{
     background-image:url('galery/boton_left_presionando.png') !important;
 }
 
+.marcando_left_molon{
+    background-image:url('galery/cool_left_presionando.png') !important;
+}
+
+.marcando_right_molon{
+    background-image:url('galery/cool_right_presionando.png') !important;
+}
+
 .respuesta{
     /*border: solid 1px black;*/
     //height:80px;
