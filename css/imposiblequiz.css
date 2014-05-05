@@ -951,23 +951,32 @@ body.rock .bt4{
     margin-top:55%;
     margin-left:15%;
     float:left;
+    -webkit-transform: rotate(-370deg);
+
 }
 
 #sortir_game{
     display:block;
     margin-top:55%;
     margin-left:55%;
+    width: 310px;
+    -webkit-transform: rotate(370deg);
 }
 
 .css_gameover{
     font-size: 35px;
     font-weight: bold;
-    color: yellow;
+    color: blue;
+    -webkit-transition: -webkit-transform 1s ease-out;
+  
+   
+
+    
 }
 
-.css_gameover:hover{
+.css_gameover:hover{ 
     color: red;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
 
