@@ -484,6 +484,7 @@ body.rock .bt4{
 }
 
 
+
 /*Fin fondo botones*/
 
 
@@ -530,11 +531,11 @@ body.rock .bt4{
     background-position-y: -0.4em;
 }
 
-.marcando_right{
+.marcando_right_normal{
     background-image:url('galery/boton_right_presionando.png') !important;
 }
 
-.marcando_left{
+.marcando_left_normal{
     background-image:url('galery/boton_left_presionando.png') !important;
 }
 
@@ -948,18 +949,25 @@ body.rock .bt4{
 #try_again{
     display:block;
     margin-top:55%;
-    margin-left:30%;
+    margin-left:15%;
     float:left;
 }
 
 #sortir_game{
     display:block;
     margin-top:55%;
-    margin-left:60%;
+    margin-left:55%;
 }
 
 .css_gameover{
-    
+    font-size: 35px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.css_gameover:hover{
+    color: red;
+    cursor: pointer;
 }
 
 

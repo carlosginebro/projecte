@@ -191,24 +191,27 @@ $(function(){
 
 
     /* Marcando respuestas*/
+    
+    var estilo_body = $('body').attr('class');
+    
     $( ".bt1, .bt3" ).mousedown(function() {
-        $( this ).addClass("marcando_left");
+        $( this ).addClass("marcando_left_"+estilo_body);
     }).mouseup(function() {
-        $( this ).removeClass( "marcando_left" );
+        $( this ).removeClass( "marcando_left_"+estilo_body);
     });
   
     $( ".bt1, .bt3" ).mouseleave(function() {
-        $( this ).removeClass( "marcando_left" );
+        $( this ).removeClass( "marcando_left_"+estilo_body );
     });
   
     $( ".bt2, .bt4" ).mousedown(function() {
-        $( this ).addClass("marcando_right");
+        $( this ).addClass("marcando_right_"+estilo_body);
     }).mouseup(function() {
-        $( this ).removeClass( "marcando_right" );
+        $( this ).removeClass( "marcando_right_"+estilo_body );
     });
   
     $( ".bt2, .bt4" ).mouseleave(function() {
-        $( this ).removeClass( "marcando_right" );
+        $( this ).removeClass( "marcando_right_"+estilo_body );
     });
   
   /*fi marcadores respuestas */
