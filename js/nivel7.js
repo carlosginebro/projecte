@@ -1,4 +1,4 @@
-var segons = 14;
+var segons = 18;
 var temps;
 var tiempo = "";
 var widthx;
@@ -7,6 +7,7 @@ var x = 0;
 var y = 0;
 var duration = 80;
 var offset = 40;
+
 function inicio7(){
     $("#portada").hide();
     $("#marcadores").fadeIn();

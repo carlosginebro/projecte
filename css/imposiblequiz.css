@@ -899,13 +899,58 @@ body.rock .bt4{
     color: #158a04;
 }
 
+.c910{
+    background-color:#7f5819;
+    color:white;
+}
+
+.c911{
+    background-color: #ebd1a2;
+    color: black;
+}
+
 .cgridFont{
     position: fixed !important;
     margin-left: 15%;
     font-size: 17pt;
     font-weight: bold;
+    
 }
 
+.cgridFont li{
+
+    text-align: center;
+    line-height: 50px;
+}
+
+.tbl_lvl9{
+    margin-top:30px;
+    margin-left:35%;
+ 
+}
+
+.tbl_lvl9 td{
+    width:45px;
+    height:45px;
+    /*border:1px solid black;*/
+}
+
+#try_again{
+    display:block;
+    margin-top:55%;
+    margin-left:30%;
+    float:left;
+}
+
+#sortir_game{
+    display:block;
+    margin-top:55%;
+    margin-left:60%;
+}
+
+.css_gameover{
+    
+}
 
 
 
