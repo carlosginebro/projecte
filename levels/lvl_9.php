@@ -5,6 +5,7 @@
             require_once 'headlvls.php';
             require_once '../funcions.php';
         ?>
+       <script src="../js/nivel9.js"></script>
        <style>
            ul li{
                list-style-type: none;

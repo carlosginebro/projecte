@@ -1,4 +1,31 @@
 
+function restar_vida(){
+
+    $("#sas").show();
+    $("#vida_a").show();
+    $("#vida_a").addClass('rotar').after(function(){
+        $("#vida_a").animate({
+            'width':'300px',
+            'height':'300px'
+        }, 500, function(){
+             $("#sas").fadeOut(1000, function(){
+                $("#vida_a").removeClass('rotar').after(function(){
+                      $("#vida_a").animate({
+                            'width':'0px',
+                            'height':'0px'
+                        }, 500);
+
+                 }); 
+             });
+
+
+
+
+        });
+    });     
+        
+}
+
  $(window).load(function() {
      $("#plantilla").fadeIn();
      $("#loading").fadeIn(7000, function(){
@@ -222,6 +249,7 @@ $(function(){
     $('body').on("click", "[name=no]", function() {
         var vidas = $('#videsbd').val();
         if(vidas>=0){
+            restar_vida();
             $("#vidas_rest").removeClass("cVidas_rest"+vidas);
             vidas--;
             $('#videsbd').val(vidas);
@@ -313,26 +341,26 @@ $(function(){
     
     //Fi boto sortir
     
-    //Crear taula slides lvl 9
+    //gave_over botons
     
-    $(".gridster ul").gridster({
-        widget_margins: [2, 2],
-        widget_base_dimensions: [55, 55]
+    $("#try_again").click(function(){
+        document.location = "pantalla.php";
     });
     
-    //Fi crear taula lvl 9
-    
-    //pasar lvl9
-    
-    $("[name=nextLvl9]").dblclick(function(){
-        var nivel = $("#getLvl").val();
-        alert(nivel);
-        nivel++;
-        alert(nivel);
-        document.location = "lvl_" + nivel + ".php";
+    $("#sortir_game").click(function(){
+        document.location = "index.php";
     });
     
-    //fi pasar lvl 9
+    //fi game_over botons
+    
+    
+    //restar vida animacion
+    
+
+    
+    
+    
+    
     
 });
   

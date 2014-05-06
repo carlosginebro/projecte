@@ -17,7 +17,7 @@ body{
     background-image: url('galery/fondo.jpg');
     font-family: Romanicums;
     -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 div, span{
@@ -1018,11 +1018,6 @@ body.rock .bt4:hover{
     font-size: 35px;
     font-weight: bold;
     color: blue;
-    -webkit-transition: -webkit-transform 1s ease-out;
-  
-   
-
-    
 }
 
 .css_gameover:hover{ 
@@ -1030,6 +1025,11 @@ body.rock .bt4:hover{
     cursor: pointer; 
 }
 
+.rotar{
+    -webkit-transform: rotate(720deg);
+    -moz-transform:rotate(720deg);
+    transform: rotate(720deg);           
+}
 
 
 
