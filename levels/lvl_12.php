@@ -5,23 +5,14 @@
             require_once 'headlvls.php';
             require_once '../funcions.php';
         ?>
-       <script src="../js/nivel7.js"></script>
+       <script src="../js/nivel12.js"></script>
 	   <style>
-		body{
+		img{
 			cursor : none;
 		}
 		
-		#labe{
-			margin-top: 50px;
-		}
-	</style>
-	<script>
 		
-	
-		function linia(){
-			//alert("lose");
-		}
-	</script>
+	</style>
 </head>
 
 <body id="container" class="<?php echo $_SESSION['estil']; ?>">
@@ -34,7 +25,7 @@
             </div>
      
             <div id="marcadores" style="width:100%; height: 64%; margin-left: 35%;">
-                <img src ="../css/galery/labfacil.jpg" alt="labFacil" usemap="#laberinto" />
+                <img src ="../css/galery/labfacil.jpg" alt="labFacil" id="ima"usemap="#laberinto" />
 				<map name="laberinto">
 					<area shape="rect" coords="5,33,6,286" onmouseover="linia()" />
 					<area shape="rect" coords="5,286,259,287" onmouseover="linia()" />
