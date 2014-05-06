@@ -276,6 +276,7 @@ $(function(){
  
   /*Fi usar comodin*/
   
+  
   /*Comensar a jugar*/
   
     $("[name=jugar]").click(function(){

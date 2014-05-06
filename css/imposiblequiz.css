@@ -370,6 +370,18 @@ body a{
 
 }
 
+#portadalaberinto{
+    height:25%;
+    /*border: solid 1px black;*/
+    width: 96%;
+    background-image: url('galery/tema.jpg');
+    background-repeat: no-repeat;
+    /*    background-position-x: 50px;
+        background-position-y: -7px;*/
+    background-size: contain;
+
+}
+
 .pregunta{
     height:43%;
     /*border: solid 1px black;*/
@@ -484,6 +496,27 @@ body.rock .bt4{
 }
 
 
+body.rock .bt1:hover{
+    background-image: url('galery/rock_left_hoover.png');
+    background-size: contain;
+  
+}
+body.rock .bt3:hover{
+    background-image: url('galery/rock_left_hoover.png');
+    background-size: contain;
+   
+}
+body.rock .bt2:hover{
+    background-image: url('galery/rock_right_hoover.png');
+    background-size: contain;
+   
+}
+body.rock .bt4:hover{
+    background-image: url('galery/rock_right_hoover.png');
+    background-size: contain;
+   
+}
+
 
 /*Fin fondo botones*/
 
@@ -545,6 +578,15 @@ body.rock .bt4{
 
 .marcando_right_molon{
     background-image:url('galery/cool_right_presionando.png') !important;
+}
+
+
+.marcando_left_rock{
+    background-image:url('galery/rock_left_presionando.png') !important;
+}
+
+.marcando_right_rock{
+    background-image:url('galery/rock_right_presionando.png') !important;
 }
 
 .respuesta{
@@ -779,6 +821,7 @@ body.rock .bt4{
     margin-bottom:-20px;
     line-height: 45px;
 }
+
 
 .no_portadalogica{
     background-image: none !important;
