@@ -372,8 +372,7 @@ body a{
     width: 96%;
     background-image: url('galery/tema.jpg');
     background-repeat: no-repeat;
-    /*    background-position-x: 50px;
-        background-position-y: -7px;*/
+    color: black;
     background-size: contain;
 
 }

@@ -19,8 +19,10 @@ function restar_vida(vidas){
                             'margin-top':'38%',
                             'margin-left':'73%'
                         }, 500);
-                        $ ("#vidas_rest").removeClass("cVidas_rest_bye"+vidas);
+                        
                  }); 
+                 
+                 $ ("#vidas_rest").removeClass("cVidas_rest_bye"+vidas);
              });
 
 
