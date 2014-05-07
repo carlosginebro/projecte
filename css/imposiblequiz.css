@@ -20,6 +20,14 @@ body{
     -ms-text-size-adjust: 100%;
 }
 
+.normal, .molon{
+    color:white;
+}
+
+.rock{
+    color: black;
+}
+
 div, span{
     cursor:default;
 }
@@ -597,11 +605,11 @@ body.rock .bt4:hover{
     padding-top: 10%;
     padding-right:20px;
     padding-left: 30px;
-    /*    font-size:40px;*/
+
 
     padding-bottom: 4%;
     font-weight: bold;
-    color: white;
+
 }
 
 .respuestalogica{
@@ -779,6 +787,7 @@ body.rock .bt4:hover{
 /*Boostrap*/
 
 #myModalLabel{
+    color: black;
     font-family: Romanicums;
     font-weight: bold;
     font-size:25px;
@@ -796,7 +805,7 @@ body.rock .bt4:hover{
 }
 
 #form_config ul li{
-    
+        color: black;
         list-style-type: none;
         margin-top:15px;
     }

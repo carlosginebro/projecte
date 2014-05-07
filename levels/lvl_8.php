@@ -1,10 +1,10 @@
 <html>
 <head>
-       <meta charset="ISO-8859-15" />
+       <meta charset="utf-8" />
         <?php
             require_once 'headlvls.php';
             require_once '../funcions.php';
-                   
+            require_once '../animacio_perdre_vida.php'; 
             $pregunta = getPregunta(4);
             
             $arrayPregunta = explode("#", $pregunta);
@@ -16,7 +16,7 @@
             <div id="portada" class="no_portadalogica">
                 <span class="nivel_pantalla">8</span>
 						
-                <span >Tria la opció correcte<br /><img src="<?php echo $arrayPregunta[0]; ?>" alt="preg1" class="preguntalogica" /></span>
+                <span >Tria la opciÃ³ correcte<br /><img src="<?php echo $arrayPregunta[0]; ?>" alt="preg1" class="preguntalogica" /></span>
             </div>
      
             <div id="marcadores" style="width:100%; height: 47%; margin-left: 5%;">
