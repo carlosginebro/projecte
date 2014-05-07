@@ -399,7 +399,16 @@ $(function(){
     //restar vida animacion
     
     
-    
+    $("#test3").click(function(){
+       $("#animacio_comodin").fadeIn(300);
+       $("#animacio_comodin").addClass('rotar2').delay(3000).after(function(){
+           $("#animacio_comodin").css({
+               'margin-left':'600px'
+           });
+//           $("#animacio_comodin").addClass('move');
+       });
+        
+    });
     
     
     

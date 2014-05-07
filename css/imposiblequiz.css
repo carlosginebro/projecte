@@ -1043,6 +1043,17 @@ body.rock .bt4:hover{
     transform: rotate(720deg);           
 }
 
+.rotar2{
+    -webkit-transform: rotate(360deg);
+    -moz-transform:rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.move{
+    /*margin-left:800px;*/
+    /*opacity: 0;*/
+}
+
 .cVidas_rest_bye5{
     background-image: url('galery/vida_5bye.png');
     background-size: contain;

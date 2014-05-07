@@ -10,7 +10,7 @@
 
 
     function getPregunta($nivell){
-		$conec= cone();
+        $conec= cone();
 		
         $sql = "select * from preguntes where nivell_pregunta =".$nivell;
         $consulta = $conec->query($sql);

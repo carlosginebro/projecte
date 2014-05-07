@@ -6,6 +6,7 @@
             require_once '../funcions.php';
             require_once '../animacio_correcte.php';
         ?>
+   
        <script src="../js/nivel9.js"></script>
        <style>
            ul li{
@@ -77,14 +78,14 @@
                 <div id="logo_icons"></div>
                 <div id="vidas_icons" class="icono_vidas<?php echo $_SESSION['comodins']; ?>"></div>
                 <div id="logo_vides"></div>
-                <div id="vidas_rest" class="cVidas_rest<?php echo $_SESSION['vides']; ?>" name="nextLvl9"></div>
+                <div id="vidas_rest" class="cVidas_rest<?php echo $_SESSION['vides']; ?>"></div>
             </div>
        </div>
 	   
 	   
 <input type="text" value="9" id="getLvl" />
 <input type="text" value="<?php echo $_SESSION['vides'];?>" class="cHiden" id="videsbd" />
-
+<input type="text" value="<?php echo $_SESSION['comodins']; ?>" class="cHiden" id="getComodins" />
 </body>
 
 </html>
