@@ -4,7 +4,8 @@
         <?php
             require_once 'headlvls.php';
             require_once '../funcions.php';
-            require_once '../animacio_perdre_vida.php'; 
+            require_once '../animacio_perdre_vida.php';
+            require_once '../animacio_correcte.php';
         ?>
        
        <script src="../js/nivel12.js"></script>

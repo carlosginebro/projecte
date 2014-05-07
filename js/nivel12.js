@@ -111,14 +111,7 @@ function linia(){
 
 
 function conseguit(){
-
-
-		var nivel = $("#getLvl").val(); 
-        alert(nivel);
-        nivel++;
-        alert(nivel);
-        document.location="lvl_"+nivel+".php"; 
-    
-	
-	
+    var nivel = $("#getLvl").val(); 
+    nivel++;
+    animacio_nivel(nivel);	
 }
