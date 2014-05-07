@@ -1,20 +1,25 @@
 
-function restar_vida(){
+function restar_vida(vidas){
 
     $("#sas").show();
     $("#vida_a").show();
+    $ ("#vidas_rest").addClass("cVidas_rest_bye"+vidas);
     $("#vida_a").addClass('rotar').after(function(){
         $("#vida_a").animate({
-            'width':'300px',
-            'height':'300px'
+            'width':'450px',
+            'height':'450px',
+            'margin-top':'5%',
+            'margin-left':'35%'
         }, 500, function(){
              $("#sas").fadeOut(1000, function(){
                 $("#vida_a").removeClass('rotar').after(function(){
                       $("#vida_a").animate({
                             'width':'0px',
-                            'height':'0px'
+                            'height':'0px',
+                            'margin-top':'38%',
+                            'margin-left':'73%'
                         }, 500);
-
+                        $ ("#vidas_rest").removeClass("cVidas_rest_bye"+vidas);
                  }); 
              });
 
@@ -248,9 +253,10 @@ $(function(){
   
     $('body').on("click", "[name=no]", function() {
         var vidas = $('#videsbd').val();
-        if(vidas>=0){
-            restar_vida();
+        if(vidas>0){
+            restar_vida(vidas);
             $("#vidas_rest").removeClass("cVidas_rest"+vidas);
+            
             vidas--;
             $('#videsbd').val(vidas);
         }
@@ -260,6 +266,8 @@ $(function(){
             data: {vidas: vidas},
             url: "../restarVidesComodins.php",
             success:function( dada ) {
+          
+                
                 $ ("#vidas_rest").addClass("cVidas_rest"+dada).after(function(){
                     if(dada==0){
                         alert("gameover");//mirar pork no hace el fadeIn en gameover
