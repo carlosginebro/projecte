@@ -21,8 +21,12 @@ function restar_vida(vidas){
                         }, 500);
                         
                  }); 
-                 
-                 $ ("#vidas_rest").removeClass("cVidas_rest_bye"+vidas);
+                 $("#sas").fadeIn(250, function(){
+                     $("#sas").fadeOut(250, function(){
+                          $ ("#vidas_rest").removeClass("cVidas_rest_bye"+vidas);
+                     });
+                 });
+                
              });
 
 

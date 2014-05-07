@@ -378,7 +378,7 @@ body a{
     width: 96%;
     background-image: url('galery/tema.jpg');
     background-repeat: no-repeat;
-    color: black;
+    /*color: black;*/
     background-size: contain;
 
 }
@@ -834,6 +834,7 @@ body.rock .bt4:hover{
     margin-top:20px;
     margin-bottom:-20px;
     line-height: 45px;
+    color: black;
 }
 
 
