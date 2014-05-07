@@ -8,6 +8,7 @@ var y = 0;
 var duration = 80;
 var offset = 40;
 
+
 function inicio7(){
     $("#portada").hide();
     $("#marcadores").fadeIn();
@@ -67,7 +68,8 @@ $(function(){
 
         if(heightx == 0){
             var nivel = $("#getLvl").val();	
-            nivel++;      
+            nivel++;
+			clearTimeout(temps);
             animacio_nivel(nivel);
         }
     });

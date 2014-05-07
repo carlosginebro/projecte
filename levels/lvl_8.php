@@ -1,6 +1,6 @@
 <html>
 <head>
-        <meta charset="ISO-8859-15" />
+        <meta charset="utf-8" />
         <?php
             require_once 'headlvls.php';
             require_once '../funcions.php';
