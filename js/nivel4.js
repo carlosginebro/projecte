@@ -1,4 +1,6 @@
 var imagen;
+var punts;
+var t;
 
 function ComencaLvl4(){
     $("table").show();
@@ -62,9 +64,13 @@ function planetesAl() {
     
     //Fem seguir l'asteroide al planetes.
     chase(x, y, planetes);
-	
-    //Fem que es repeteixi sempre
-    window.setTimeout('planetesAl()', 1200);
+    
+    
+        
+  
+        //Fem que es repeteixi sempre
+        t = setTimeout('planetesAl()', 1200);
+    
 } 
 
 function chase(x, y, planetes) {
@@ -130,12 +136,12 @@ function won() {
     //Si guanyes parem asteroide
     asteroide.stop();
     $('#jugador').html(parseInt($('#jugador').html()) + 1);
-    var punts =  $('#jugador').html();
+    punts =  $('#jugador').html();
     if(punts == 20){
-        var nivel = $("#getLvl").val();   
-		
+        clearTimeout(t);
+        var nivel = $("#getLvl").val();   		
         nivel++;      
-        document.location="lvl_"+nivel+".php";     
+        animacio_nivel(nivel);     
     }
  
 } 

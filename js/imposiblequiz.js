@@ -3,7 +3,7 @@ function restar_vida(vidas){
 
     $("#sas").show();
     $("#vida_a").show();
-    $ ("#vidas_rest").addClass("cVidas_rest_bye"+vidas);
+    $("#vidas_rest").addClass("cVidas_rest_bye"+vidas);
     $("#vida_a").addClass('rotar').after(function(){
         $("#vida_a").animate({
             'width':'450px',
@@ -35,6 +35,35 @@ function restar_vida(vidas){
         });
     });     
         
+}
+
+function animacio_nivel(nivel) {
+    $("#animacio_correcte").fadeIn(300);
+    var offset = 10;
+    var duration = 150;
+    $('#animacio_correcte').animate({marginLeft: ('-=' + offset)}, duration, function() {
+        $(this).animate({marginLeft: ('+=' + offset * 2)}, duration, function() {
+            $(this).animate({marginLeft: ('-=' + offset * 2)}, duration, function() {
+                $(this).animate({marginLeft: ('+=' + offset * 2)}, duration, function() {
+                    $(this).animate({marginLeft: ('-=' + offset * 2)}, duration, function() {
+                        $(this).animate({marginLeft: ('+=' + offset * 2)}, duration, function() {
+                            $(this).animate({marginLeft: ('-=' + offset * 2)}, duration, function() {
+                                $(this).animate({marginLeft: ('+=' + offset)}, duration, function() {
+                                    duration = 300;
+                                    offset = 40;
+                                    $('#animacio_correcte').animate({'max-width': '580px', width: ('+=' + offset),
+                                        marginLeft: ('-=' + offset / 2), height: ('+=' + offset),
+                                        marginTop: ('-=' + offset / 2), opacity: 0}, duration, function() {
+                                                document.location="lvl_"+nivel+".php"; 
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    });
 }
 
  $(window).load(function() {
@@ -335,10 +364,9 @@ $(function(){
     $("[name=si]").click(function(){
         
         var nivel = $("#getLvl").val(); 
-        alert(nivel);
         nivel++;
-        alert(nivel);
-        document.location="lvl_"+nivel+".php";   
+        animacio_nivel(nivel);
+          
         
     });
     
@@ -370,7 +398,7 @@ $(function(){
     
     //restar vida animacion
     
-
+    
     
     
     

@@ -68,7 +68,7 @@ $(function(){
         if(heightx == 0){
             var nivel = $("#getLvl").val();	
             nivel++;      
-            document.location="lvl_"+nivel+".php";
+            animacio_nivel(nivel);
         }
     });
     

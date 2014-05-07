@@ -1,10 +1,11 @@
 <html>
 <head>
-       <meta charset="ISO-8859-15" />
+        <meta charset="ISO-8859-15" />
         <?php
             require_once 'headlvls.php';
             require_once '../funcions.php';
             require_once '../animacio_perdre_vida.php'; 
+            require_once '../animacio_correcte.php';
             $pregunta = getPregunta(2);
             
             $arrayPregunta = explode("#", $pregunta);

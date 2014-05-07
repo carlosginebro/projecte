@@ -15,10 +15,9 @@ $(function(){
     
     $("[name=nextLvl9]").dblclick(function(){
         var nivel = $("#getLvl").val();
-        alert(nivel);
+  
         nivel++;
-        alert(nivel);
-        document.location = "lvl_" + nivel + ".php";
+        animacio_nivel(nivel);
     });
     
     //fi pasar lvl 9
