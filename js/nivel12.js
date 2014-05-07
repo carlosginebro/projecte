@@ -118,5 +118,6 @@ function conseguit(){
         nivel++;
         alert(nivel);
         document.location="lvl_"+nivel+".php"; 
-
+    
+	
 }

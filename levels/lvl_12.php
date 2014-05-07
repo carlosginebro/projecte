@@ -24,7 +24,7 @@
                 <span class="nivel_pantalla">12</span>
                 <span >Recull el Formatge sense tocar les parets!</span>
             </div>
-     
+	<!-- -->
             <div id="marcadores" style="width:100%; height: 64%; margin-left: 35%;">
                 <img src ="../css/galery/labfacil.jpg" alt="labFacil" id="ima"usemap="#laberinto" />
 				<map name="laberinto">
