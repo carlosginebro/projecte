@@ -17,6 +17,7 @@ body{
     background-image: url('galery/fondo.jpg');
     font-family: Romanicums;
     -webkit-text-size-adjust: 100%;
+<<<<<<< Updated upstream
     -ms-text-size-adjust: 100%;
 }
 
@@ -26,6 +27,11 @@ body{
 
 .rock{
     color: black;
+=======
+      -ms-text-size-adjust: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+>>>>>>> Stashed changes
 }
 
 div, span{
@@ -846,8 +852,8 @@ body.rock .bt4:hover{
 .nivel_pantalla{
     border: 2px solid black;
     float:left;
-    width: 50px;
-    border-radius: 100px;
+    width: 70px;
+    border-radius: 300px;
     text-align: center;
 }
 
