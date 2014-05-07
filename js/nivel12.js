@@ -120,4 +120,5 @@ function conseguit(){
         document.location="lvl_"+nivel+".php"; 
     
 	
+	
 }
