@@ -66,6 +66,21 @@ function animacio_nivel(nivel) {
     });
 }
 
+function animacio_comodin(nivel) {
+    $("#animacio_comodin").fadeIn(300);
+    $("#animacio_comodin").addClass('rotar2').delay(500).after(function() {
+        $("#animacio_comodin").animate({
+            'margin-left': '400px',
+            'opacity': 0
+        },function(){
+            document.location="lvl_"+nivel+".php";
+        });
+            
+    
+    });
+    
+}
+
  $(window).load(function() {
      $("#plantilla").fadeIn();
      $("#loading").fadeIn(7000, function(){
@@ -338,7 +353,8 @@ $(function(){
             
             $ ("#vidas_icons").addClass("icono_vidas"+comodinsActu).after(function(){
                 nivel++;
-                document.location="lvl_"+nivel+".php";
+                animacio_comodin(nivel);
+                
             });
             
         }
@@ -399,16 +415,7 @@ $(function(){
     //restar vida animacion
     
     
-    $("#test3").click(function(){
-       $("#animacio_comodin").fadeIn(300);
-       $("#animacio_comodin").addClass('rotar2').delay(3000).after(function(){
-           $("#animacio_comodin").css({
-               'margin-left':'600px'
-           });
-//           $("#animacio_comodin").addClass('move');
-       });
-        
-    });
+ 
     
     
     

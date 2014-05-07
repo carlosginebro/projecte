@@ -6,6 +6,7 @@
             require_once '../funcions.php';
             require_once '../animacio_perdre_vida.php';
             require_once '../animacio_correcte.php';
+            require_once '../animacio_comodin.php';
             $pregunta = getPregunta(3);
             
             $arrayPregunta = explode("#", $pregunta);
