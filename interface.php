@@ -17,6 +17,14 @@
                       <li><input type="radio" value="molon" name="interface"/> Molon</li>
 
                       <li><input type="radio" value="rock" name="interface"/> Roca</li>
+                  </ul>
+                  <br />
+                  <span style="font-size: 21px; line-height: inherit; color: #333333;">Idioma: </span>
+                  
+                  <ul>
+                      <li><input type="radio" value="es" name="idioma"/>Castellano</li>
+                      <li><input type="radio" value="ca" name="idioma"/>Català</li>
+                  </ul>
                   <br />
        
        

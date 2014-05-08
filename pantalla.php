@@ -12,6 +12,15 @@
     $conec= cone();
     $id = $_SESSION['id'];
     
+    if(isset($_POST['idioma'])){
+        $_SESSION['idioma'] = $_POST['idioma'];
+        
+        //update a la bbdd
+        
+    }else{
+         $_SESSION['idioma']='ca';
+    }
+    
     $sql = "select Vides, Comodins from usuari where id = $id";
     $consulta = $conec->query($sql);
     $reg = $consulta->fetch_array();
@@ -39,6 +48,7 @@
         <meta charset="ISO-8859-15" />
         <?php
             require_once 'head.php';
+            require_once 'llibreria_text.php';
         ?>
 
 
@@ -57,7 +67,7 @@
                 <ul style="list-style: none outside none;">
                     <li id="bt1" class="bt1" name="jugar" style="float: left;display: block; width: 44%;height: 50%;">
                         <div class="respuesta" >
-                            <span class="size">VENGAA!!</span>     
+                            <span class="size"><?php $var_final = "somi_{$_SESSION['idioma']}"; echo $var_final; ?></span>     
                         </div>
                     </li>
                     <li id="bt2" id ="creditos" class="bt2" style="float: left;display: block; width: 50%;height: 50%;">

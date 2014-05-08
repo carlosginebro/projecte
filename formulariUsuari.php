@@ -12,10 +12,9 @@ session_start();
     if (isset($cons)&&($reg['Password']==$pass)) {
             $_SESSION['id'] = $reg['Id'];
             $_SESSION['usu'] = $usu;
-//            $_SESSION['vides'] = $reg['Vides'];
-/*$_SESSION['comodins'] = $reg['Comodins'];
-            $_SESSION['vides'] = $reg['Vides'];
-            $_SESSION['admin'] = $reg['Admin'];*/
+            
+            
+// $_SESSION['idioma'] mirar kina te aket usuari            
 
             echo "1";
 
