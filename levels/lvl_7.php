@@ -4,7 +4,8 @@
         <?php
             require_once 'headlvls.php';
             require_once '../funcions.php';
-            require_once '../animacio_correcte.php';
+            require_once '../animacio_correcte_'.$_SESSION['idioma'].'.php';
+            require_once '../llibreria_text.php';
         ?>
        <script src="../js/nivel7.js"></script>
 </head>
@@ -15,7 +16,7 @@
            <div id="tiempo2" style="float:right;"></div>
            <div id="portada" class="no_portada">
             
-            <span>Aconsegueix apagar el foc de la casa abans que sigui massa tard, fes servir l'extintor per apagar el foc, o en cas contrari, si vols avivar el foc, fes servir la gasolina...</span>
+            <span><?php $var_final = "l7_tit_".$_SESSION['idioma']; echo $$var_final; ?></span>
             <br /><br />
             <input type="button" value="Començar!" id="bt7" class='bt_jocs_nivells' onclick="inicio7()"/>
 

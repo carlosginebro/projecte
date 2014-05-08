@@ -2,10 +2,11 @@
 <head>
        <meta charset="ISO-8859-15" />
         <?php
+
             require_once 'headlvls.php';
             require_once '../funcions.php';
-            require_once '../animacio_perdre_vida.php';
-            require_once '../animacio_correcte.php';
+            require_once '../animacio_perdre_vida_'.$_SESSION['idioma'].'.php';
+            require_once '../animacio_correcte_'.$_SESSION['idioma'].'.php';
             require_once '../animacio_comodin.php';
             $pregunta = getPregunta(1);
             
@@ -54,9 +55,9 @@
            
             </div>
             <div id="vidas">
-                <div id="logo_icons"></div>
+                <div id="logo_icons_<?php echo $_SESSION['idioma'];?>"></div>
                 <div id="vidas_icons" class="icono_vidas<?php echo $_SESSION['comodins']; ?>"></div>
-                <div id="logo_vides"></div>
+                <div id="logo_vides_<?php echo $_SESSION['idioma'];?>"></div>
                 <div id="vidas_rest" class="cVidas_rest<?php echo $_SESSION['vides']; ?>"></div>
             </div>
                 

@@ -45,7 +45,7 @@
     ?>
     
 	<head>
-        <meta charset="ISO-8859-15" />
+        <meta charset="UTF-8" />
         <?php
             require_once 'head.php';
             require_once 'llibreria_text.php';
@@ -67,19 +67,19 @@
                 <ul style="list-style: none outside none;">
                     <li id="bt1" class="bt1" name="jugar" style="float: left;display: block; width: 44%;height: 50%;">
                         <div class="respuesta" >
-                            <span class="size"><?php $var_final = "somi_{$_SESSION['idioma']}"; echo $var_final; ?></span>     
+                            <span class="size"><?php $var_final = "somi_".$_SESSION['idioma']; echo $$var_final; ?></span>     
                         </div>
                     </li>
                     <li id="bt2" id ="creditos" class="bt2" style="float: left;display: block; width: 50%;height: 50%;">
                         <div class="respuesta" style="width: 86%;">
-                            <span class="size">CREDITOS</span>
+                            <span class="size"><?php $var_final = "credit_".$_SESSION['idioma']; echo $$var_final; ?></span>
                         </div>
                     </li>
                 </ul>
                 <ul style="list-style: none outside none;">
                     <li id="bt3" class="bt3" data-toggle="modal" data-target="#myModal" style="float: left;display: block; width: 44%;height: 50%;">
                         <div class="respuesta" >
-                            <span class="size">Configuracion</span>
+                            <span class="size"><?php $var_final = "conf_".$_SESSION['idioma']; echo $$var_final; ?></span>
          
 
                         </div>
@@ -87,7 +87,7 @@
                     
                     <li id="bt4" class="bt4" style="float: left;display: block; width: 50%;height: 50%;">
                         <div class="respuesta">
-                            <span class="size">SORTIR</span>
+                            <span class="size"><?php $var_final = "sortir_".$_SESSION['idioma']; echo $$var_final; ?></span>
                          
                         </div>
                     </li>
@@ -96,9 +96,9 @@
             <!--</table>-->
             </div>
             <div id="vidas">
-                <div id="logo_icons"></div>
+                <div id="logo_icons_<?php echo $_SESSION['idioma'];?>"></div>
                 <div id="vidas_icons" class="icono_vidas<?php echo $_SESSION['comodins']; ?>"></div>
-                <div id="logo_vides"></div>
+                <div id="logo_vides_<?php echo $_SESSION['idioma'];?>"></div>
                 <div id="vidas_rest" class="cVidas_rest<?php echo $_SESSION['vides']; ?>"></div>
             </div>
                 

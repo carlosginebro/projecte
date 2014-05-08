@@ -21,7 +21,7 @@ body{
 }
 
 .normal, .molon{
-    color:white;
+    color:white; 
 }
 
 .rock{
@@ -662,10 +662,20 @@ body.rock .bt4:hover{
 
 }
 
-#logo_icons{
+#logo_icons_ca{
     float:left;
     margin-left:50px;
     background-image: url('galery/logo_comodins.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width:230px;
+}
+
+#logo_icons_es{
+    float:left;
+    margin-left:50px;
+    background-image: url('galery/logo_comodines.png');
     background-size: contain;
     background-repeat: no-repeat;
     height: 100%;
@@ -717,11 +727,21 @@ body.rock .bt4:hover{
     background-size: contain;
 }
 
-#logo_vides{
+#logo_vides_ca{
     float:left;
     width:150px;
     height:100%;
     background-image: url('galery/logo_vides.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+#logo_vides_es{
+    float:left;
+    width:150px;
+    height:100%;
+    background-image: url('galery/logo_vidas.png');
     background-size: contain;
     background-repeat: no-repeat;
     margin-right: 10px;
