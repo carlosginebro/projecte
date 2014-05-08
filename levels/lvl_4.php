@@ -6,7 +6,7 @@
             require_once 'headlvls.php';
             require_once '../funcions.php';
             require_once '../animacio_correcte_'.$_SESSION['idioma'].'.php';
-            require_once '../llibreria_text.php';
+            require_once '../llibreria_'.$_SESSION["idioma"].'.php';
         ?>
        <script src="../js/nivel4.js"></script>
 	   <style>
@@ -50,7 +50,7 @@
        <div id="plantilla">
 		   <div id="portada" class="no_portada">
 					<span class="nivel_pantalla">4</span>
-					<span> <?php $var_final = "l4_tit_".$_SESSION['idioma']; echo $$var_final; ?></span>
+					<span> <?php echo $l4_tit; ?></span>
 			</div>
 			<div id="marcadores" style="text-align:center;">
 				<input type="button" value="Començar!" class='bt_jocs_nivells' onclick="ComencaLvl4()"/> 

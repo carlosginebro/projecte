@@ -8,7 +8,7 @@
             require_once '../animacio_perdre_vida_'.$_SESSION['idioma'].'.php';
             require_once '../animacio_correcte_'.$_SESSION['idioma'].'.php';
             require_once '../animacio_comodin.php';
-            require_once '../llibreria_text.php';
+            require_once '../llibreria_'.$_SESSION["idioma"].'.php';
         ?>
 </head>
 
@@ -17,26 +17,26 @@
        <div id="plantilla">
             <div id="portada" class="no_portada">
                 <span class="nivel_pantalla">3</span>
-                <span ><?php $var_final = "l3_tit_".$_SESSION['idioma']; echo $$var_final; ?></span>
+                <span ><?php  echo $l3_tit; ?></span>
             </div>
      
             <div id="marcadores" style="width:100%; height: 47%; margin-left: 5%;">
                 <ul style="list-style: none outside none;">
                     <li class="bt1" name="no" style="float: left;display: block; width: 44%;height: 50%;">
                         <div class="respuesta" >
-                            <span class="size"><?php $var_final = "l31_".$_SESSION['idioma']; echo $$var_final; ?></span>     
+                            <span class="size"><?php echo $l31; ?></span>     
                         </div>
                     </li>
                     <li class="bt2" name="no" style="float: left;display: block; width: 50%;height: 50%;">
                         <div class="respuesta" style="width: 86%;">
-                            <span class="size"><?php $var_final = "l32_".$_SESSION['idioma']; echo $$var_final; ?></span>
+                            <span class="size"><?php echo $l32; ?></span>
                         </div>
                     </li>
                 </ul>
                 <ul style="list-style: none outside none;">
                     <li class="bt3" name="no" style="float: left;display: block; width: 44%;height: 50%;">
                         <div class="respuesta" >
-                            <span class="size" style="font-size:40pt;"><?php $var_final = "l33_".$_SESSION['idioma']; echo $$var_final; ?></span>
+                            <span class="size" style="font-size:40pt;"><?php echo $l33; ?></span>
          
 
                         </div>
@@ -44,7 +44,7 @@
                     
                     <li class="bt4" name="no" style="float: left;display: block; width: 50%;height: 50%;">
                         <div class="respuesta">
-                            <span class="size"><?php $var_final = "l34_".$_SESSION['idioma']; echo $$var_final; ?></span>
+                            <span class="size"><?php echo $l34; ?></span>
                          
                         </div>
                     </li>

@@ -5,7 +5,8 @@
             require_once 'headlvls.php';
             require_once '../funcions.php';
             require_once '../animacio_correcte_'.$_SESSION['idioma'].'.php';
-            require_once '../llibreria_text.php';
+            require_once '../llibreria_'.$_SESSION["idioma"].'.php';
+
         ?>
        <script src="../js/nivel7.js"></script>
 </head>
@@ -16,7 +17,7 @@
            <div id="tiempo2" style="float:right;"></div>
            <div id="portada" class="no_portada">
             
-            <span><?php $var_final = "l7_tit_".$_SESSION['idioma']; echo $$var_final; ?></span>
+            <span><?php echo $l7_tit; ?></span>
             <br /><br />
             <input type="button" value="Començar!" id="bt7" class='bt_jocs_nivells' onclick="inicio7()"/>
 

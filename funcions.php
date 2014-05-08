@@ -12,7 +12,7 @@
     function getPregunta($nivell){
         $conec= cone();
 		
-        $sql = "select * from preguntes where nivell_pregunta =".$nivell;
+        $sql = "select * from preguntes_$_SESSION[idioma] where nivell_pregunta =".$nivell;
         $consulta = $conec->query($sql);
         $random = rand(0,3);
 
@@ -21,7 +21,7 @@
         $pregunta_final = $reg['pregunta'];
 	$id_pregunta = $reg['id_pregunta'];	
 	
-        $sql = "select * from respostes where fk_pregunta = $id_pregunta";
+        $sql = "select * from respostes_$_SESSION[idioma] where fk_pregunta = $id_pregunta";
         
         $consulta = $conec->query($sql);
         $respostes = array();

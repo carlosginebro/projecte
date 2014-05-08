@@ -6,7 +6,7 @@
             require_once '../funcions.php';
             require_once '../animacio_correcte_'.$_SESSION['idioma'].'.php';
             require_once '../animacio_comodin.php';
-            require_once '../llibreria_text.php';
+            require_once '../llibreria_'.$_SESSION["idioma"].'.php';
         ?>
    
        <script src="../js/nivel9.js"></script>
@@ -63,17 +63,17 @@
              </div>
              <div id="marcadores" class="gridster">
                  <ul class="cgridFont">
-                     <li data-row="2" data-col="7" data-sizex="1" data-sizey="2" class="c91"><?php $var_final = "l91_".$_SESSION['idioma']; echo $$var_final; ?></li>
-                     <li data-row="3" data-col="1" data-sizex="2" data-sizey="1" class="c911"><?php $var_final = "l92_".$_SESSION['idioma']; echo $$var_final; ?></li>
-                     <li data-row="2" data-col="4" data-sizex="2" data-sizey="1" class="c93"><?php $var_final = "l93_".$_SESSION['idioma']; echo $$var_final; ?></li>
-                     <li data-row="2" data-col="2" data-sizex="2" data-sizey="1" class="c98"><?php $var_final = "l94_".$_SESSION['idioma']; echo $$var_final; ?></li> 
-                     <li data-row="1" data-col="6" data-sizex="2" data-sizey="1" class="c92"><?php $var_final = "l95_".$_SESSION['idioma']; echo $$var_final; ?></li>
-                     <li data-row="3" data-col="4" data-sizex="2" data-sizey="1" class="c910"><?php $var_final = "l96_".$_SESSION['idioma']; echo $$var_final; ?></li>
-                     <li data-row="1" data-col="1" data-sizex="1" data-sizey="2" class="c95"><?php $var_final = "l97_".$_SESSION['idioma']; echo $$var_final; ?></li>
-                     <li data-row="3" data-col="3" data-sizex="1" data-sizey="1" class="c99"><?php $var_final = "l98_".$_SESSION['idioma']; echo $$var_final; ?></li>
-                     <li data-row="1" data-col="2" data-sizex="2" data-sizey="1" class="c96"><?php $var_final = "l99_".$_SESSION['idioma']; echo $$var_final; ?></li>
-                     <li data-row="2" data-col="6" data-sizex="1" data-sizey="1" class="c97"><?php $var_final = "l910_".$_SESSION['idioma']; echo $$var_final; ?></li>
-                     <li data-row="1" data-col="4" data-sizex="2" data-sizey="1" class="c94"><?php $var_final = "l911_".$_SESSION['idioma']; echo $$var_final; ?></li>
+                     <li data-row="2" data-col="7" data-sizex="1" data-sizey="2" class="c91"><?php echo $l91; ?></li>
+                     <li data-row="3" data-col="1" data-sizex="2" data-sizey="1" class="c911"><?php echo $l92; ?></li>
+                     <li data-row="2" data-col="4" data-sizex="2" data-sizey="1" class="c93"><?php  echo $l93; ?></li>
+                     <li data-row="2" data-col="2" data-sizex="2" data-sizey="1" class="c98"><?php echo $l94; ?></li> 
+                     <li data-row="1" data-col="6" data-sizex="2" data-sizey="1" class="c92"><?php echo $l95; ?></li>
+                     <li data-row="3" data-col="4" data-sizex="2" data-sizey="1" class="c910"><?php echo $l96; ?></li>
+                     <li data-row="1" data-col="1" data-sizex="1" data-sizey="2" class="c95"><?php  echo $l97; ?></li>
+                     <li data-row="3" data-col="3" data-sizex="1" data-sizey="1" class="c99"><?php echo $l98; ?></li>
+                     <li data-row="1" data-col="2" data-sizex="2" data-sizey="1" class="c96"><?php echo $l99; ?></li>
+                     <li data-row="2" data-col="6" data-sizex="1" data-sizey="1" class="c97"><?php echo $l910; ?></li>
+                     <li data-row="1" data-col="4" data-sizex="2" data-sizey="1" class="c94"><?php echo $l911; ?></li>
                  </ul>
             </div>
            <div id="vidas">

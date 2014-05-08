@@ -7,6 +7,7 @@
             require_once '../animacio_perdre_vida_'.$_SESSION['idioma'].'.php';
             require_once '../animacio_correcte_'.$_SESSION['idioma'].'.php';
             require_once '../animacio_comodin.php';
+            require_once '../llibreria_'.$_SESSION["idioma"].'.php';
         ?>
        
        <script src="../js/nivel12.js"></script>
@@ -33,7 +34,7 @@
 <div id="plantilla">
             <div id="portadalaberinto" class="no_portada">
                 <span class="nivel_pantalla">12</span>
-                <span >Recull el Formatge sense tocar les parets!</span>
+                <span style="font-size: 22pt;"><?php echo $l12_tit; ?></span>
             </div>
 	<!-- -->
             <div id="marcadores" style="width:100%; height: 64%; margin-left: 35%;">

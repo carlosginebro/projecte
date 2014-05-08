@@ -48,7 +48,7 @@
         <meta charset="UTF-8" />
         <?php
             require_once 'head.php';
-            require_once 'llibreria_text.php';
+            require_once 'llibreria_'.$_SESSION["idioma"].'.php';
         ?>
 
 
@@ -67,19 +67,19 @@
                 <ul style="list-style: none outside none;">
                     <li id="bt1" class="bt1" name="jugar" style="float: left;display: block; width: 44%;height: 50%;">
                         <div class="respuesta" >
-                            <span class="size"><?php $var_final = "somi_".$_SESSION['idioma']; echo $$var_final; ?></span>     
+                            <span class="size"><?php echo $somi; ?></span>     
                         </div>
                     </li>
                     <li id="bt2" id ="creditos" class="bt2" style="float: left;display: block; width: 50%;height: 50%;">
                         <div class="respuesta" style="width: 86%;">
-                            <span class="size"><?php $var_final = "credit_".$_SESSION['idioma']; echo $$var_final; ?></span>
+                            <span class="size"><?php echo $credit; ?></span>
                         </div>
                     </li>
                 </ul>
                 <ul style="list-style: none outside none;">
                     <li id="bt3" class="bt3" data-toggle="modal" data-target="#myModal" style="float: left;display: block; width: 44%;height: 50%;">
                         <div class="respuesta" >
-                            <span class="size"><?php $var_final = "conf_".$_SESSION['idioma']; echo $$var_final; ?></span>
+                            <span class="size"><?php  echo $conf; ?></span>
          
 
                         </div>
@@ -87,7 +87,7 @@
                     
                     <li id="bt4" class="bt4" style="float: left;display: block; width: 50%;height: 50%;">
                         <div class="respuesta">
-                            <span class="size"><?php $var_final = "sortir_".$_SESSION['idioma']; echo $$var_final; ?></span>
+                            <span class="size"><?php  echo $sortir; ?></span>
                          
                         </div>
                     </li>

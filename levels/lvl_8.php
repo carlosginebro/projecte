@@ -7,7 +7,7 @@
             require_once '../animacio_perdre_vida_'.$_SESSION['idioma'].'.php';
             require_once '../animacio_correcte_'.$_SESSION['idioma'].'.php';
             require_once '../animacio_comodin.php';
-            require_once '../llibreria_text.php';
+            require_once '../llibreria_'.$_SESSION["idioma"].'.php';
             $pregunta = getPregunta(4);
             
             $arrayPregunta = explode("#", $pregunta);
@@ -19,7 +19,7 @@
             <div id="portada" class="no_portadalogica">
                 <span class="nivel_pantalla">8</span>
 						
-                <span ><?php $var_final = "l8_tit_".$_SESSION['idioma']; echo $$var_final; ?><img src="<?php echo $arrayPregunta[0]; ?>" alt="preg1" class="preguntalogica" /></span>
+                <span ><?php echo $l8_tit; ?><img src="<?php echo $arrayPregunta[0]; ?>" alt="preg1" class="preguntalogica" /></span>
             </div>
      
             <div id="marcadores" style="width:100%; height: 47%; margin-left: 5%;">
