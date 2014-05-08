@@ -11,8 +11,12 @@
        
        <script src="../js/nivel12.js"></script>
 	   <style>
-		img{
-			cursor : none;
+		.img{
+			cursor : none !important ;
+		}
+		
+		.img2{
+			cursor : pointer ;
 		}
 		
 		#lab{
@@ -36,7 +40,9 @@
 				<div id="ratoli">
 					<img src ="../css/galery/raton.jpg" alt="raton"   onmouseover="ratoli()" />
 			</div>
-				
+			<div id="test4">
+
+</div>			
 			<div id="lab">
 					<img src ="../css/galery/labfacil.jpg" alt="labFacil"   usemap="#laberinto" />		
 			</div>

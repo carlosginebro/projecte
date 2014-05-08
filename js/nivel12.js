@@ -1,11 +1,18 @@
+
+var  t;
+
+
 function ratoli(){
 	$('#ratoli').hide();
-	
-	$('#lab').show();	
-	
+
+	$('#lab').show();		
 }
 
 function comensalvl(){
+	
+	
+	
+	
 	var linias= " ";
 
 	
@@ -33,6 +40,26 @@ function comensalvl(){
 	
 
 	$('#porv').html(linias);
+	
+	
+	
+	
+	$('#test4').fadeOut(800, function() {
+		$('#lab').removeClass("img");
+	
+		
+	});
+	
+	
+	$('#test4').fadeIn(20, function() {
+		$('#lab').addClass("img");
+	
+	});
+	
+	
+
+	t = setTimeout('comensalvl()', 50);
+	
 }
 
 
@@ -85,7 +112,7 @@ function linia(){
             restar_vida(vidas);
             $("#vidas_rest").removeClass("cVidas_rest"+vidas);
             
-            vidas--;
+            //vidas--;
             $('#videsbd').val(vidas);
         }
 		
