@@ -75,8 +75,11 @@ function animacio_nivel(nivel) {
 }
 
 function animacio_comodin(nivel) {
+	var audio = new Audio('../audio/comodi.mp3');
     $("#animacio_comodin").fadeIn(300);
     $("#animacio_comodin").addClass('rotar2').delay(500).after(function() {
+	
+		audio.play();
         $("#animacio_comodin").animate({
             'margin-left': '400px',
             'opacity': 0
