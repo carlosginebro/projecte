@@ -4,6 +4,11 @@ function restar_vida(vidas){
     $("#sas").show();
     $("#vida_a").show();
     $("#vidas_rest").addClass("cVidas_rest_bye"+vidas);
+	
+  
+	var audio = new Audio('../audio/vidasmenos.mp3');
+	audio.play();
+	
     $("#vida_a").addClass('rotar').after(function(){
         $("#vida_a").animate({
             'width':'450px',
@@ -41,6 +46,9 @@ function animacio_nivel(nivel) {
     $("#animacio_correcte").fadeIn(300);
     var offset = 10;
     var duration = 150;
+	
+	var audio = new Audio('../audio/ganas.mp3');
+	audio.play();
     $('#animacio_correcte').animate({marginLeft: ('-=' + offset)}, duration, function() {
         $(this).animate({marginLeft: ('+=' + offset * 2)}, duration, function() {
             $(this).animate({marginLeft: ('-=' + offset * 2)}, duration, function() {
