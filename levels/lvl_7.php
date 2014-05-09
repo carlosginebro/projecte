@@ -33,6 +33,7 @@
         </div>
 <input type="text" value="7" id="getLvl" />
 <input type="text" value="<?php echo $_SESSION['vides'];?>" class="cHiden" id="videsbd" />
+<input type="text" value="<?php echo $_SESSION['sound']; ?>" class="cHiden" id="getSound" />
 
 </body>
 

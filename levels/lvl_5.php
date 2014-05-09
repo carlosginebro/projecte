@@ -63,6 +63,7 @@ require_once '../animacio_perdre_vida_'.$_SESSION['idioma'].'.php';
 <input type="text" value="5" id="getLvl" />
 <input type="text" value="<?php echo $_SESSION['vides'];?>" class="cHiden" id="videsbd" />
 <input type="text" value="<?php echo $_SESSION['comodins']; ?>" class="cHiden" id="getComodins" />
+<input type="text" value="<?php echo $_SESSION['sound']; ?>" class="cHiden" id="getSound" />
 </body>
 
 </html>

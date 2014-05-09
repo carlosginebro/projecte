@@ -65,9 +65,15 @@ function comensalvl(){
 
 function restar_vida(vidas){
 
+    var sound = $("#getSound").val();
+    
     $("#sas").show();
     $("#vida_a").show();
     $ ("#vidas_rest").addClass("cVidas_rest_bye"+vidas);
+    if(sound == 1){
+	var audio = new Audio('../audio/vidasmenos.mp3');
+	audio.play();
+    }
     $("#vida_a").addClass('rotar').after(function(){
         $("#vida_a").animate({
             'width':'450px',
@@ -106,13 +112,13 @@ function restar_vida(vidas){
 
 function linia(){
 
-	 var vidas = $('#videsbd').val();
+        var vidas = $('#videsbd').val();
 
        if(vidas>0){
             restar_vida(vidas);
             $("#vidas_rest").removeClass("cVidas_rest"+vidas);
             
-            //vidas--;
+            vidas--;
             $('#videsbd').val(vidas);
         }
 		

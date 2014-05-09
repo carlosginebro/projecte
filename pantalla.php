@@ -23,7 +23,7 @@
     if(isset($_POST['sound'])){
         $_SESSION['sound'] = $_POST['sound'];
     }else{
-		$_SESSION['sound'] = 'si';
+		$_SESSION['sound'] = 1;
 	}
     
     $sql = "select Vides, Comodins from usuari where id = $id";

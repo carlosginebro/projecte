@@ -1,14 +1,16 @@
 
 function restar_vida(vidas){
 
+    var sound = $("#getSound").val();
+    
     $("#sas").show();
     $("#vida_a").show();
     $("#vidas_rest").addClass("cVidas_rest_bye"+vidas);
 	
-  
+    if(sound == 1){
 	var audio = new Audio('../audio/vidasmenos.mp3');
 	audio.play();
-	
+    }
     $("#vida_a").addClass('rotar').after(function(){
         $("#vida_a").animate({
             'width':'450px',
@@ -43,12 +45,15 @@ function restar_vida(vidas){
 }
 
 function animacio_nivel(nivel) {
+    var sound = $("#getSound").val();
     $("#animacio_correcte").fadeIn(300);
     var offset = 10;
     var duration = 150;
 	
+    if(sound == 1){
 	var audio = new Audio('../audio/ganas.mp3');
 	audio.play();
+    }
     $('#animacio_correcte').animate({marginLeft: ('-=' + offset)}, duration, function() {
         $(this).animate({marginLeft: ('+=' + offset * 2)}, duration, function() {
             $(this).animate({marginLeft: ('-=' + offset * 2)}, duration, function() {
@@ -75,11 +80,13 @@ function animacio_nivel(nivel) {
 }
 
 function animacio_comodin(nivel) {
+     var sound = $("#getSound").val();
 	var audio = new Audio('../audio/comodi.mp3');
     $("#animacio_comodin").fadeIn(300);
     $("#animacio_comodin").addClass('rotar2').delay(500).after(function() {
-	
+            if(sound == 1){
 		audio.play();
+            }
         $("#animacio_comodin").animate({
             'margin-left': '400px',
             'opacity': 0
