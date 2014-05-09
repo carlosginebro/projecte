@@ -14,11 +14,10 @@
     
     if(isset($_POST['idioma'])){
         $_SESSION['idioma'] = $_POST['idioma'];
+        $idioma = $_SESSION['idioma'];
         
-        //update a la bbdd
-        
-    }else{
-         $_SESSION['idioma']='ca';
+        $sql = "update idioma set idioma = '$idioma' where fk_usuari = $id";
+        $conec->query($sql);
     }
     
     $sql = "select Vides, Comodins from usuari where id = $id";

@@ -1,6 +1,8 @@
 
 <?php
 
+    $load = "Carregant...";
+
     $somi = 'SOM-HII!!';
     
     $credit = 'CREDITS';

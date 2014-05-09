@@ -1,6 +1,8 @@
 
 <?php
 
+    $load = "Cargando...";
+
     $somi = 'VENGAA!!';
 
     $credit = 'CREDITOS';
