@@ -80,7 +80,7 @@
                 <div id="logo_icons_<?php echo $_SESSION['idioma'];?>"></div>
                 <div id="vidas_icons" class="icono_vidas<?php echo $_SESSION['comodins']; ?>"></div>
                 <div id="logo_vides_<?php echo $_SESSION['idioma'];?>"></div>
-                <div id="vidas_rest" class="cVidas_rest<?php echo $_SESSION['vides']; ?>"></div>
+                <div id="vidas_rest" class="cVidas_rest<?php echo $_SESSION['vides']; ?>" name="nextLvl9"></div>
             </div>
        </div>
 	   

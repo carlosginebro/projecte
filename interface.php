@@ -29,8 +29,8 @@
                   <span style="font-size: 21px; line-height: inherit; color: #333333;">Música: </span>
                   
                   <ul>
-                      <li><input type="radio" value="si" name="sound"/> Activar</li>
-                      <li><input type="radio" value="no" name="sound"/> Desactivar</li>
+                      <li><input type="radio" value="1" name="sound"/> Activar</li>
+                      <li><input type="radio" value="0" name="sound"/> Desactivar</li>
                   </ul>
        
        
