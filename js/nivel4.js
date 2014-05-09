@@ -74,11 +74,15 @@ function planetesAl() {
 } 
 
 function chase(x, y, planetes) {
+	var velocitatasteroide=  Math.floor((Math.random()*900)+400); 
+
+
+
     //SI l'asteroide pilla el planta
     asteroide.animate({
         top: y,
         left: x 
-    }, 1000, function () {
+    }, velocitatasteroide, function () {
         //El planeta explota
         explotaplaneta(x, y, planetes);
         //I perds
