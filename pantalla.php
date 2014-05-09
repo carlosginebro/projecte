@@ -21,8 +21,10 @@
     }
     
     if(isset($_POST['sound'])){
-        $_SESSION['sound'] = $reg['sound'];
-    }
+        $_SESSION['sound'] = $_POST['sound'];
+    }else{
+		$_SESSION['sound'] = 'si';
+	}
     
     $sql = "select Vides, Comodins from usuari where id = $id";
     $consulta = $conec->query($sql);

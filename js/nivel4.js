@@ -104,7 +104,8 @@ function salvaPlaneta(x, y, planetes) {
 }
 
 function explotaplaneta(x, y, planetes) {
-	
+	var audio = new Audio('../audio/explotaplaneta.mp3');
+	audio.play();
 	planetes.css({
 		'background-image': 'url("planeta4/'+imagen+'")'
 		
