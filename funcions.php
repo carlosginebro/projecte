@@ -11,6 +11,7 @@
 
     function getPregunta($nivell){
         $conec= cone();
+        
 	
         $idioma = $_SESSION['idioma'];
         
