@@ -22,10 +22,16 @@
                   <span style="font-size: 21px; line-height: inherit; color: #333333;">Idioma: </span>
                   
                   <ul>
-                      <li><input type="radio" value="es" name="idioma"/>Castellano</li>
-                      <li><input type="radio" value="ca" name="idioma"/>Català</li>
+                      <li><input type="radio" value="es" name="idioma"/> Castellano</li>
+                      <li><input type="radio" value="ca" name="idioma"/> Català</li>
                   </ul>
                   <br />
+                  <span style="font-size: 21px; line-height: inherit; color: #333333;">Música: </span>
+                  
+                  <ul>
+                      <li><input type="radio" value="si" name="sound"/> Activar</li>
+                      <li><input type="radio" value="no" name="sound"/> Desactivar</li>
+                  </ul>
        
        
                   <input type="submit" value="Aceptar"  id="btestilos"/>

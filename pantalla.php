@@ -20,6 +20,10 @@
         $conec->query($sql);
     }
     
+    if(isset($_POST['sound'])){
+        $_SESSION['sound'] = $reg['sound'];
+    }
+    
     $sql = "select Vides, Comodins from usuari where id = $id";
     $consulta = $conec->query($sql);
     $reg = $consulta->fetch_array();
@@ -100,7 +104,7 @@
                 <div id="logo_vides_<?php echo $_SESSION['idioma'];?>"></div>
                 <div id="vidas_rest" class="cVidas_rest<?php echo $_SESSION['vides']; ?>"></div>
             </div>
-                
+                <input type="text" value="<?php echo $_SESSION['sound']; ?>" class="cHiden" id="getSound" />
             </div>
        
 

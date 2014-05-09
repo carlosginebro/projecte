@@ -418,15 +418,9 @@ $(function(){
     });
     
     //fi game_over botons
+
     
-    
-    //restar vida animacion
-    
-    
- 
-    
-    
-    
+
     
 });
-  
+
