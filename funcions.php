@@ -11,14 +11,16 @@
 
     function getPregunta($nivell){
         $conec= cone();
-		
+	
+        $idioma = $_SESSION['idioma'];
+        
         $sql = "select * from preguntes where nivell_pregunta =".$nivell;
         $consulta = $conec->query($sql);
         $random = rand(0,3);
 
         $consulta->data_seek($random);
         $reg = $consulta->fetch_array();
-        $pregunta_final = $reg['pregunta_ca'];
+        $pregunta_final = $reg['pregunta_'.$idioma];
 	$id_pregunta = $reg['id_pregunta'];	
 	
         $sql = "select * from respostes where fk_pregunta = $id_pregunta";
@@ -28,7 +30,7 @@
         $cont = 0;
         
         while($reg = $consulta->fetch_array()){
-            $respostes[$cont]="#".$reg['correcte']."#".$reg['resposta_ca'];
+            $respostes[$cont]="#".$reg['correcte']."#".$reg['resposta_'.$idioma];
             $cont++;
 //            $pregunta_final.="#".$reg['correcte']."#".$reg['resposta'];
         }
