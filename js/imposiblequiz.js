@@ -1,4 +1,5 @@
 
+
 function restar_vida(vidas){
 
     var sound = $("#getSound").val();
@@ -25,12 +26,20 @@ function restar_vida(vidas){
                             'height':'0px',
                             'margin-top':'38%',
                             'margin-left':'73%'
-                        }, 500);
+                        }, 500, function(){
+                            if(vidas == 1){
+                                $("#plantilla").fadeOut(2000, function(){
+                                    document.location="../gameover.php"; 
+                                })
+                                  
+                            }
+                        });
                         
                  }); 
                  $("#sas").fadeIn(250, function(){
                      $("#sas").fadeOut(250, function(){
                           $ ("#vidas_rest").removeClass("cVidas_rest_bye"+vidas);
+                     
                      });
                  });
                 
@@ -101,7 +110,7 @@ function animacio_comodin(nivel) {
 
  $(window).load(function() {
      $("#plantilla").fadeIn();
-     $("#loading").fadeIn(7000, function(){
+     $("#loading").fadeIn(10000, function(){
         
         document.location= "pantalla.php";
 
@@ -171,6 +180,7 @@ function animacio_comodin(nivel) {
  });
 
 $(function(){
+    
 
 /* Obrir recovery*/
 
@@ -321,6 +331,10 @@ $(function(){
   
     $('body').on("click", "[name=no]", function() {
         var vidas = $('#videsbd').val();
+//        if(vidas == 1){
+//            alert("animacio gameover");
+//            document.location="../gameover.php";  
+//        }
         if(vidas>0){
             restar_vida(vidas);
             $("#vidas_rest").removeClass("cVidas_rest"+vidas);
@@ -334,17 +348,12 @@ $(function(){
             data: {vidas: vidas},
             url: "../restarVidesComodins.php",
             success:function( dada ) {
-          
                 
-                $ ("#vidas_rest").addClass("cVidas_rest"+dada).after(function(){
-                    if(dada==0){
-                        alert("gameover");//mirar pork no hace el fadeIn en gameover
-                        document.location="../gameover.php";  
-                    }
-                });
+                $ ("#vidas_rest").addClass("cVidas_rest"+dada);
+                 
             }
         });
-
+       
     });
  
   /*Final fallo casillas restar vidas*/

@@ -78,6 +78,7 @@ div, span{
 
 #test form input[type=text]{
     font-family:sans-serif;
+    text-align: center;
 }
 
 #test form{
@@ -94,7 +95,7 @@ div, span{
     background-position-x: 600px;
     background-position-y: -400px;
 /*    background-size: contain;*/
-    border:10px solid;
+    border:6px solid;
     box-shadow:0 0 20px 2px white;
     text-decoration:none;
     top:30%;
@@ -167,7 +168,7 @@ div, span{
     height: 30px;
     width: 300px; 
     font-size:14pt;
-
+    text-align: center;
 }
 
 #MailForm{
