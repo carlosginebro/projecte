@@ -28,9 +28,40 @@ function restar_vida(vidas){
                             'margin-left':'73%'
                         }, 500, function(){
                             if(vidas == 1){
-                                $("#plantilla").fadeOut(2000, function(){
-                                    document.location="../gameover.php"; 
-                                })
+//                                $("#plantilla").fadeOut(200, function(){
+//                                    document.location="../gameover.php"; 
+//                                });
+                                  $("#plantilla").html("");
+                                  $("body").css({
+                                          'overflow':'hidden'
+                                      });
+                                  $("#plantilla").animate({
+                                        'width':'20px',
+                                        'height': '20px',
+                                        'margin':'23% auto'
+//                                     
+                                  }, 500,  function(){
+                                      $("#plantilla").css({
+                                          'box-shadow': 'inset 0px 0px 40px #F7F8CE, 0px 0px 40px #ff0',
+                                          
+                                          
+                                      });
+                                      
+                                      $("#plantilla").animate({
+                                         'width':'100%',
+                                         'height':'100%',
+                                         'margin':'0 0',
+                                         'border':'2px'
+                                      }, 500, function(){
+                                          $("#plantilla").css({
+                                            'box-shadow':'none',
+                                            'background-image':'url("../css/galery/gameover.png")',
+                                            'background-repeat':'no-repeat',
+                                            'background-size':'cover'
+                                          });
+                                      });
+
+                                  });
                                   
                             }
                         });
