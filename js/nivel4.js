@@ -4,14 +4,15 @@ var t;
 
 function ComencaLvl4(){
     $("table").show();
-    asteroide = $('<img>').attr({
-        'src': '../css/galery/asteroide.png'
-    }).css({
+    asteroide = $('<div>').css({
+		'background-image': "url('../css/galery/asteroide.png')",
+		'background-size': 'contain',
         'position': 'absolute',
         'z-index': 2,
         top: -10,
         left: -10,
-        width: 50
+        width: 50,
+		height: 50
 //        'pointer-events': 'none'
     });
 	
