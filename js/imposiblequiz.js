@@ -21,7 +21,7 @@ function game_over(){
         }, 500, function() {
             $("#plantilla").css({
                 'box-shadow': 'none',
-                'background-image': 'url("../css/galery/gameover.jpg")',
+                'background-image': 'url("../css/galery/gameover.png")',
                 'background-repeat': 'no-repeat',
                 'background-size': '100% 100%'
             });

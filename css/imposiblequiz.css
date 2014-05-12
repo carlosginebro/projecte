@@ -1033,26 +1033,28 @@ body.rock .bt4:hover{
 
 #try_again{
     display:block;
-    margin-top:35%;
-    margin-left:15%;
+    margin-top:10%;
+    margin-left:2%;
     float:left;
-    -webkit-transform: rotate(-370deg);
-
+    -webkit-transform: rotate(365deg);
+    
 }
 
 #sortir_game{
     display:block;
-    margin-top:35%;
-    margin-left:55%;
-    width: 310px;
-    -webkit-transform: rotate(370deg);
+    margin-top:10%;
+    margin-left:49%;
+    width: 675px;
+    -webkit-transform: rotate(-365deg);
 }
 
 .css_gameover{
-    font-size: 35px;
+    font-size: 75px;
     font-weight: bold;
-    color: blue;
+    color: silver;
     position: absolute;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 0 0 10px #0099ff, 0 0 20px #0099ff, 0 0 30px #0099ff, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff, 0 0 150px #fff;
 }
 
 .css_gameover:hover{ 
