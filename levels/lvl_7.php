@@ -19,7 +19,7 @@
             
             <span><?php echo $l7_tit; ?></span>
             <br /><br />
-            <input type="button" value="Començar!" id="bt7" class='bt_jocs_nivells' onclick="inicio7()"/>
+            <input type="button" value="<?php echo $boton; ?>" id="bt7" class='bt_jocs_nivells' onclick="inicio7()"/>
 
            </div>
            <div id="marcadores" style="width:100%; height: 47%; margin-left: 5%; display:none;">

@@ -2,6 +2,12 @@
 <?php
 
     $load = "Cargando...";
+    
+    $gameover1 = "Otra vez!!";
+    
+    $gameover2 = "Me rindo...";
+    
+    $boton = "Comenzar!";
 
     $somi = 'VENGAA!!';
 

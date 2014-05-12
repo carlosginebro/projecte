@@ -8,6 +8,39 @@ var y = 0;
 var duration = 80;
 var offset = 40;
 
+function game_over(){
+    $("#plantilla").html("");
+    $("body").css({
+        'overflow': 'hidden'
+    });
+    $("#plantilla").animate({
+        'width': '20px',
+        'height': '20px',
+        'margin': '23% auto'
+//                                     
+    }, 500, function() {
+        $("#plantilla").css({
+            'box-shadow': 'inset 0px 0px 40px #F7F8CE, 0px 0px 40px #ff0',
+            'background-image':'none'
+        });
+
+        $("#plantilla").animate({
+            'width': '100%',
+            'height': '100%',
+            'margin': '0 0',
+            'border': '2px'
+        }, 500, function() {
+            $("#plantilla").css({
+                'box-shadow': 'none',
+                'background-image': 'url("../css/galery/gameover.jpg")',
+                'background-repeat': 'no-repeat',
+                'background-size': '100% 100%'
+            });
+            document.location = "../gameover.php";
+        });
+
+    });
+}
 
 function inicio7(){
     $("#portada").hide();
@@ -24,7 +57,7 @@ function cronometre(){
 
             $('#tiempo2').html('0');
       
-            document.location="../gameover.php"; 
+            game_over(); 
             
         }else if(segons < 6){
             $("#tiempo2").css({

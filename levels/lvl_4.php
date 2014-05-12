@@ -53,7 +53,7 @@
 					<span> <?php echo $l4_tit; ?></span>
 			</div>
 			<div id="marcadores" style="text-align:center;">
-				<input type="button" value="Començar!" class='bt_jocs_nivells' onclick="ComencaLvl4()"/> 
+				<input type="button" value="<?php echo $boton; ?>" class='bt_jocs_nivells' onclick="ComencaLvl4()"/> 
             </div>
        </div>
 	   

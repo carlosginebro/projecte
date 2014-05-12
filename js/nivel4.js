@@ -132,9 +132,8 @@ function explotaplaneta(x, y, planetes) {
 function lose() {
     $('#asteroide').html(parseInt($('#asteroide').html()) + 1);
     var punts =  $('#asteroide').html();
-    if(punts == 20){
-        alert("gameover");//mirar pork no hace el fadeIn en gameover
-        document.location="../gameover.php";  
+    if(punts == 20){       
+        document.location = "../gameover.php";  
     }
  }
 function won() {

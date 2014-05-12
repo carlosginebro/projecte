@@ -88,7 +88,13 @@ function restar_vida(vidas){
                             'height':'0px',
                             'margin-top':'38%',
                             'margin-left':'73%'
-                        }, 500);
+                        }, 500, function(){
+                            if(vidas == 1){
+//                        
+                                 game_over();
+                                  
+                            }
+                        });
                         
                  }); 
                  $("#sas").fadeIn(250, function(){
@@ -128,16 +134,11 @@ function linia(){
             data: {vidas: vidas},
             url: "../restarVidesComodins.php",
             success:function( dada ) {
-			
                 
-                $ ("#vidas_rest").addClass("cVidas_rest"+dada).after(function(){
-                    if(dada==0){
-                        alert("gameover");//mirar pork no hace el fadeIn en gameover
-                        document.location="../gameover.php";  
-                    }
-                });
+                $ ("#vidas_rest").addClass("cVidas_rest"+dada);
+                 
             }
-		});
+        });
 
 }
 

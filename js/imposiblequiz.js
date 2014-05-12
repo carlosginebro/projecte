@@ -11,6 +11,7 @@ function game_over(){
     }, 500, function() {
         $("#plantilla").css({
             'box-shadow': 'inset 0px 0px 40px #F7F8CE, 0px 0px 40px #ff0',
+            'background-image':'none'
         });
 
         $("#plantilla").animate({
@@ -148,7 +149,7 @@ function animacio_comodin(nivel) {
 
     
      $("#urano").fadeIn(2000);
-     $("#urano").css("left", $("#urano").position().left).circulate({
+     $("#urano").css("", $("#urano").position().left).circulate({
         sizeAdjustment: 160,
         speed: 5500,
         width: -820,
@@ -158,7 +159,7 @@ function animacio_comodin(nivel) {
     });
     
     $("#tierra").fadeIn(2000);
-    $("#tierra").css("left", $("#tierra").position().left).circulate({
+    $("#tierra").css("", $("#tierra").position().left).circulate({
         sizeAdjustment: 160,
         speed: 6500,
         width: -820,
@@ -168,7 +169,7 @@ function animacio_comodin(nivel) {
     });
     
     $("#luna").fadeIn(2000);
-    $("#luna").css("left", $("#luna").position().left).circulate({
+    $("#luna").css("", $("#luna").position().left).circulate({
         sizeAdjustment: 160,
         speed: 5000,
         width: -820,
@@ -178,7 +179,7 @@ function animacio_comodin(nivel) {
     });
     
     $("#marte").fadeIn(2000);
-    $("#marte").css("left", $("#marte").position().left).circulate({
+    $("#marte").css("", $("#marte").position().left).circulate({
         sizeAdjustment: 160,
         speed: 8000,
         width: -820,
@@ -188,7 +189,7 @@ function animacio_comodin(nivel) {
     });
     
     $("#jupiter").fadeIn(2000);
-    $("#jupiter").css("left", $("#jupiter").position().left).circulate({
+    $("#jupiter").css("", $("#jupiter").position().left).circulate({
         sizeAdjustment: 160,
         speed: 13500,
         width: -820,
@@ -198,7 +199,7 @@ function animacio_comodin(nivel) {
     });
     
     $("#saturno").fadeIn(2000);
-    $("#saturno").css("left", $("#saturno").position().left).circulate({
+    $("#saturno").css("", $("#saturno").position().left).circulate({
         sizeAdjustment: 160,
         speed: 9500,
         width: -820,
