@@ -23,7 +23,7 @@
         }else{
             
             
-            //include("mail.php");  fer que envii mail
+            include("mail.php");
             
             $recovery = "";
             
@@ -35,6 +35,20 @@
             
             $sql = "insert into usuari(Usuari, Password, RecoveryName, Vides, Comodins, PuntuacioMax, Admin) values ('$u', '$p', '$recovery', 3, 0, 0, 0)";
         
+            $cone->query($sql);
+            
+            $sql = "select Id from usuari where Usuari = '$u'";
+            $consulta = $cone->query($sql);
+            $reg = $consulta->fetch_array();
+            $id = $reg['Id'];
+            
+            $sql = "insert into mail (id_usu, mail) values ($id, '$m')";
+            $cone->query($sql);
+            
+            $sql = "insert into idioma (idioma, fk_usuari) values ('ca', $id)";
+            $cone->query($sql);
+            
+            $sql = "insert into estils (estil, fk_usuari) values ('normal', $id)";
             $cone->query($sql);
             
             mysqli_close($cone);
