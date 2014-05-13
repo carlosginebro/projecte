@@ -10,7 +10,7 @@
             require_once '../llibreria_'.$_SESSION["idioma"].'.php';
         ?>
        
-       <script src="../js/nivel12.js"></script>
+       <script src="../js/nivel13.js"></script>
 	   <style>
 		
 		
@@ -45,9 +45,7 @@
 		
 		#objecte{
 		
-			margin-top:  150px;
-			margin-left: 400px;
-			position: absolute;
+			
 		}
 		
 	</style>
@@ -60,15 +58,16 @@
 <div id="plantilla">
 	<div id="lvl13">
 	<div id="marcadores" style="width:100%; height: 90%; ">
-
+           
+           
 			<div id="objecte">
-				ezfdsaafdssssssssssssssssssssssss
+				
 			</div>
 
-			<div id="papeleraredonda">
+			<div id="papeleraredonda" ondrop="drop1(event)" ondragover="allowDrop(event)">
 				
 			</div>	
-			<div id="papeleracuadrada">
+			<div id="papeleracuadrada" ondrop="drop2(event)" ondragover="allowDrop(event)">
 				
 			</div>
 	
