@@ -51,6 +51,7 @@
 		}
 		
 	</style>
+	
 </head>
 
 <body id="container" class="<?php echo $_SESSION['estil']; ?>">
