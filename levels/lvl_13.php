@@ -64,10 +64,10 @@
 				
 			</div>
 
-			<div id="papeleraredonda" ondrop="drop1(event)" ondragover="allowDrop(event)">
+			<div id="papeleraredonda" ondrop="peperedonda(event)" ondragover="allowDrop(event)">
 				
 			</div>	
-			<div id="papeleracuadrada" ondrop="drop2(event)" ondragover="allowDrop(event)">
+			<div id="papeleracuadrada" ondrop="papecuadrada(event)" ondragover="allowDrop(event)">
 				
 			</div>
 	

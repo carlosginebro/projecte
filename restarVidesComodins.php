@@ -3,7 +3,11 @@ session_start();
 
 if(isset($_POST['vidas'])){
     $vides = $_POST['vidas'];
-
+    
+    
+// update puntiacio MAX
+    
+    
     $_SESSION['vides'] = $vides;
 
     echo $_SESSION['vides'];
