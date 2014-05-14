@@ -23,7 +23,7 @@
         }else{
             
             
-            include("mail.php");
+            
             
             $recovery = "";
             
@@ -52,6 +52,8 @@
             $cone->query($sql);
             
             mysqli_close($cone);
+            
+            include("mail.php");
             
             echo "1";
         }

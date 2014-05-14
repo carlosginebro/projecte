@@ -21,7 +21,7 @@ $mail->WordWrap = 50;
 $mail->isHTML(true);                          
 
 $mail->Subject = 'Contrasenya i Password';
-$mail->Body    = 'Nom Usuari: '.$u.' </br>Password: '.$p.' .';
+$mail->Body    = 'Nom Usuari: '.$u.' <br />Password: '.$p.' <br />Recovery key: '.$recovery;
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 $mail->send();
