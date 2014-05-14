@@ -7,9 +7,11 @@
  var objecte;
  var objencertats=0;
  var tipus;
- var objtotal=1;
+ var objtotal=0;
  var aux=0;
- var obj = Array(0,0,0,0);
+ var obj = [];
+ var midaarray= 4;
+
  
 $(function(){
     
@@ -34,20 +36,24 @@ function colocarobj(){
 
     var sortir=false;
     var x=0;
-    
-    num= Math.floor((Math.random()*4)+1);
-
   
     
-    while (sortir==false){
+  
+    num= Math.floor((Math.random()*4)+1);
 
-        while(x<obj.length){
-            
-         //   alert("x "+x);
-//            alert("num "+num);
-         //   alert("obj  "+obj[0]);
+//        alert(aux);
+//    alert(objtotal);
+//    alert(objencertats);
+        while(x<midaarray && !sortir){
+//            alert("holas");
+            if(x == aux){
+//                alert("iguals");
+               
+                obj[aux] = num;
+                sortir = true;
+            }
          
-            if(obj[x]==num && aux<=3 ){
+                if(obj[x]==num && !sortir){
                     num=  Math.floor((Math.random()*4)+1);
                     x=0;
                 }else{
@@ -55,17 +61,11 @@ function colocarobj(){
                 }
             
            
-        }
-       
-        
-        sortir=true;
+        }   
     
-    }
     
-    //alert("num "+num);
     
-    obj[aux]=num;
-   // alert(obj[aux]);
+
     aux++;
    
     var str= "obj"+num;
@@ -94,24 +94,45 @@ function peperedonda(ev){
 	ev.preventDefault();
         
         objecte.hide();
-        
+        var entrar = true;
         if(tipus<=3){
            
             objtotal++;
-            colocarobj();
             objencertats++;
-        }else{
-            objtotal++;          
+            
+            if(objtotal == 4){
+            
+            if(objencertats==4){
+         
+                entrar = false;
+                nivelcompletat();
+             }else if(objencertats<4){
+                nivelperdut();
+             }
+             
+         }
+            if(entrar)
             colocarobj();
             
-        }
-    
-        if(objencertats==4){
-            nivelcompletat();
-         }else if(objtotal>=4){
-             alert(hola);  
-             nivelperdut();
+        }else{
+            objtotal++;
+            
+            if(objtotal == 4){
+            
+            if(objencertats==4){
+                nivelcompletat();
+             }else if(objencertats<4){
+        
+                 nivelperdut();
+             }
+             
+         }else{
+            colocarobj(); 
          }
+
+            
+        }
+        
        
  	
 }
@@ -120,24 +141,44 @@ function papecuadrada(ev){
 	ev.preventDefault();
          
         objecte.hide();
-        
+        var entrar = true;
       
-        if(tipus>3){
-           
+        if(tipus>3){          
             objtotal++;
-            colocarobj();
             objencertats++;
+            
+            if(objtotal == 4){
+            
+            if(objencertats==4){              
+                entrar = false;
+                nivelcompletat();
+             }else if(objencertats<4){
+                nivelperdut();
+             }
+             
+         }
+            if(entrar)
+            colocarobj();
         }else{
             objtotal++;
-            objecte.hide();
-            colocarobj();
+            
+            if(objtotal == 4){
+            
+            if(objencertats==4){
+                nivelcompletat();
+             }else if(objencertats<4){
+        
+                 nivelperdut();
+             }
+             
+         }else{
+            colocarobj(); 
+         }
+         
+        
         }
         
-        if(objencertats==4){
-            nivelcompletat();
-         }else if(objtotal>=4){     
-             nivelperdut();
-         }
+        
         
         
 }
@@ -146,10 +187,10 @@ function nivelperdut(){
 
         var vidas = $('#videsbd').val();
         
-        for (var z=0;z<obj.length;z++){
-            obj[z]=0;
-            
-        }
+//        for (var z=0;z<obj.length;z++){
+//            obj[z]=0;
+//            
+//        }
         
         if(vidas>0){
             restar_vida(vidas);
@@ -170,10 +211,11 @@ function nivelperdut(){
             }
         });
         
-        objtotal=1;
+        objtotal=0;
         objencertats=0;
         aux=0;
        
+       colocarobj();
  }
 
 function  nivelcompletat(){
