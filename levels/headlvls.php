@@ -9,4 +9,4 @@
 <link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.css" />  
 <link rel="stylesheet" type="text/css" href="../css/clean.css" />
 <link rel="stylesheet" type="text/css" href="../css/jquery.gridster.css" />
-<link rel="stylesheet" type="text/css" href="../css/imposiblequiz.css" />
+<link rel="stylesheet" type="text/css" href="../css/crazyuniverse.css" />
