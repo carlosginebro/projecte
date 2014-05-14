@@ -11,8 +11,8 @@
  var aux=0;
  var obj = [];
  var midaarray= 4;
-
- 
+var entrar = true;
+ var entrarx = true;
 $(function(){
     
     colocarobj();
@@ -47,7 +47,7 @@ function colocarobj(){
         while(x<midaarray && !sortir){
 //            alert("holas");
             if(x == aux){
-//                alert("iguals");
+//           
                
                 obj[aux] = num;
                 sortir = true;
@@ -94,7 +94,7 @@ function peperedonda(ev){
 	ev.preventDefault();
         
         objecte.hide();
-        var entrar = true;
+        entrar = true;
         if(tipus<=3){
            
             objtotal++;
@@ -107,6 +107,7 @@ function peperedonda(ev){
                 entrar = false;
                 nivelcompletat();
              }else if(objencertats<4){
+                 entrar = false;
                 nivelperdut();
              }
              
@@ -141,7 +142,7 @@ function papecuadrada(ev){
 	ev.preventDefault();
          
         objecte.hide();
-        var entrar = true;
+        entrarx = true;
       
         if(tipus>3){          
             objtotal++;
@@ -150,26 +151,27 @@ function papecuadrada(ev){
             if(objtotal == 4){
             
             if(objencertats==4){              
-                entrar = false;
+                entrarx = false;
                 nivelcompletat();
              }else if(objencertats<4){
+                entrarx = false;
                 nivelperdut();
              }
              
          }
-            if(entrar)
+            if(entrarx)
             colocarobj();
         }else{
             objtotal++;
             
             if(objtotal == 4){
             
-            if(objencertats==4){
-                nivelcompletat();
-             }else if(objencertats<4){
-        
-                 nivelperdut();
-             }
+                if(objencertats==4){
+                    nivelcompletat();
+                 }else if(objencertats<4){
+
+                     nivelperdut();
+                 }
              
          }else{
             colocarobj(); 
