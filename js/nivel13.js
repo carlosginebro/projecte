@@ -8,6 +8,8 @@
  var objencertats=0;
  var tipus;
  var objtotal=1;
+ var aux=0;
+ var obj = Array(0,0,0,0);
  
 $(function(){
     
@@ -28,22 +30,24 @@ function drag(ev){
 
 
 function colocarobj(){
-    var obj =[0,0,0,0];
-     
-    var aux=0;
+ 
+
     var sortir=false;
     var x=0;
     
-    num=  Math.floor((Math.random()*4)+1);
+    num= Math.floor((Math.random()*4)+1);
 
-    
+  
     
     while (sortir==false){
-        var i = obj.lenght;
-        alert(i);
+
         while(x<obj.length){
             
-            if(obj[x]==num){
+         //   alert("x "+x);
+//            alert("num "+num);
+         //   alert("obj  "+obj[0]);
+         
+            if(obj[x]==num && aux<=3 ){
                     num=  Math.floor((Math.random()*4)+1);
                     x=0;
                 }else{
@@ -58,8 +62,12 @@ function colocarobj(){
     
     }
     
+    //alert("num "+num);
+    
     obj[aux]=num;
+   // alert(obj[aux]);
     aux++;
+   
     var str= "obj"+num;
     tipus = str.substr(3, 3);
     
@@ -93,15 +101,15 @@ function peperedonda(ev){
             colocarobj();
             objencertats++;
         }else{
-            objtotal++;
-            objecte.hide();
+            objtotal++;          
             colocarobj();
             
         }
     
         if(objencertats==4){
             nivelcompletat();
-         }else if(objtotal>4){
+         }else if(objtotal>=4){
+             alert(hola);  
              nivelperdut();
          }
        
@@ -123,12 +131,11 @@ function papecuadrada(ev){
             objtotal++;
             objecte.hide();
             colocarobj();
-            
         }
         
         if(objencertats==4){
             nivelcompletat();
-         }else if(objtotal>4){
+         }else if(objtotal>=4){     
              nivelperdut();
          }
         
@@ -136,10 +143,14 @@ function papecuadrada(ev){
 }
 
 function nivelperdut(){
-    
-    
-        var vidas = $('#videsbd').val();
 
+        var vidas = $('#videsbd').val();
+        
+        for (var z=0;z<obj.length;z++){
+            obj[z]=0;
+            
+        }
+        
         if(vidas>0){
             restar_vida(vidas);
             $("#vidas_rest").removeClass("cVidas_rest"+vidas);
@@ -161,7 +172,8 @@ function nivelperdut(){
         
         objtotal=1;
         objencertats=0;
-  
+        aux=0;
+       
  }
 
 function  nivelcompletat(){
