@@ -13,6 +13,9 @@
  var midaarray= 4;
 var entrar = true;
  var entrarx = true;
+ 
+ 
+ 
 $(function(){
     
     colocarobj();
@@ -36,16 +39,11 @@ function colocarobj(){
 
     var sortir=false;
     var x=0;
-  
-    
-  
-    num= Math.floor((Math.random()*4)+1);
 
-//        alert(aux);
-//    alert(objtotal);
-//    alert(objencertats);
+    num= Math.floor((Math.random()*8)+1);
+
         while(x<midaarray && !sortir){
-//            alert("holas");
+
             if(x == aux){
 //           
                
@@ -54,7 +52,7 @@ function colocarobj(){
             }
          
                 if(obj[x]==num && !sortir){
-                    num=  Math.floor((Math.random()*4)+1);
+                    num=  Math.floor((Math.random()*8)+1);
                     x=0;
                 }else{
                     x++;
@@ -95,12 +93,12 @@ function peperedonda(ev){
         
         objecte.hide();
         entrar = true;
-        if(tipus<=3){
+        if(tipus<=4){
            
             objtotal++;
             objencertats++;
             
-            if(objtotal == 4){
+        if(objtotal == 4){
             
             if(objencertats==4){
          
@@ -118,14 +116,14 @@ function peperedonda(ev){
         }else{
             objtotal++;
             
-            if(objtotal == 4){
+         if(objtotal == 4){
             
-            if(objencertats==4){
-                nivelcompletat();
-             }else if(objencertats<4){
-        
-                 nivelperdut();
-             }
+                if(objencertats==4){
+                    nivelcompletat();
+                 }else if(objencertats<4){
+
+                     nivelperdut();
+                 }
              
          }else{
             colocarobj(); 
@@ -144,7 +142,7 @@ function papecuadrada(ev){
         objecte.hide();
         entrarx = true;
       
-        if(tipus>3){          
+        if(tipus>4){          
             objtotal++;
             objencertats++;
             
@@ -181,19 +179,12 @@ function papecuadrada(ev){
         }
         
         
-        
-        
 }
 
 function nivelperdut(){
 
         var vidas = $('#videsbd').val();
-        
-//        for (var z=0;z<obj.length;z++){
-//            obj[z]=0;
-//            
-//        }
-        
+                
         if(vidas>0){
             restar_vida(vidas);
             $("#vidas_rest").removeClass("cVidas_rest"+vidas);
