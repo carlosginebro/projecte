@@ -5,7 +5,7 @@
     
     $gameover1 = "Otra vez!!";
     
-    $gameover2 = "Me rindo...";
+    $gameover2 = "Se acabó...";
     
     $boton = "Comenzar!";
 

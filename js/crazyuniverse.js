@@ -22,8 +22,8 @@ function game_over(){
         }, 500, function() {
             $("#plantilla").css({
                 'box-shadow': 'none',
-                'background-image': 'url("../css/galery/gameover.jpg")',
-                'background-repeat': 'no-repeat',
+//                'background-image': 'url("../css/galery/gameover.jpg")',
+//                'background-repeat': 'no-repeat',
                 'background-size': '100% 100%'
             });
             document.location = "../gameover.php";
@@ -141,7 +141,9 @@ function animacio_comodin(nivel) {
 
  $(window).load(function() {
      $("#plantilla").fadeIn();
+     $("#telon").fadeOut(400);
      $("#loading").fadeIn(10000, function(){
+        
         
         document.location= "pantalla.php";
 
