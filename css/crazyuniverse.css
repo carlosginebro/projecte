@@ -6,7 +6,6 @@
 @font-face {
   font-family: Numeros;
   src: url('../fonts/Engineer_sHand.tff');
-  /*src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');*/
 }
 
 .cHiden{
@@ -725,6 +724,33 @@ body.rock .bt4:hover{
     width:254px;
     height:100%;
     background-image: url('galery/saltar_nivel3.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icono_vidas4{
+    /*border:solid 1px black;*/
+    width:254px;
+    height:100%;
+    background-image: url('galery/saltar_nivel4.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icono_vidas5{
+    /*border:solid 1px black;*/
+    width:254px;
+    height:100%;
+    background-image: url('galery/saltar_nivel5.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icono_vidas6{
+    /*border:solid 1px black;*/
+    width:254px;
+    height:100%;
+    background-image: url('galery/saltar_nivel6.png');
     background-repeat: no-repeat;
     background-size: contain;
 }
