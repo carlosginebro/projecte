@@ -333,6 +333,8 @@ $(function(){
     });
     
     /*Fi comprovar recovery*/
+    
+   
 
 
     /* Marcando respuestas*/
@@ -473,7 +475,45 @@ $(function(){
     
     //fi game_over botons
 
+     /* Creditos */
     
+    
+     $('body').on("click", "#bt2", function() {
+        $("#creditos").fadeOut(500, function(){
+            $("#plantilla").animate({                
+                'margin':'0 auto',
+                'height':'100%'
+            },500,function(){
+                $("#creditos2").show();
+                $("#margentop").show();
+                $("#margenbot").show();
+                 $("#letras").css({top:'620px'});
+                $("#letras").show();
+                $("#letras").animate({
+                    top:'-500px'
+                }, 16000, function(){
+                    $("#margentop").hide();
+                    $("#margenbot").hide();
+                    $("#letras").hide();
+                    $("#plantilla").animate({
+                         margin: '3% auto',
+                         height: '555px'
+                    }, 500, function(){
+                        $("#creditos2").fadeOut(500, function(){
+                            $("#creditos").show();
+                        });
+                                
+                    });      
+                });
+            });
+        });
+        
+        
+    });
+    
+    
+    
+    /* Fi creditos */
 
     
 });

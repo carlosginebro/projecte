@@ -64,6 +64,25 @@
             include_once 'interface.php'; 
         ?>
           <div id="plantilla">
+              <div id="creditos2" class="cHiden" style="color:black; margin-top:2%;">
+                  <div id="margentop" style="width:829px; height:71px; border-top: solid 7px #aaa;  position:absolute; top:0px; z-index: 3; background-color: white; box-shadow:0px 21px 30px 0px rgba(255, 255, 255, 0.8); ">
+                      
+                  </div>
+                  <div id="margenbot" style="width:829px; height:70px; border-bottom: solid 8px #aaa; position:absolute; top:599px; z-index: 3; background-color: white; box-shadow: 0px -21px 30px 0px rgba(255, 255, 255, 0.8);">
+                      
+                  </div>
+                  
+                  <div id="letras" style="font-size: 30px; line-height:35px; text-align: center; padding-left: 15px; padding-right: 15px; width:829px; height:590px; background-color: white;  z-index:1; position:absolute; top: 500px; left: 269px;">
+                      <div style=" width:600px; height: 200px; background-image: url('css/galery/logo_index.png'); background-size: contain; background-repeat: no-repeat; margin-left: 280px;"></div>
+                      Creadores de Crazy Univers:<br/>
+                      Carlos Masegosa<br/>
+                      Toni Llombart<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                      FIN
+                  </div>
+              </div>
+              
+              
+          <div id="creditos">
             <div id="portada">
                 
             </div>
@@ -75,7 +94,7 @@
                             <span class="size"><?php echo $somi; ?></span>     
                         </div>
                     </li>
-                    <li id="bt2" id ="creditos" class="bt2" style="float: left;display: block; width: 50%;height: 50%;">
+                    <li id="bt2" class="bt2" style="float: left;display: block; width: 50%;height: 50%;">
                         <div class="respuesta" style="width: 86%;">
                             <span class="size"><?php echo $credit; ?></span>
                         </div>
@@ -108,7 +127,7 @@
             </div>
                 <input type="text" value="<?php echo $_SESSION['sound']; ?>" class="cHiden" id="getSound" />
             </div>
-       
+          </div>
 
     </body>
    
