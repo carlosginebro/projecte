@@ -17,7 +17,7 @@
 
     $sortir = 'SORTIR';
 
-    $l3_tit = 'Fes clic sobre <span name="si">el més gran</span>.';
+    $l3_tit = 'Fes clic sobre <span name="si" style="cursor: pointer;">el més gran</span>.';
  
     $l31 = 'Elefant';
 

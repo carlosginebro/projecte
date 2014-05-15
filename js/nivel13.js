@@ -81,8 +81,8 @@ function colocarobj(){
          width: '90px',
          height: '90px',
         'top':  '150px',
-	'left': '650px'
-       
+	'left': '650px',
+        'cursor':'pointer'
         
    });
  

@@ -13,7 +13,7 @@
 <body id="container" class="<?php echo $_SESSION['estil']; ?>" >
        <div id="plantilla">
             <div id="portada" class="no_portada">
-                <span class="nivel_pantalla" name="si">6</span>
+                <span class="nivel_pantalla" name="si" style="cursor: pointer;">6</span>
                 <span >9 * 5 - (4 * 10) + 1  =</span>
             </div>
      
