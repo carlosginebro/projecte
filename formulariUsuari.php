@@ -6,6 +6,8 @@ session_start();
 			
     $usu = $_POST['nom'];
     $pass = $_POST['pw'];
+    $chk = $_POST['chk'];
+    
     $lasql = "select * from usuari where Usuari = '$usu'";
     $cons = $cone->query($lasql);
     $reg = $cons->fetch_array();
@@ -18,7 +20,9 @@ session_start();
             $reg = $cons->fetch_array();
             $_SESSION['idioma'] = $reg['idioma'];
 // $_SESSION['idioma'] mirar kina te aket usuari            
-
+			
+            $sqlrecorda= "update Usuari Set Recordar = ".$chk;
+            $con = $cone->query($sqlrecorda);
             echo "1";
 
     }else{
