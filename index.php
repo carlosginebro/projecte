@@ -51,9 +51,11 @@
             <span  id="recovery">Recuperar Contrasenya</span>
             <br/>
             <br/>
-            
+
             <span><input type="checkbox" id="recordar" /> Recorda </span>
             <br/>
+            <br/>
+            
 		<input type="button" class="btn" value="Acceptar" id="BtForm" />
 	</p>
 	</fieldset>

@@ -74,8 +74,14 @@
                   
                   <div id="letras" style="font-size: 30px; line-height:35px; text-align: center; padding-left: 15px; padding-right: 15px; width:829px; height:590px; background-color: white;  z-index:1; position:absolute; top: 500px; left: 269px;">
                       <div style=" width:600px; height: 200px; background-image: url('css/galery/logo_index.png'); background-size: contain; background-repeat: no-repeat; margin-left: 280px;"></div>
-                      Creadores de Crazy Univers:<br/>
+                      Creadores de Crazy Univers:<br/><br/>
+                      
                       Carlos Masegosa<br/>
+                      <br/>
+                      
+                        &
+                      <br/>
+                    <br/>
                       Toni Llombart<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                       FIN
                   </div>
