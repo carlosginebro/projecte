@@ -242,6 +242,12 @@ $(function(){
    $("#BtForm").click(function() {
 	var nom= $("#NomForm").val();
 	var pw= $("#PwForm").val();
+	var ck=0;
+	
+	if($("#recordar").is(':checked')==true){
+		ck=1;
+	}
+	
         if(nom === '' || pw === ''){
             var duration = 80;
             var offset = 40;
@@ -258,7 +264,7 @@ $(function(){
 	$.ajax({
 		
 		type: "post",
-		data: {nom: nom, pw: pw},
+		data: {nom: nom, pw: pw, chk: ck},
 		url: "formulariUsuari.php",
 		success:function( dada ) {
                     if (dada=="1"){              
@@ -475,6 +481,34 @@ $(function(){
     
     //fi game_over botons
 
+    
+    
+    /*  RECORDAM */
+    $("#PwForm").focus(function(){
+    	
+    	var nom= $("#NomForm").val();
+    	
+    	 $.ajax({
+             type: "post",
+             data: {nom: nom},
+             url: "recorda.php",
+             success:function(dada) {
+            	 
+            	$('#PwForm').val(dada);
+            	
+             }
+    	
+             
+    	 });
+    	
+    });
+
+    
+    
+    
+    /*  FI RECORDAM  */
+    
+    
      /* Creditos */
     
     

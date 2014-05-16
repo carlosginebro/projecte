@@ -21,8 +21,13 @@ session_start();
             $_SESSION['idioma'] = $reg['idioma'];
 // $_SESSION['idioma'] mirar kina te aket usuari            
 			
-            $sqlrecorda= "update Usuari Set Recordar = ".$chk;
-            $con = $cone->query($sqlrecorda);
+            if($chk==1){
+            
+	            $sqlrecorda= "update usuari Set Recordar = 1";
+	            $con = $cone->query($sqlrecorda);
+            }
+            
+            
             echo "1";
 
     }else{
