@@ -17,7 +17,7 @@
   
     $sortir = 'SALIR';
             
-    $l3_tit = 'Haz clic encima de <span name="si" style="cursor: pointer;">el mas grande</span>';
+    $l3_tit = 'Haz clic encima de <span name="si3" style="cursor: pointer;">el mas grande</span>';
 
     $l31 = 'Elefante';
     
@@ -57,5 +57,6 @@
     
     $l12_tit = "Recoge el Queso sin tocar las paredes! (ponte sobre el ratón para empezar)";
     
+    $l13_tit = "Arrastra los objetos a la basura adecuada.";
   
 ?>

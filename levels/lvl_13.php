@@ -43,11 +43,6 @@
 		}
 		
 		
-		#objecte{
-		
-			
-		}
-		
 	</style>
 	
 </head>
@@ -56,6 +51,7 @@
 
 
 <div id="plantilla">
+    <span STYLE="display:block; position:absolute; top:70px; left: 400px; color: black; font-size: 20pt;"><?php echo $l13_tit; ?></span>
 	<div id="lvl13">
 	<div id="marcadores" style="width:100%; height: 90%; ">
            

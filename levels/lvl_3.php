@@ -10,11 +10,13 @@
             require_once '../animacio_comodin.php';
             require_once '../llibreria_'.$_SESSION["idioma"].'.php';
         ?>
+        <script src="../js/nivel3.js"></script>
 </head>
 
 
 <body id="container" class="<?php echo $_SESSION['estil']; ?>" >
        <div id="plantilla">
+            <div id="tiempo1" style="float:right;"></div>
             <div id="portada" class="no_portada">
                 <span class="nivel_pantalla">3</span>
                 <span ><?php  echo $l3_tit; ?></span>

@@ -8,12 +8,14 @@
             require_once '../animacio_correcte_'.$_SESSION['idioma'].'.php';
             require_once '../animacio_comodin.php';
         ?>
+       <script src="../js/nivel6.js"></script>
 </head>
 
 <body id="container" class="<?php echo $_SESSION['estil']; ?>" >
        <div id="plantilla">
             <div id="portada" class="no_portada">
-                <span class="nivel_pantalla" name="si" style="cursor: pointer;">6</span>
+                <span class="nivel_pantalla" name="si6" style="cursor: pointer;">6</span>
+                <div id="tiempo3" style="float:right;"></div>
                 <span >9 * 5 - (4 * 10) + 1  =</span>
             </div>
      

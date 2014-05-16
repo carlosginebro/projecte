@@ -17,7 +17,7 @@
 
     $sortir = 'SORTIR';
 
-    $l3_tit = 'Fes clic sobre <span name="si" style="cursor: pointer;">el més gran</span>.';
+    $l3_tit = 'Fes clic sobre <span name="si3" style="cursor: pointer;">el més gran</span>.';
  
     $l31 = 'Elefant';
 
@@ -57,5 +57,5 @@
     
     $l12_tit = "Recull el Formatge sense tocar les parets! (posat sobre el ratolí per començar)";
 
-  
+    $l13_tit = "<span style='font-size: 15pt !important'>Arrossega els objectes a les escombraries adequades.</span>";
 ?>
