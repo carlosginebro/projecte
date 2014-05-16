@@ -82,7 +82,35 @@
                         &
                       <br/>
                     <br/>
-                      Toni Llombart<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                      Toni Llombart<br/>
+                      
+                      <br/><br/><br/><br/>
+                      
+                      Programes utilitzats:
+                      <br/>
+                       <br/>
+                      -Photoshop.
+                      <br/>
+                       <br/>
+                      -Eclipse
+                      <br/>
+                       <br/>
+                      -SmartGit.
+                      <br/>
+                       <br/>
+                      -NetBeans.
+                      <br/>
+                       <br/>
+                      -SourceTree.
+                      <br/>
+                       <br/>
+                      -Wamp
+                    
+                   
+                      
+                      
+                      
+                      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                       FIN
                   </div>
               </div>
