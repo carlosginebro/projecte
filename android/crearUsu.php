@@ -33,7 +33,7 @@
             $recovery .= substr($u, 0, 1);
             $recovery .= substr($m, 0, 2);
             
-            $sql = "insert into usuari(Usuari, Password, RecoveryName, Vides, Comodins, PuntuacioMax, Admin) values ('$u', '$p', '$recovery', 3, 0, 0, 0)";
+            $sql = "insert into usuari(Usuari, Password, RecoveryName, Vides, Comodins, PuntuacioMax, Recordar, Activat, Admin) values ('$u', '$p', '$recovery', 3, 0, 0, 0, 0, 0)";
         
             $cone->query($sql);
             

@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Temps de generació: 16-05-2014 a les 14:48:43
--- Versió del servidor: 5.5.24-log
--- Versió de PHP: 5.3.13
+-- Tiempo de generación: 16-05-2014 a las 15:30:18
+-- Versión del servidor: 5.6.12-log
+-- Versión de PHP: 5.4.16
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,13 +17,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de dades: `projecte`
+-- Base de datos: `projecte`
 --
+CREATE DATABASE IF NOT EXISTS `projecte` DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci;
+USE `projecte`;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `estils`
+-- Estructura de tabla para la tabla `estils`
 --
 
 CREATE TABLE IF NOT EXISTS `estils` (
@@ -31,19 +33,23 @@ CREATE TABLE IF NOT EXISTS `estils` (
   `estil` varchar(40) COLLATE latin1_spanish_ci NOT NULL,
   `fk_usuari` int(3) NOT NULL,
   PRIMARY KEY (`id_estil`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=6 ;
 
 --
--- Bolcant dades de la taula `estils`
+-- Volcado de datos para la tabla `estils`
 --
 
 INSERT INTO `estils` (`id_estil`, `estil`, `fk_usuari`) VALUES
-(1, 'normal', 1);
+(1, 'normal', 1),
+(2, 'normal', 2),
+(3, 'normal', 3),
+(4, 'normal', 4),
+(5, 'normal', 5);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `idioma`
+-- Estructura de tabla para la tabla `idioma`
 --
 
 CREATE TABLE IF NOT EXISTS `idioma` (
@@ -51,19 +57,23 @@ CREATE TABLE IF NOT EXISTS `idioma` (
   `idioma` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   `fk_usuari` int(50) NOT NULL,
   PRIMARY KEY (`id_idioma`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=6 ;
 
 --
--- Bolcant dades de la taula `idioma`
+-- Volcado de datos para la tabla `idioma`
 --
 
 INSERT INTO `idioma` (`id_idioma`, `idioma`, `fk_usuari`) VALUES
-(1, 'ca', 1);
+(1, 'ca', 1),
+(2, 'ca', 2),
+(3, 'ca', 3),
+(4, 'ca', 4),
+(5, 'ca', 5);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `mail`
+-- Estructura de tabla para la tabla `mail`
 --
 
 CREATE TABLE IF NOT EXISTS `mail` (
@@ -72,16 +82,20 @@ CREATE TABLE IF NOT EXISTS `mail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 --
--- Bolcant dades de la taula `mail`
+-- Volcado de datos para la tabla `mail`
 --
 
 INSERT INTO `mail` (`id_usu`, `mail`) VALUES
-(1, 'antonillombart@ginebro.cat');
+(1, 'antonillombart@ginebro.cat'),
+(2, 'antonillombart@ginebro.cat'),
+(3, 'antonillombart@ginebro.cat'),
+(4, 'antonillombart@ginebro.cat'),
+(5, 'antonillombart@ginebro.cat');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `preguntes`
+-- Estructura de tabla para la tabla `preguntes`
 --
 
 CREATE TABLE IF NOT EXISTS `preguntes` (
@@ -93,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `preguntes` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=25 ;
 
 --
--- Bolcant dades de la taula `preguntes`
+-- Volcado de datos para la tabla `preguntes`
 --
 
 INSERT INTO `preguntes` (`id_pregunta`, `pregunta_ca`, `pregunta_es`, `nivell_pregunta`) VALUES
@@ -125,7 +139,7 @@ INSERT INTO `preguntes` (`id_pregunta`, `pregunta_ca`, `pregunta_es`, `nivell_pr
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `respostes`
+-- Estructura de tabla para la tabla `respostes`
 --
 
 CREATE TABLE IF NOT EXISTS `respostes` (
@@ -138,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `respostes` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=104 ;
 
 --
--- Bolcant dades de la taula `respostes`
+-- Volcado de datos para la tabla `respostes`
 --
 
 INSERT INTO `respostes` (`id_resposta`, `resposta_ca`, `resposta_es`, `fk_pregunta`, `correcte`) VALUES
@@ -242,7 +256,7 @@ INSERT INTO `respostes` (`id_resposta`, `resposta_ca`, `resposta_es`, `fk_pregun
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `usuari`
+-- Estructura de tabla para la tabla `usuari`
 --
 
 CREATE TABLE IF NOT EXISTS `usuari` (
@@ -257,14 +271,15 @@ CREATE TABLE IF NOT EXISTS `usuari` (
   `Activat` int(1) NOT NULL,
   `Admin` tinyint(1) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=6 ;
 
 --
--- Bolcant dades de la taula `usuari`
+-- Volcado de datos para la tabla `usuari`
 --
 
 INSERT INTO `usuari` (`Id`, `Usuari`, `Password`, `RecoveryName`, `Vides`, `Comodins`, `PuntuacioMax`, `Recordar`, `Activat`, `Admin`) VALUES
-(1, 'test', 'test', 'sdib45as', 4, 0, 200, 1, 0, 1);
+(1, 'test', 'test', 'sdib45as', 4, 0, 200, 1, 1, 1),
+(5, 'toni', 'toni10', '4626tan', 3, 0, 0, 1, 1, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

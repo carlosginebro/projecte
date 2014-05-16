@@ -11,7 +11,7 @@ session_start();
     $lasql = "select * from usuari where Usuari = '$usu'";
     $cons = $cone->query($lasql);
     $reg = $cons->fetch_array();
-    if (isset($cons)&&($reg['Password']==$pass)) {
+    if (isset($cons)&&($reg['Password']==$pass)&&($reg['Activat']==1)) {
             $_SESSION['id'] = $reg['Id'];
             $_SESSION['usu'] = $usu;
             $id = $_SESSION['id'];
