@@ -22,6 +22,9 @@
 
 <html>
     <head>
+        <?php
+            require_once 'head.php';
+        ?>
         <meta charset="utf-8">
     </head>
     <body>
