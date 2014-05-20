@@ -209,14 +209,16 @@ $(function(){
                margin: '0% auto'
             }, 500, function(){
                 $("#plantilla").animate({
-                    'background-color':'#0C0170',
+                    'background-color':'rgb(12, 11, 73)',
                     width:'40%'
                 },3000, function(){
                     $("#plantilla").css({
-                        'cursor' : 'url("../css/cursor/spaceship.gif"), auto'
+                        'cursor' : 'url("../css/cursor/spaceship.gif"), auto',
+                        'background-image': 'url("../css/galery/fondolvl15.png")'
                     });
                     meteoritos();
                     
+//                    $("body").addClass('error15');
                     $("#d15temps").fadeIn(300);
                     
                     
@@ -226,13 +228,8 @@ $(function(){
             });
        });
       
-        
-     
-       
-       
-       
+ 
     });
-   
    
    
    
