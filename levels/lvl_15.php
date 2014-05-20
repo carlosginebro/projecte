@@ -13,7 +13,12 @@
         <script src="../js/nivel15.js"></script>
 </head>
 <body id="container" class="<?php echo $_SESSION['estil']; ?>">
-    <div id="plantilla" style="color: black !important;">
+    <div id="delay_meteorito2"></div>
+    <div id="delay_meteorito3"></div>
+    <div id="delay_meteorito4"></div>
+        
+        
+    <div id="plantilla" style="color: black !important; cursor: url('../css/cursor/Custom3_AlternateSelectFlyingPlaneUpsideDown.ani'), auto;">
         <div id="d151" class="cHiden"><span>Hola</span></div>
         <div id="d152" class="cHiden"><span>que </span></div>
         <div id="d153" class="cHiden"><span>ase</span></div>

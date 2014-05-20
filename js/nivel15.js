@@ -1,6 +1,174 @@
 
 
 var delay = 200;
+var imagen;
+var meteorito;
+var meteorito2;
+var t;
+var velocidad = 2000;
+var velocidad_repetir = 2000;
+
+
+
+function meteoritos(){
+    if(velocidad > 700){
+        velocidad = velocidad-100;
+        velocidad_repetir = velocidad_repetir - 100;
+    }
+     //Generem una posicio aleatoria per el planeta en la plantalla 
+    var x = Math.floor((Math.random() * $("#plantilla").width())+410);
+    var x2 = Math.floor((Math.random() * $("#plantilla").width())+410);
+    var x3 = Math.floor((Math.random() * $("#plantilla").width())+410);
+    var x4 = Math.floor((Math.random() * $("#plantilla").width())+410);
+    
+    if(x > 545){
+        x = x - 50;
+    }
+    
+    if(x2 > 545){
+        x2 = x2 - 50;
+    }
+    
+    if(x3 > 545){
+        x3 = x3 - 50;
+    }
+    
+    if(x4 > 545){
+        x4 = x4 - 50;
+    }
+    
+    meteorito = $('<span>').css({
+        'position': 'absolute',
+        'height': '50px',
+        'width': '50px',
+        'z-index': '100',
+        'background-color':'red',
+        'top':-50,
+        'left':x
+    });
+    
+    meteorito2 = $('<span>').css({
+        'position': 'absolute',
+        'height': '50px',
+        'width': '50px',
+        'z-index': '100',
+        'background-color':'yellow',
+        'top':-50,
+        'left':x2,
+        'display':'none'
+    });
+    
+    $(document.body).append(meteorito);
+    $(document.body).append(meteorito2);
+    
+    meteorito.bind('mouseover', function (e) {
+        perdre(e); 
+    });
+    
+    meteorito2.bind('mouseover', function (e) {
+        perdre2(e); 
+    });
+    
+    animacion(x, meteorito, velocidad);
+    
+    $("#delay_meteorito2").toggle(velocidad/2, function(){
+         meteorito2.show();
+        animacion(x2, meteorito2, velocidad);
+    });
+    
+    if(velocidad < 1600){
+        meteorito3 = $('<span>').css({
+            'position': 'absolute',
+            'height': '50px',
+            'width': '50px',
+            'z-index': '100',
+            'background-color':'green',
+            'top':-50,
+            'left':x3,
+            'display':'none'
+        });
+        
+        $(document.body).append(meteorito3);
+    
+        meteorito3.bind('mouseover', function (e) {
+            perdre3(e); 
+        });
+        
+        $("#delay_meteorito3").toggle(velocidad/4, function(){
+            meteorito3.show();
+            animacion(x3, meteorito3, velocidad);
+        });
+        
+    
+    }
+    
+    if(velocidad < 1100){
+        meteorito4 = $('<span>').css({
+            'position': 'absolute',
+            'height': '50px',
+            'width': '50px',
+            'z-index': '100',
+            'background-color': 'lightblue',
+            'top': -50,
+            'left': x4,
+            'display': 'none'
+        }); 
+        
+        $(document.body).append(meteorito4);
+    
+        meteorito4.bind('mouseover', function (e) {
+            perdre4(e); 
+        });
+        
+        $("#delay_meteorito4").toggle(velocidad/3, function(){
+            meteorito4.show();
+            animacion(x4, meteorito4, velocidad);
+        });
+    }
+    
+    
+    t = setTimeout('meteoritos()', velocidad_repetir);
+    
+}
+
+function animacion(x, meteorito, velocidad){
+    meteorito.animate({
+        top:'100%'
+    }, velocidad, function(){
+        meteorito.hide();
+       
+//        meteoritos();
+    });
+}
+
+
+
+
+function perdre() {   
+    meteorito.stop();
+    meteorito.hide();
+     clearTimeout(t);
+//    alert("hola");
+}
+
+function perdre2() {   
+    meteorito2.stop();
+    meteorito2.hide();
+     clearTimeout(t);
+//    alert("hola");
+}
+
+function perdr3() {
+    meteorito3.stop();
+    meteorito3.hide();
+    clearTimeout(t);  
+}
+
+function perdre4() {
+    meteorito4.stop();
+    meteorito4.hide();
+    clearTimeout(t);    
+}
 
  
 $(function(){
@@ -34,10 +202,12 @@ $(function(){
             }, 500, function(){
                 $("#plantilla").animate({
                     'background-color':'#0C0170',
-                    width:'100%'
+                    width:'40%'
                 },3000, function(){
-                    
-                    // funcio start();
+                    $("#plantilla").css({
+                        'cursor' : 'url("../css/galery/bomb.png") !important'
+                    });
+//                    meteoritos();
                     
                     $("#d15temps").fadeIn(300);
                     

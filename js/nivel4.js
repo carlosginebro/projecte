@@ -1,6 +1,7 @@
 var imagen;
 var punts;
 var t;
+var planetes;
 
 function ComencaLvl4(){
     $("table").show();

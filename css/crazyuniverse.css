@@ -14,10 +14,11 @@
 
 body{
     background-image: url('galery/fondo.jpg');
-	overflow: hidden;
+    overflow: hidden;
     font-family: Romanicums;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+     cursor:url('cursor/BGNormal.cur'), default;
 }
 
 .normal, .molon{
@@ -32,7 +33,7 @@ body{
 }
 
 div, span{
-    cursor:default;
+    cursor:url('cursor/BGNormal.cur'), default;
 }
 
 /*formulario entrada*/
@@ -51,7 +52,7 @@ div, span{
 
 #logo_index:hover{
    background-image: url('galery/logo_marcat_index.png');
-   cursor: pointer;
+   cursor: url('cursor/BGLink.cur'), pointer;
 }
 
 
@@ -116,7 +117,7 @@ div, span{
 }
 
 #BtForm{
-    cursor:pointer;
+    cursor:url('cursor/BGLink.cur'), pointer;
     margin-top: 20px;
     box-shadow: 0 0 20px 2px black;
     background-color: #ccc;
@@ -135,7 +136,7 @@ div, span{
 }
 
 #BtRecoveryAjax{
-   cursor:pointer;
+   cursor:url('cursor/BGLink.cur'), pointer;
     margin-top: 20px;
     box-shadow: 0 0 20px 2px black;
     background-color: #ccc;
@@ -188,7 +189,7 @@ div, span{
  font-size: 10pt;
 color: black;
  margin-left: 20px;
- cursor: pointer;
+ cursor: url('cursor/BGLink.cur'), pointer;
 }
 
 #recovery:hover, #back_recovery:hover{
@@ -558,7 +559,7 @@ body.rock .bt4:hover{
 
     background-repeat: no-repeat;
     /*width: 378px;*/
-    cursor:pointer;
+    cursor:url('cursor/BGLink.cur'), pointer;
     background-position-y:0.4em;
     /*     width: 48%;
         height: 22%;  */
@@ -569,7 +570,7 @@ body.rock .bt4:hover{
 
     background-repeat: no-repeat;
     /*width: 378px;*/
-    cursor:pointer;
+    cursor:url('cursor/BGLink.cur'), pointer;
     /*    width: 48%;
         height: 22%;*/
     background-position-y: -0.4em;
@@ -689,7 +690,7 @@ body.rock .bt4:hover{
 }
 
 #vidas_icons:hover{
-    cursor:pointer;
+    cursor:url('cursor/BGLink.cur'), pointer;
 }
 
 .icono_vidas0{
@@ -825,7 +826,7 @@ body.rock .bt4:hover{
     height: 70px;
     padding-left: 15px;
     padding-right: 20px;
-    cursor: pointer;
+    cursor: url('cursor/BGLink.cur'), pointer;
 }
 /**Fi plantilla**/
 
@@ -966,7 +967,7 @@ body.rock .bt4:hover{
    box-shadow: 0 0 20px 2px yellow; 
    border-color: gold;
    background-color: #fdf5ce;
-   cursor: pointer;
+   cursor: url('cursor/BGLink.cur'), pointer;
 }
 
 #casalvl7{
@@ -976,12 +977,12 @@ body.rock .bt4:hover{
 
 
 #extintor:hover{
-    cursor: pointer;
+    cursor: url('cursor/BGLink.cur'), pointer;
 
 }
 
 #petrol:hover{
-    cursor: pointer;
+    cursor: url('cursor/BGLink.cur'), pointer;
     
 }
 
@@ -1119,7 +1120,7 @@ body.rock .bt4:hover{
 
 .css_gameover:hover{ 
     color: red;
-    cursor: pointer; 
+    cursor: url('cursor/BGLink.cur'), pointer; 
 }
 
 .rotar{
