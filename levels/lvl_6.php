@@ -14,7 +14,7 @@
 <body id="container" class="<?php echo $_SESSION['estil']; ?>" >
        <div id="plantilla">
             <div id="portada" class="no_portada">
-                <span class="nivel_pantalla" name="si6" style="cursor: pointer;">6</span>
+                <span class="nivel_pantalla" name="si6" style="cursor: url('../css/cursor/BGLink.cur'), pointer;">6</span>
                 <div id="tiempo3" style="float:right;"></div>
                 <span >9 * 5 - (4 * 10) + 1  =</span>
             </div>

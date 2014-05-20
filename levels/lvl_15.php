@@ -18,7 +18,7 @@
     <div id="delay_meteorito4"></div>
         
         
-    <div id="plantilla" style="color: black !important; cursor: url('../css/cursor/Custom3_AlternateSelectFlyingPlaneUpsideDown.ani'), auto;">
+    <div id="plantilla" style="color: black !important;">
         <div id="d151" class="cHiden"><span>Hola</span></div>
         <div id="d152" class="cHiden"><span>que </span></div>
         <div id="d153" class="cHiden"><span>ase</span></div>

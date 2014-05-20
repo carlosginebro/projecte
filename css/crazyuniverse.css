@@ -12,6 +12,10 @@
     display:none;
 }
 
+input[type=checkbox]{
+    cursor:url('cursor/BGAlternate.cur'), default;
+}
+
 body{
     background-image: url('galery/fondo.jpg');
     overflow: hidden;
@@ -32,7 +36,7 @@ body{
 	background-size: cover;
 }
 
-div, span{
+div, span, ul, li, label{
     cursor:url('cursor/BGNormal.cur'), default;
 }
 
@@ -40,12 +44,12 @@ div, span{
 
 #logo_index{
     width:350px;
-  	height: 250px;
+    height: 250px;
     position:absolute;
     top:2%;
     left:5%;
     background-image: url('galery/logo_index.png');
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: contain;
     background-position-x: -6px;
 }
@@ -80,6 +84,11 @@ div, span{
 #test form input[type=text]{
     font-family:sans-serif;
     text-align: center;
+    cursor: url('cursor/BGText.cur'), pointer;
+}
+
+#test form input[type=password]{
+      cursor: url('cursor/BGText.cur'), pointer;
 }
 
 #test form{
