@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 16-05-2014 a las 15:30:18
--- Versión del servidor: 5.6.12-log
--- Versión de PHP: 5.4.16
+-- Temps de generació: 21-05-2014 a les 14:43:11
+-- Versió del servidor: 5.5.24-log
+-- Versió de PHP: 5.3.13
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,15 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de datos: `projecte`
+-- Base de dades: `projecte`
 --
-CREATE DATABASE IF NOT EXISTS `projecte` DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci;
-USE `projecte`;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `estils`
+-- Estructura de la taula `estils`
 --
 
 CREATE TABLE IF NOT EXISTS `estils` (
@@ -36,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `estils` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=6 ;
 
 --
--- Volcado de datos para la tabla `estils`
+-- Bolcant dades de la taula `estils`
 --
 
 INSERT INTO `estils` (`id_estil`, `estil`, `fk_usuari`) VALUES
@@ -49,7 +47,7 @@ INSERT INTO `estils` (`id_estil`, `estil`, `fk_usuari`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `idioma`
+-- Estructura de la taula `idioma`
 --
 
 CREATE TABLE IF NOT EXISTS `idioma` (
@@ -60,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `idioma` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=6 ;
 
 --
--- Volcado de datos para la tabla `idioma`
+-- Bolcant dades de la taula `idioma`
 --
 
 INSERT INTO `idioma` (`id_idioma`, `idioma`, `fk_usuari`) VALUES
@@ -73,7 +71,7 @@ INSERT INTO `idioma` (`id_idioma`, `idioma`, `fk_usuari`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `mail`
+-- Estructura de la taula `mail`
 --
 
 CREATE TABLE IF NOT EXISTS `mail` (
@@ -82,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `mail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 --
--- Volcado de datos para la tabla `mail`
+-- Bolcant dades de la taula `mail`
 --
 
 INSERT INTO `mail` (`id_usu`, `mail`) VALUES
@@ -95,7 +93,7 @@ INSERT INTO `mail` (`id_usu`, `mail`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `preguntes`
+-- Estructura de la taula `preguntes`
 --
 
 CREATE TABLE IF NOT EXISTS `preguntes` (
@@ -104,10 +102,10 @@ CREATE TABLE IF NOT EXISTS `preguntes` (
   `pregunta_es` varchar(250) COLLATE latin1_spanish_ci NOT NULL,
   `nivell_pregunta` int(3) NOT NULL,
   PRIMARY KEY (`id_pregunta`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=25 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=29 ;
 
 --
--- Volcado de datos para la tabla `preguntes`
+-- Bolcant dades de la taula `preguntes`
 --
 
 INSERT INTO `preguntes` (`id_pregunta`, `pregunta_ca`, `pregunta_es`, `nivell_pregunta`) VALUES
@@ -134,12 +132,16 @@ INSERT INTO `preguntes` (`id_pregunta`, `pregunta_ca`, `pregunta_es`, `nivell_pr
 (21, 'Quina és la velocitat de la llum?', 'Cual es la velocidad de la luz?', 6),
 (22, 'De que està fet l''univers?', 'De que está hecho el universo?', 6),
 (23, 'Numero de planetes del sistema solar?', 'Numero de planetas del sistema solar?', 6),
-(24, 'Satèl·lit més gran del Saturn?', 'Satélite más grande del Saturno?', 6);
+(24, 'Satèl·lit més gran del Saturn?', 'Satélite más grande del Saturno?', 6),
+(25, 'Què li diu la copa d''un arbre a l''altra?', '¿Qué le dice la copa de un árbol a la otra?', 7),
+(26, 'Ho porta l''home per davant, ho treu amb molt recel, té cap, i en ell no hi ha ni un sol pèl.', 'Lo lleva el hombre por delante, lo saca con mucho recelo, tiene cabeza, y en ella no hay ni un solo pelo.', 7),
+(27, 'Una vegada al dia és mania, una vegada per setmana, és cosa sana, una vegada per mes, és deixadesa, una vegada a l''any se t''oxida la canella.', 'Una vez al día es manía, una vez por setmana, es cosa sana, una vez por mes, es dejadez, una vez al año se te oxida el caño.', 7),
+(28, 'Madonna no en té, el Papa en té però no l''utilitza, Bush ho té curt, Schwartzenegger ho té llarg..', 'Madonna no lo tiene, el Papa lo tiene pero no lo usa, Bush lo tiene corto, Schwartzenegger lo tiene largo..', 7);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `respostes`
+-- Estructura de la taula `respostes`
 --
 
 CREATE TABLE IF NOT EXISTS `respostes` (
@@ -149,10 +151,10 @@ CREATE TABLE IF NOT EXISTS `respostes` (
   `fk_pregunta` int(3) NOT NULL,
   `correcte` varchar(2) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`id_resposta`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=104 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=120 ;
 
 --
--- Volcado de datos para la tabla `respostes`
+-- Bolcant dades de la taula `respostes`
 --
 
 INSERT INTO `respostes` (`id_resposta`, `resposta_ca`, `resposta_es`, `fk_pregunta`, `correcte`) VALUES
@@ -251,12 +253,28 @@ INSERT INTO `respostes` (`id_resposta`, `resposta_ca`, `resposta_es`, `fk_pregun
 (100, 'Rea', 'Rea', 24, 'no'),
 (101, 'Hipereon', 'Hipereon', 24, 'no'),
 (102, 'Titan', 'Titan', 24, 'si'),
-(103, 'Febes', 'Febes', 24, 'no');
+(103, 'Febes', 'Febes', 24, 'no'),
+(104, 'Que miras.', 'Qué miras.', 25, 'no'),
+(105, 'Descorchem', 'Descorchemos', 25, 'no'),
+(106, 'Brindem', 'Brindemos', 25, 'si'),
+(107, 'Que alta que ets!', 'Que alta eres!', 25, 'no'),
+(108, 'Relotje de butxaca', 'El reloj de bolsillo', 26, 'si'),
+(109, 'Òrgan masculí', 'Órgano masculino', 26, 'no'),
+(110, 'Cadena d''or', 'Cadena de oro', 26, 'no'),
+(111, 'Anell', 'Anillo', 26, 'no'),
+(112, 'Dutxar-se', 'Bañarse', 27, 'si'),
+(113, 'Menjar', 'Comer', 27, 'no'),
+(114, 'Afeitar-se', 'Afeitarse', 27, 'no'),
+(115, 'El llit', 'La cama', 27, 'no'),
+(116, 'Guardes de seguretat', 'Guardias de seguridad', 28, 'no'),
+(117, 'Cognom', 'Apellido', 28, 'si'),
+(118, 'Una mansió', 'Una mansión ', 28, 'no'),
+(119, 'Un cotxe', 'Un coche', 28, 'no');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuari`
+-- Estructura de la taula `usuari`
 --
 
 CREATE TABLE IF NOT EXISTS `usuari` (
@@ -274,7 +292,7 @@ CREATE TABLE IF NOT EXISTS `usuari` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=6 ;
 
 --
--- Volcado de datos para la tabla `usuari`
+-- Bolcant dades de la taula `usuari`
 --
 
 INSERT INTO `usuari` (`Id`, `Usuari`, `Password`, `RecoveryName`, `Vides`, `Comodins`, `PuntuacioMax`, `Recordar`, `Activat`, `Admin`) VALUES
