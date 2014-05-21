@@ -1,3 +1,4 @@
+
 <html>
 <head>
        <meta charset="utf-8" />
@@ -13,8 +14,11 @@
         <script src="../js/nivel15.js"></script>
 </head>
 <body id="container">
-    <div id="plantilla" style="color: black !important;">
-        
+    <div id="plantilla" class="win">
+        <span id="feli16">FELICIDADES!!</span>
+
+        <span id="msg16">Has conseguido acabar Crazy Univers!! Muchas felicidades <?php echo $_SESSION['usu']; ?></span>
+        <span id="return16"></span>
     </div>
     
 </body>

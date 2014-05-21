@@ -20,6 +20,11 @@ input[type=button]{
     cursor: url('../css/cursor/BGLink.cur'), pointer;
 }
 
+a{
+    cursor: url('cursor/BGLink.cur'), pointer;
+    text-decoration: none !important;
+}
+
 
 html{
     cursor:url('cursor/BGNormal.cur'), default;
@@ -1213,6 +1218,40 @@ body.rock .bt4:hover{
     -webkit-text-stroke: 1px black;
     font-size: 25pt;
     text-align: center;
+}
+
+#act_usu{
+    font-size: 22pt;
+    text-align: center;
+    margin-top: 24%;
+    line-height: 50px;
+}
+
+.win{
+    background-image: url('../css/galery/wincrazyuniverse.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+        
+}
+
+#feli16{
+    position: absolute;
+    display: block;
+    top: 14%;
+    left: 31%;
+    font-size: 24pt;
+    color: white;
+}
+
+#msg16{
+    /*position: absolute;*/
+    display: block;
+    margin-top: 24%;
+    margin-left: 61%;
+    font-size: 24pt;
+    color: white;
+    text-align: left;
+    -webkit-text-stroke: 1px white;
 }
 
 

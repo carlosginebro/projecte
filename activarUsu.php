@@ -12,12 +12,6 @@
     $sql = "update usuari set Activat = 1 where Usuari = '$usu'";
     $cone->query($sql);
 
-
-
-
-
-
-
 ?>
 
 <html>
@@ -28,8 +22,12 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <span>L'usuari <?php echo $usu;?> ha sigut activat.</span>
-        <br/>
-        <span>Fes click en <a target="_blank" href='../projecte/'>Crazy Univers</a> per començar a jugar!!</span>
+        <div id="plantilla">
+            <div id="act_usu">
+            <span>L'usuari <?php echo $usu;?> ha sigut activat.</span>
+            <br/>
+            <span>Fes click en <a target="_blank" href='../projecte/'>Crazy Univers</a> per començar a jugar!!</span>
+            </div>
+        </div>
     </body>
 </html>
