@@ -58,5 +58,13 @@
     $l12_tit = "Recoge el Queso sin tocar las paredes! (ponte sobre el ratón para empezar)";
     
     $l13_tit = "Arrastra los objetos a la basura adecuada.";
+    
+    $l15_1 = "Increíble, has conseguido llegar al último nivel de Crazy Univers";
+    
+    $l15_2 = "Si quieres conseguir superarlo, tendrás que ser muy ágil";
+   
+    $l15_3 = "Y sobre todo, no salgas de la pantalla del minijuego!";
+    
+    $l15_4 = "Estás listo???";
   
 ?>

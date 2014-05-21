@@ -58,4 +58,12 @@
     $l12_tit = "Recull el Formatge sense tocar les parets! (posat sobre el ratolí per començar)";
 
     $l13_tit = "<span style='font-size: 15pt !important'>Arrossega els objectes a les escombraries adequades.</span>";
+    
+    $l15_1 = "Increïble, has aconseguit arribar a l'últim nivell de Crazy Univers";
+    
+    $l15_2 = "Si vols aconseguir superar-ho, hauràs de ser molt àgil";
+    
+    $l15_3 = "I sobretot, no surtis de la pantalla del mini-joc!";
+    
+    $l15_4 = "Estàs llest???";
 ?>

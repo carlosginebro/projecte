@@ -1,13 +1,16 @@
 
 
-var delay = 200;
+var delay = 3000;
 var imagen;
 var meteorito;
 var meteorito2;
 var t;
 var velocidad = 2000;
 var velocidad_repetir = 2000;
-
+var segons = 25;
+var temps;
+var tiempo = "";
+var punts = 0;
 
 
 function meteoritos(){
@@ -39,13 +42,13 @@ function meteoritos(){
     
     meteorito = $('<span>').css({
         'position': 'absolute',
-        'height': '50px',
-        'width': '50px',
+        'height': '80px',
+        'width': '80px',
         'z-index': '100',
         'background-image': "url('../css/galery/asteroide.png')",
         'background-size': 'contain',
         'top':-50,
-        'left':x
+        'left':x-20
     });
     
     meteorito2 = $('<span>').css({
@@ -81,8 +84,8 @@ function meteoritos(){
     if(velocidad < 1600){
         meteorito3 = $('<span>').css({
             'position': 'absolute',
-            'height': '50px',
-            'width': '50px',
+            'height': '65px',
+            'width': '65px',
             'z-index': '100',
             'background-image': "url('../css/galery/asteroide.png')",
             'background-size': 'contain',
@@ -108,13 +111,13 @@ function meteoritos(){
     if(velocidad < 1100){
         meteorito4 = $('<span>').css({
             'position': 'absolute',
-            'height': '50px',
-            'width': '50px',
+            'height': '110px',
+            'width': '110px',
             'z-index': '100',
             'background-image': "url('../css/galery/asteroide.png')",
             'background-size': 'contain',
             'top': -50,
-            'left': x4,
+            'left': x4-20,
             'display': 'none'
         }); 
         
@@ -140,7 +143,8 @@ function animacion(x, meteorito, velocidad){
         top:'100%'
     }, velocidad, function(){
         meteorito.hide();
-       
+       $('#asteroide2').html(parseInt($('#asteroide2').html()) + 1);
+//        var punts =  $('#asteroide').html();
 
     });
 }
@@ -152,6 +156,7 @@ function perdre() {
     meteorito.stop();
     meteorito.hide();
      clearTimeout(t);
+      clearTimeout(temps);
      game_over();
 //    alert("hola");
 }
@@ -160,6 +165,7 @@ function perdre2() {
     meteorito2.stop();
     meteorito2.hide();
      clearTimeout(t);
+      clearTimeout(temps);
      game_over();
 //    alert("hola");
 }
@@ -167,7 +173,8 @@ function perdre2() {
 function perdr3() {
     meteorito3.stop();
     meteorito3.hide();
-    clearTimeout(t);  
+    clearTimeout(t);
+     clearTimeout(temps);
     game_over();
 }
 
@@ -176,6 +183,41 @@ function perdre4() {
     meteorito4.hide();
     clearTimeout(t);
     game_over();
+}
+
+function cronometre(){
+	
+	segons--;
+	if (segons == 0){
+
+            $('#d15temps').hide();
+      
+            var nivel = $("#getLvl").val(); 
+            nivel++;
+            clearTimeout(temps);
+            clearTimeout(t);
+            animacio_nivel(nivel); 
+            
+        }else if(segons < 6){
+            $("#d15temps").css({
+               color:'red'
+            });
+            
+             
+            
+            tiempo =  ""+segons;
+            $('#d15temps').html(tiempo);
+            
+        }else{
+            $("#d15temps").css({
+               color:'white' 
+            });
+            
+            tiempo = ""+segons;
+            $('#d15temps').html(tiempo);
+        }
+	
+	temps = setTimeout("cronometre()",1000);
 }
 
  
@@ -193,7 +235,7 @@ $(function(){
    
    
     $("#bt15").click(function(){
-        $("#bt15").fadeOut(500);
+        $("#bt15").hide();
       
  
         $("#plantilla").animate({
@@ -217,12 +259,14 @@ $(function(){
                         'background-image': 'url("../css/galery/fondolvl15.png")'
                     });
                     meteoritos();
-                    
-//                    $("body").addClass('error15');
+                    cronometre();
+                   $("#margenizk").addClass('error15').css({'z-index':2});
+                   $("#margender").addClass('error15').css({'z-index':2});
+                 
                     $("#d15temps").fadeIn(300);
+                    $("#punts15").fadeIn(300);
                     
-                    
-//                    $("#msgfinal").delay(3000).show();
+
                     
                 });
             });
@@ -231,7 +275,10 @@ $(function(){
  
     });
    
+   $('body').on("mouseover", ".error15", function() {
    
+       game_over();
+   });
    
     
 });
