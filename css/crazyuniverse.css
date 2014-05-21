@@ -1248,9 +1248,9 @@ body.rock .bt4:hover{
     display: block;
     margin-top: 24%;
     margin-left: 61%;
-    font-size: 24pt;
+    font-size: 22pt;
     color: white;
-    text-align: left;
+
     -webkit-text-stroke: 1px white;
 }
 

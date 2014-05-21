@@ -17,8 +17,8 @@
     <div id="plantilla" class="win">
         <span id="feli16">FELICIDADES!!</span>
 
-        <span id="msg16">Has conseguido acabar Crazy Univers!! Muchas felicidades <?php echo $_SESSION['usu']; ?></span>
-        <span id="return16"></span>
+        <div id="msg16"><span>Has conseguido acabar Crazy Univers!!</span><br /><br /><span> Muchas felicidades <?php echo $_SESSION['usu']; ?></span></div>
+        <input type='button' id="return16" class='bt_final' value='Inicio'/>
     </div>
     
 </body>
