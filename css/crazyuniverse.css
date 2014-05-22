@@ -1202,6 +1202,8 @@ body.rock .bt4:hover{
     border: 3px solid #c0c8ce;
     left: 4%;
     top: 1%;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #asteroide2{
@@ -1211,6 +1213,8 @@ body.rock .bt4:hover{
     border: 3px solid #c0c8ce;
     left: 94%;
     top: 1%;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .span15{
