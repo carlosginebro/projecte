@@ -20,6 +20,8 @@
         $random = rand(0,3);
 
         $consulta->data_seek($random);
+        
+        
         $reg = $consulta->fetch_array();
         $pregunta_final = $reg['pregunta_'.$idioma];
 	$id_pregunta = $reg['id_pregunta'];	
@@ -33,20 +35,24 @@
         while($reg = $consulta->fetch_array()){
             $respostes[$cont]="#".$reg['correcte']."#".$reg['resposta_'.$idioma];
             $cont++;
-//            $pregunta_final.="#".$reg['correcte']."#".$reg['resposta'];
+
         }
         
+        
         $keys = array_keys($respostes);
-
+        
+        //Barrejar les posicions
         shuffle($keys);
         
+        //Asignem a una nova array les posicions barrejades
         foreach($keys as $key) {
             $new[$key] = $respostes[$key];
         }
         
         $respostes = $new;
         
-        $respostesMezcladas = shuffle($respostes);
+        //Barrejem les respostes
+        shuffle($respostes);
      
         for($i = 0, $size = count($respostes); $i < $size; $i++){
               $pregunta_final.=$respostes[$i];
@@ -55,9 +61,6 @@
         return $pregunta_final;
     }
 
-//    function getRespostes(){
-//        
-//    }
 
 
 
