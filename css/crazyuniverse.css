@@ -1254,7 +1254,34 @@ body.rock .bt4:hover{
     -webkit-text-stroke: 1px white;
 }
 
+#puntuacio16{
+    position: absolute;
+    display: block;
+    top: 46%;
+    left: 35%;
+    font-size: 24pt;
+    color:#666666;
+}
 
+#return16{
+    margin-left: 70%;
+    margin-top: 9%;
+    font-size: 20pt;
+    border-radius: 3px;
+    padding: 8px;
+    cursor: url('cursor/BGLink.cur'), pointer;
+    font-weight: bold;
+    width: 140px;
+    color : #222222;
+    border: 2px solid #444444;
+}
+
+#return16:hover{
+    color: black;
+    box-shadow: 0 0 20px 2px yellow; 
+    border-color: gold;
+    background-color: #fdf5ce;
+}
 
 @media only screen and (max-width: 800px) {
     .size{

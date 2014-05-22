@@ -251,7 +251,7 @@ $(function(){
                margin: '0% auto'
             }, 500, function(){
                 $("#plantilla").animate({
-                    'background-color':'rgb(12, 11, 73)',
+                    'background-color':'#030621',
                     width:'40%'
                 },3000, function(){
                     $("#plantilla").css({

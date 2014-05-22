@@ -1,3 +1,4 @@
+
 <html>
 <head>
        <meta charset="ISO-8859-15" />
@@ -11,6 +12,8 @@
             $pregunta = getPregunta(1);
             
             $arrayPregunta = explode("#", $pregunta);
+            
+       
         ?>
 </head>
 
@@ -66,6 +69,7 @@
 <input type="text" value="<?php echo $_SESSION['vides'];?>" class="cHiden" id="videsbd" />
 <input type="text" value="<?php echo $_SESSION['comodins']; ?>" class="cHiden" id="getComodins" />
 <input type="text" value="<?php echo $_SESSION['sound']; ?>" class="cHiden" id="getSound" />
+<?php $_SESSION['puntuacio'] = 0; ?>
 </body>
 
 </html>

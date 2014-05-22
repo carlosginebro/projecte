@@ -7,6 +7,10 @@
     
     $gameover2 = "Em rendeix-ho...";
     
+    $estil_joc = "Estils de joc";
+    
+    $config = "Configuració";
+    
     $boton = "Començar!";
 
     $somi = 'SOM-HII!!';
@@ -66,4 +70,10 @@
     $l15_3 = "I sobretot, no surtis de la pantalla del mini-joc!";
     
     $l15_4 = "Estàs llest???";
+    
+    $l16_1 = "FELICITATS!!";
+    
+    $l16_2 = "<span>Has conseguit acavar Crazy Univers!!</span><br /><br /><span> Moltes felicitats </span>";
+    
+    $l16_3 = "Inici";
 ?>

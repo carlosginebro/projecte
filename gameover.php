@@ -1,5 +1,12 @@
 <?php
     session_start();
+    
+    $conec = new mysqli("localhost", "root", "", "projecte");
+    $puntuacio = $_SESSION['puntuacio'];
+    $id = $_SESSION['id'];
+    
+    $sql = "update usuari Set PuntuacioMax = $puntuacio where Id = $id";
+    $conec->query($sql);
 ?>
 <html>
     <head>
@@ -10,6 +17,7 @@
         ?>
     </head>
     <?php
+
         require_once 'llibreria_'.$_SESSION["idioma"].'.php';
     ?>
     <body id="container" >

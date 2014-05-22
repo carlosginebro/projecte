@@ -15,10 +15,18 @@
 </head>
 <body id="container">
     <div id="plantilla" class="win">
-        <span id="feli16">FELICIDADES!!</span>
-
-        <div id="msg16"><span>Has conseguido acabar Crazy Univers!!</span><br /><br /><span> Muchas felicidades <?php echo $_SESSION['usu']; ?></span></div>
-        <input type='button' id="return16" class='bt_final' value='Inicio'/>
+        <span id="feli16"><?php echo $l16_1; ?></span>
+        <span id="puntuacio16">2500p</span>
+        <div id="msg16"><?php echo $l16_2; echo $_SESSION['usu']; ?></div>
+        <input type='button' id="return16" class='bt_final' value='<?php echo $l16_3; ?>'/>
     </div>
-    
+    <?php 
+        $_SESSION['puntuacio'] = 2500;
+        $conec = new mysqli("localhost", "root", "", "projecte");
+        $puntuacio = $_SESSION['puntuacio'];
+        $id = $_SESSION['id'];
+
+        $sql = "update usuari Set PuntuacioMax = $puntuacio where Id = $id";
+        $conec->query($sql);
+    ?>
 </body>

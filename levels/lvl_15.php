@@ -31,5 +31,6 @@
          
     </div>
     <input type="text" value="15" id="getLvl" />
+    <?php $_SESSION['puntuacio'] = 1900; ?>
 </body >
 </html>

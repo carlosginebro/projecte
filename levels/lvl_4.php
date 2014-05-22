@@ -62,7 +62,7 @@
 <input type="text" value="4" id="getLvl" />
 <input type="text" value="<?php echo $_SESSION['vides'];?>" class="cHiden" id="videsbd" />
 <input type="text" value="<?php echo $_SESSION['sound']; ?>" class="cHiden" id="getSound" />
-
+<?php $_SESSION['puntuacio'] = 350; ?>
 </body>
 
 </html>

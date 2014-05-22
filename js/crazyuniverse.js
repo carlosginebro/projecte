@@ -7,7 +7,7 @@ function game_over(){
         'width': '20px',
         'height': '20px',
         'margin': '23% auto'
-//                                     
+                                    
     }, 500, function() {
         $("#plantilla").css({
             'box-shadow': 'inset 0px 0px 40px #F7F8CE, 0px 0px 40px #ff0',
@@ -548,6 +548,15 @@ $(function(){
     
     
     /* Fi creditos */
+    
+    /* Boto lvl 16 */
+    
+    $("#return16").click(function(){
+        document.location = "../pantalla.php";
+    });
+    
+    
+    /* Fi Boto lvl 16 */
 
     
 });

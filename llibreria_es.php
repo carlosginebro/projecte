@@ -7,6 +7,10 @@
     
     $gameover2 = "Se acabó...";
     
+    $estil_joc = "Estilos del juego";
+    
+    $config = "Configuración";
+    
     $boton = "Comenzar!";
 
     $somi = 'VENGAA!!';
@@ -66,5 +70,11 @@
     $l15_3 = "Y sobre todo, no salgas de la pantalla del minijuego!";
     
     $l15_4 = "Estás listo???";
+    
+    $l16_1 = "FELICIDADES!!";
+    
+    $l16_2 = "<span>Has conseguido acabar Crazy Univers!!</span><br /><br /><span> Muchas felicidades </span>";
+    
+    $l16_3 = "Inicio";
   
 ?>
