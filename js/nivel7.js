@@ -91,7 +91,6 @@ $(function(){
         x = x + 2;
         y = y + 4;
 
-
         $("#img_fuegolvl7").css({
             width : widthx,
             height : heightx,

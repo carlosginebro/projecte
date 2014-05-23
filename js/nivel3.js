@@ -2,15 +2,7 @@ var segons = 20;
 var temps;
 var tiempo = "";
 
-//var widthx;
-//var heightx;
-//var x = 0;
-//var y = 0;
-//var duration = 80;
-//var offset = 40;
-
-function cronometre(){
-	
+function cronometre(){	
 	segons--;
 	if (segons == 0){
 
@@ -22,9 +14,7 @@ function cronometre(){
             $("#tiempo1").css({
                color:'red'
             });
-            
-             
-            
+                      
             tiempo =  ""+segons;
             $('#tiempo1').html(tiempo);
             

@@ -5,8 +5,16 @@
     $puntuacio = $_SESSION['puntuacio'];
     $id = $_SESSION['id'];
     
-    $sql = "update usuari Set PuntuacioMax = $puntuacio where Id = $id";
-    $conec->query($sql);
+    $sql = "select PuntuacioMax from usuari where Id = $id";
+    $consulta = $conec->query($sql);
+    $reg = $consulta->fetch_array();
+    
+    if($reg['PuntuacioMax'] < $puntuacio){
+    
+        $sql = "update usuari Set PuntuacioMax = $puntuacio where Id = $id";
+        $conec->query($sql);
+    
+    }
 ?>
 <html>
     <head>

@@ -22,8 +22,6 @@ function game_over(){
         }, 500, function() {
             $("#plantilla").css({
                 'box-shadow': 'none',
-//                'background-image': 'url("../css/galery/gameover.jpg")',
-//                'background-repeat': 'no-repeat',
                 'background-size': '100% 100%'
             });
             document.location = "../gameover.php";
@@ -44,6 +42,7 @@ function restar_vida(vidas){
 	var audio = new Audio('../audio/vidasmenos.mp3');
 	audio.play();
     }
+    
     $("#vida_a").addClass('rotar').after(function(){
         $("#vida_a").animate({
             'width':'450px',
@@ -75,9 +74,6 @@ function restar_vida(vidas){
                  });
                 
              });
-
-
-
 
         });
     });     
@@ -132,11 +128,8 @@ function animacio_comodin(nivel) {
             'opacity': 0
         },function(){
             document.location="lvl_"+nivel+".php";
-        });
-            
-    
-    });
-    
+        });  
+    });  
 }
 
  $(window).load(function() {
@@ -374,10 +367,7 @@ $(function(){
   
     $('body').on("click", "[name=no]", function() {
         var vidas = $('#videsbd').val();
-//        if(vidas == 1){
-//            alert("animacio gameover");
-//            document.location="../gameover.php";  
-//        }
+
         if(vidas>0){
             restar_vida(vidas);
             $("#vidas_rest").removeClass("cVidas_rest"+vidas);
@@ -417,7 +407,7 @@ $(function(){
                 data: {comodins: comodinsActu},
                 url: "../restarVidesComodins.php",
                 success: function(dada) {
-                    //alert(dada);
+                    
                 }
             });
             
