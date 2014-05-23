@@ -10,14 +10,7 @@ function ratoli(){
 
 function comensalvl(){
 	
-	
-	
-	
 	var linias= " ";
-
-	
-	
-	
 	
 			linias+= "		<area shape='rect' coords='5,33,6,286' onmouseover='linia()' /> ";
 			linias+= "		<area shape='rect' coords='5,286,259,287' onmouseover='linia()' />";
