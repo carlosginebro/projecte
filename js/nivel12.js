@@ -62,6 +62,9 @@ function restar_vida(vidas){
     
     $("#sas").show();
     $("#vida_a").show();
+    $('#lab').hide();
+    $('#ratoli').show();
+	
     $ ("#vidas_rest").addClass("cVidas_rest_bye"+vidas);
     if(sound == 1){
 	var audio = new Audio('../audio/vidasmenos.mp3');
