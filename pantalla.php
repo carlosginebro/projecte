@@ -3,6 +3,18 @@
     
     session_start();
     
+    if(!isset($_SESSION['usu'])){
+        ?>
+<script>
+    document.location='index.php?reinicia';
+</script>
+    <?php
+    }else{
+    
+    //saber a quin nivell li toca i no pugui fer trampas
+    $_SESSION['lvlactual'] = 0;
+        
+    
     function cone(){
             $conec = new mysqli("localhost", "root", "", "projecte");
             return $conec;
@@ -160,9 +172,13 @@
                 <div id="vidas_rest" class="cVidas_rest<?php echo $_SESSION['vides']; ?>"></div>
             </div>
                 <input type="text" value="<?php echo $_SESSION['sound']; ?>" class="cHiden" id="getSound" />
+                <input type="text" value="<?php echo $_SESSION['lvlactual']; ?>" class="cHiden" id="getLvlAct" />
             </div>
           </div>
 
     </body>
    
 </html>
+<?php 
+    }
+?>

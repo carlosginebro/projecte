@@ -1,5 +1,4 @@
 <?php
-    session_start();
     
 	function cone(){
 		$conec = new mysqli("localhost", "root", "", "projecte");

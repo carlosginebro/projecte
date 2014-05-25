@@ -1,3 +1,16 @@
+<?php
+session_start();
+if($_SESSION['lvlactual']!=7){
+?>
+<script>
+    document.location = "lvl_6.php";
+</script>
+
+<?php
+}else{
+    
+
+?>
 <html>
 <head>
         <meta charset="utf-8" />
@@ -34,7 +47,11 @@
 <input type="text" value="7" id="getLvl" />
 <input type="text" value="<?php echo $_SESSION['vides'];?>" class="cHiden" id="videsbd" />
 <input type="text" value="<?php echo $_SESSION['sound']; ?>" class="cHiden" id="getSound" />
+<input type="text" value="<?php echo $_SESSION['lvlactual']; ?>" class="cHiden" id="getLvlAct" />
 <?php $_SESSION['puntuacio'] = 800; ?>
 </body>
 
 </html>
+<?php
+}
+?>

@@ -73,7 +73,7 @@
     
     $l16_1 = "FELICITATS!!";
     
-    $l16_2 = "<span>Has conseguit acavar Crazy Univers!!</span><br /><br /><span> Moltes felicitats </span>";
+    $l16_2 = "<span>Has aconseguit acabar Crazy Univers!!</span><br /><br /><span> Moltes felicitats </span>";
     
     $l16_3 = "Inici";
 ?>

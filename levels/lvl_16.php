@@ -1,4 +1,16 @@
+<?php
+session_start();
+if($_SESSION['lvlactual']!=16){
+?>
+<script>
+    document.location = "lvl_15.php";
+</script>
 
+<?php
+}else{
+    
+
+?>
 <html>
 <head>
        <meta charset="utf-8" />
@@ -30,3 +42,6 @@
         $conec->query($sql);
     ?>
 </body>
+<?php
+}
+?>

@@ -1,3 +1,16 @@
+<?php
+session_start();
+if($_SESSION['lvlactual']!=9){
+?>
+<script>
+    document.location = "lvl_8.php";
+</script>
+
+<?php
+}else{
+    
+
+?>
 <html>
 <head>
         <meta charset="utf-8" />
@@ -89,7 +102,11 @@
 <input type="text" value="<?php echo $_SESSION['vides'];?>" class="cHiden" id="videsbd" />
 <input type="text" value="<?php echo $_SESSION['comodins']; ?>" class="cHiden" id="getComodins" />
 <input type="text" value="<?php echo $_SESSION['sound']; ?>" class="cHiden" id="getSound" />
+<input type="text" value="<?php echo $_SESSION['lvlactual']; ?>" class="cHiden" id="getLvlAct" />
 <?php $_SESSION['puntuacio'] = 1100; ?>
 </body>
 
 </html>
+<?php
+}
+?>

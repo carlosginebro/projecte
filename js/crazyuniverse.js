@@ -103,7 +103,16 @@ function animacio_nivel(nivel) {
                                     $('#animacio_correcte').animate({'max-width': '580px', width: ('+=' + offset),
                                         marginLeft: ('-=' + offset / 2), height: ('+=' + offset),
                                         marginTop: ('-=' + offset / 2), opacity: 0}, duration, function() {
-                                                document.location="lvl_"+nivel+".php"; 
+                                        var lvlact = $("#getLvlAct").val();
+                                        $.ajax({
+                                            type: "post",
+                                            data: {lvlact: lvlact},
+                                            url: "../restarVidesComodins.php",
+                                            success: function(dada) {
+                                                document.location="lvl_"+nivel+".php";
+                                            }
+                                        });
+                                                 
                                     });
                                 });
                             });
@@ -427,8 +436,17 @@ $(function(){
   /*Comensar a jugar*/
   
     $("[name=jugar]").click(function(){
+        var lvlact = $("#getLvlAct").val();
+        $.ajax({
+            type:"post",
+            data:{lvlact: lvlact},
+            url: "restarVidesComodins.php",
+             success: function(dada) {
+                     document.location="levels/lvl_1.php"; 
+                }
+        });
 
-        document.location="levels/lvl_1.php"; 
+       
        
     });
     

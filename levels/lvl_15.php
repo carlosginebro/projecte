@@ -1,3 +1,16 @@
+<?php
+session_start();
+if($_SESSION['lvlactual']!=15){
+?>
+<script>
+    document.location = "lvl_14.php";
+</script>
+
+<?php
+}else{
+    
+
+?>
 <html>
 <head>
        <meta charset="utf-8" />
@@ -31,6 +44,10 @@
          
     </div>
     <input type="text" value="15" id="getLvl" />
+    <input type="text" value="<?php echo $_SESSION['lvlactual']; ?>" class="cHiden" id="getLvlAct" />
     <?php $_SESSION['puntuacio'] = 1900; ?>
 </body >
 </html>
+<?php
+}
+?>

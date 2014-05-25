@@ -14,6 +14,7 @@ var punts = 0;
 
 
 function meteoritos(){
+    //Sila velocitat de les animacions no es suficientmnet rapida, s'anira baixant
     if(velocidad > 700){
         velocidad = velocidad-100;
         velocidad_repetir = velocidad_repetir - 100;
@@ -24,6 +25,7 @@ function meteoritos(){
     var x3 = Math.floor((Math.random() * $("#plantilla").width())+410);
     var x4 = Math.floor((Math.random() * $("#plantilla").width())+410);
     
+    //controlem que els meteorits no surtin de la pantalla.
     if(x > 545){
         x = x - 50;
     }
@@ -144,7 +146,6 @@ function animacion(x, meteorito, velocidad){
     }, velocidad, function(){
         meteorito.hide();
        $('#asteroide2').html(parseInt($('#asteroide2').html()) + 1);
-//        var punts =  $('#asteroide').html();
 
     });
 }
@@ -155,19 +156,19 @@ function animacion(x, meteorito, velocidad){
 function perdre() {   
     meteorito.stop();
     meteorito.hide();
-     clearTimeout(t);
-      clearTimeout(temps);
-     game_over();
-//    alert("hola");
+    clearTimeout(t);
+    clearTimeout(temps);
+    game_over();
+
 }
 
 function perdre2() {   
     meteorito2.stop();
     meteorito2.hide();
-     clearTimeout(t);
-      clearTimeout(temps);
-     game_over();
-//    alert("hola");
+    clearTimeout(t);
+    clearTimeout(temps);
+    game_over();
+
 }
 
 function perdr3() {
@@ -185,8 +186,7 @@ function perdre4() {
     game_over();
 }
 
-function cronometre(){
-	
+function cronometre(){	
 	segons--;
 	if (segons == 0){
 
@@ -202,9 +202,7 @@ function cronometre(){
             $("#d15temps").css({
                color:'red'
             });
-            
-             
-            
+                        
             tiempo =  ""+segons;
             $('#d15temps').html(tiempo);
             
@@ -215,8 +213,7 @@ function cronometre(){
             
             tiempo = ""+segons;
             $('#d15temps').html(tiempo);
-        }
-	
+        }	
 	temps = setTimeout("cronometre()",1000);
 }
 
@@ -236,7 +233,6 @@ $(function(){
    
     $("#bt15").click(function(){
         $("#bt15").hide();
-      
  
         $("#plantilla").animate({
             'background-color':'#FA2D04',
@@ -260,14 +256,14 @@ $(function(){
                     });
                     meteoritos();
                     cronometre();
+                    
+                    //Si surt de la pantalla del mini joc gameover.
                    $("#margenizk").addClass('error15').css({'z-index':2});
                    $("#margender").addClass('error15').css({'z-index':2});
                  
                     $("#d15temps").fadeIn(300);
                     $("#punts15").fadeIn(300);
-                    
-
-                    
+                                       
                 });
             });
        });

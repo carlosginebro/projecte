@@ -28,6 +28,13 @@ if(isset($_POST['comodins'])){
     $sql = "update usuari set Comodins = $comodins where Id = $id";
     $cone->query($sql);
     
+    $_SESSION['lvlactual']++;
+    
+}
+
+if(isset($_POST['lvlact'])){
+    $lvlact = $_POST['lvlact'] + 1;
+    $_SESSION['lvlactual'] = $lvlact;
 }
 
 ?>

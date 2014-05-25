@@ -1,4 +1,16 @@
+<?php
+session_start();
+if($_SESSION['lvlactual']!=5){
+?>
+<script>
+    document.location = "lvl_4.php";
+</script>
 
+<?php
+}else{
+    
+
+?>
 <html>
 <head>
         <meta charset="ISO-8859-15" />
@@ -65,7 +77,11 @@ require_once '../animacio_perdre_vida_'.$_SESSION['idioma'].'.php';
 <input type="text" value="<?php echo $_SESSION['vides'];?>" class="cHiden" id="videsbd" />
 <input type="text" value="<?php echo $_SESSION['comodins']; ?>" class="cHiden" id="getComodins" />
 <input type="text" value="<?php echo $_SESSION['sound']; ?>" class="cHiden" id="getSound" />
+<input type="text" value="<?php echo $_SESSION['lvlactual']; ?>" class="cHiden" id="getLvlAct" />
 <?php $_SESSION['puntuacio'] = 500; ?>
 </body>
 
 </html>
+<?php
+}
+?>
