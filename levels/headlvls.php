@@ -10,3 +10,4 @@
 <link rel="stylesheet" type="text/css" href="../css/clean.css" />
 <link rel="stylesheet" type="text/css" href="../css/jquery.gridster.css" />
 <link rel="stylesheet" type="text/css" href="../css/crazyuniverse.css" />
+<link id="page_favicon" href="../css/galery/favicon.ico" rel="icon" type="image/x-icon" />
