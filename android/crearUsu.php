@@ -21,10 +21,7 @@
         if ($reg = $consulta->fetch_array()){
             echo "0"; //Usuari amb el mateix nom ja creat
         }else{
-            
-            
-            
-            
+                      
             $recovery = "";
             
             $recovery .= strlen($u);

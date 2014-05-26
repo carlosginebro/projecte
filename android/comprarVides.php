@@ -13,8 +13,7 @@
         
         $vides = $obj->{'usuari'}; 
         $id = $obj->{'password'};
-        
-        
+               
         $sql = "update usuari set Vides = $vides where Id = $id";
         
         $cone->query($sql);

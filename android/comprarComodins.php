@@ -13,8 +13,7 @@
         
         $comodins = $obj->{'usuari'}; 
         $id = $obj->{'password'};
-        
-        
+              
         $sql = "update usuari set Comodins = $comodins where Id = $id";
         
         $cone->query($sql);
