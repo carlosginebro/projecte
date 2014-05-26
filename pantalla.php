@@ -122,7 +122,48 @@
                       
                       
                       
-                      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                      <br/><br/><br/><br/><br/><br/><br/>
+                      Pantalles:
+                      <br/><br/>
+                      <div style="text-align: justify !important; padding-left: 200px;">
+                      Nivell 1 - Preguntes.<br/>
+                      Nivell 2 - Preguntes.<br/>
+                      Nivell 3 - Pregunta especial.<br/>
+                      Nivell 4 - Mini Joc.<br/>
+                      Nivell 5 - Preguntes.<br/>
+                      Nivell 6 - Pregunta especial.<br/>
+                      Nivell 7 - Preguntes.<br/>
+                      Nivell 8 - Preguntes.<br/>
+                      Nivell 9 - Mini Joc.<br/>
+                      Nivell 10 - Preguntes<br/>
+                      Nivell 11 - Preguntes.<br/>
+                      Nivell 12 - Mini Joc<br/>
+                      Nivell 13 - Mini joc<br/>
+                      Nivell 14 - Preguntes.<br/>
+                      Nivell 15 - Mini joc<br/>
+                      Nivell 16 - Felicitacions.<br/>
+                      </div>
+                      <br/><br/><br/><br/><br/><br/><br/>
+                    	Android:
+                    	<br/><br/>
+                    	- Creació del usuari.<br/>
+                    	- Mostrar informació del Usuari.<br/>
+                    	- Comprar vides.<br/>
+                    	- Guanyar comodins.<br/>
+                    	
+                    	<br/><br/><br/><br/><br/><br/><br/>
+                    	Webs de gran ajuda:<br/><br/>
+                    	
+                    	-w3school.com<br/>
+                    	-jqueryrain.com<br/>
+                    	-StackOverFlow.com<br/>
+                    	-php.net<br/>
+                    	-Jquery.com<br/>
+                    
+                      
+                    
+                      
+                      <br/><br/><br/><br/><br/><br/><br/><br/><br/>
                       FIN
                   </div>
               </div>

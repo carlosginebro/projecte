@@ -532,8 +532,8 @@ $(function(){
                  $("#letras").css({top:'620px'});
                 $("#letras").show();
                 $("#letras").animate({
-                    top:'-500px'
-                }, 16000, function(){
+                    top:'-2800px'
+                }, 50000, function(){
                     $("#margentop").hide();
                     $("#margenbot").hide();
                     $("#letras").hide();
