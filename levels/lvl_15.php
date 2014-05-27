@@ -40,7 +40,7 @@ if($_SESSION['lvlactual']!=15){
         <div id="d154" class="cHiden" style="margin-top: 240px; text-align: center;"><span class="span15"><?php echo $l15_4; ?></span></div>
         <input type="button" id="bt15" class="cHiden bt_jocs_nivells" value="SI!" style="cursor: url('../css/cursor/BGLink.cur'), pointer; margin-top: 25%; margin-left: 30%;"/>
         <div id="d15temps" class="cHiden"></div>
-        <div id="punts15" class="cHiden"><span id='asteroide2'>0</span></div>
+        <div id="punts15" class="cHiden"><img src="../css/cursor/spaceship.gif"><span id='asteroide2'>0</span></div>
          
     </div>
     <input type="text" value="15" id="getLvl" />
