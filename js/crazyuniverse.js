@@ -534,18 +534,21 @@ $(function(){
                 $("#letras").animate({
                     top:'-2800px'
                 }, 50000, function(){
-                    $("#margentop").hide();
-                    $("#margenbot").hide();
-                    $("#letras").hide();
-                    $("#plantilla").animate({
-                         margin: '3% auto',
-                         height: '555px'
-                    }, 500, function(){
-                        $("#creditos2").fadeOut(500, function(){
-                            $("#creditos").show();
-                        });
-                                
-                    });      
+                    $("#letras").delay(5000).fadeOut( function(){
+                    	 $("#margentop").hide();
+                         $("#margenbot").hide();
+                    	 $("#plantilla").animate({
+                             margin: '3% auto',
+                             height: '555px'
+                        }, 500, function(){
+                            $("#creditos2").fadeOut(500, function(){
+                                $("#creditos").show();
+                            });
+                                    
+                        }); 
+                    	
+                    });
+                        
                 });
             });
         });

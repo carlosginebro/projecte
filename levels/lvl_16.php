@@ -1,13 +1,13 @@
 <?php
 session_start();
-if($_SESSION['lvlactual']!=16){
+// if($_SESSION['lvlactual']!=16){
 ?>
 <script>
-    document.location = "lvl_15.php";
+//     document.location = "lvl_15.php";
 </script>
 
 <?php
-}else{
+// }else{
     
 
 ?>
@@ -43,5 +43,5 @@ if($_SESSION['lvlactual']!=16){
     ?>
 </body>
 <?php
-}
+// }
 ?>
