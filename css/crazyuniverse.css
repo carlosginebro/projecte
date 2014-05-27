@@ -71,7 +71,7 @@ div, span, ul, li, label{
 }
 
 #logo_index:hover{
-   background-image: url('galery/logo_marcat_index.png');
+
    cursor: url('cursor/BGLink.cur'), pointer;
 }
 
